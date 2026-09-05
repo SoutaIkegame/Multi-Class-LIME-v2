@@ -113,22 +113,6 @@ $$
 
 は区別できる。ただし、「LIME型の摂動上でlog-oddsを局所回帰する」という大枠は既出である。
 
-### 3.3 GANMEX: 明示的なone-vs-one特徴帰属
-
-GANMEXは、「なぜ元のクラス $C_c$ であり、指定した対象クラス $C_d$ ではないのか」というone-vs-one説明を明示的に扱う。特に類似クラス間では、全クラスに共通する特徴ではなく、対象ペアを区別する特徴へ焦点を当てる必要があると論じている。GANを用いて、元画像に近いfoilクラスの現実的なベースラインを生成し、特徴帰属手法へ利用する。
-
-- Shih, Tien, and Karnin, *GANMEX: One-vs-One Attributions using GAN-based Model Explainability*, ICML 2021, PMLR 139, pp. 9592--9602: <https://proceedings.mlr.press/v139/shih21a.html>
-
-したがって、one-vs-one説明の必要性やtarget–foilという問い自体は新規ではない。一方、GANMEXは画像向けのベースライン生成＋特徴帰属であり、LIME型の局所線形サロゲートとしてsoft pairwise確率を直接近似する方法ではない。
-
-### 3.4 Local Foil Trees: 局所サロゲートによるfact–foil説明
-
-Local Foil Treesは、利用者がfactとfoilを指定し、LIMEに似た局所サンプリングと近接度重みを使って決定木サロゲートを学習する。得られた木のfact leafとfoil leafのルール差から対比説明を生成するため、本研究に非常に近い問題意識を持つ。
-
-- van der Waa et al., *Contrastive Explanations with Local Foil Trees*, ICML Workshop on Human Interpretability in Machine Learning, 2018: <https://research-portal.uu.nl/en/publications/contrastive-explanations-with-local-foil-trees-2/>
-
-ただし、木の学習目標自体はfoil class対その他すべてのone-vs-rest分類であり、$p_c$と$p_d$のsoftな相対量を直接回帰するものではない。またワークショップ論文／preprintであるため、主要な新規性根拠はGANMEX等の査読済み文献と組み合わせて扱う。
-
 ## 4. 全クラス確率を同時に説明する研究
 
 ### 4.1 SLISEMAP: 局所多項ロジスティック回帰
@@ -216,6 +200,8 @@ Rahnama et al.は、40個の表形式データセットで、LIME、SHAP、Local
 - 摂動によるDeletion/Preservationだけでは、out-of-distribution入力が生じ、説明の正しさを直接測ったことにならない場合がある。
 - 合成データや透明モデルによるground-truth係数評価を併用すべきである。
 
+**2026-09-03に実装・実行済み**（`src/run_groundtruth_experiment.py`）：黒箱を多項ロジスティック回帰に差し替え、各手法（OVR / Fisher hard / Fisher soft / Contrastive）の推定pairwise係数と真の $\theta_{c^*}-\theta_{c'}$ のSpearman順位相関を測定した。結果はContrastiveが全手法・全グリッドセルで統計的に有意に最も真の係数を復元できることを示した（詳細は`docs/RECENT_WORK.md`、生の大きさではなく順位相関を使う理由もRahnama et al.の方針に準拠）。Rahnama et al.自体はLIME・SHAP・Local Permutation Importanceを線形回帰・ロジスティック回帰・Naive Bayesで比較したものであり、本研究の「多クラスLIME拡張4手法をpairwise log-odds線形性のもとで比較する」という設定はRahnama et al.そのものではなく、その評価方法論を本研究の比較対象に適用したもの。
+
 ## 7. 安定性と説明評価に関する研究
 
 ### 7.1 S-LIME
@@ -236,8 +222,6 @@ Nauta et al.は、XAI手法の評価軸を体系化し、correctness、consisten
 |---|---|---|
 | 通常LIMEのクラス別説明が暗黙のOVRになるという問題 | LIMEtree | 既出 |
 | クラス別に独立した説明が異なる特徴構造を持つ問題 | LIMEtree | 既出 |
-| 指定したtarget–foilのOVO説明 | GANMEX、Local Foil Trees | 既出 |
-| LIME型局所サロゲートからfact–foilルールを出す | Local Foil Trees | 近縁例あり（木はfoil vs rest） |
 | $q_{c,d}=p_c/(p_c+p_d)$ | Pairwise coupling | 既出 |
 | $\log(p_c/p_d)$というlog-ratio | 統計学、多項ロジスティック回帰、Shapley compositions | 既出 |
 | LIME型摂動上でlog-oddsを局所回帰 | CLIMAX、Rahnama et al. | OVRまたは二値では既出 |
@@ -330,7 +314,6 @@ $p_c-p_d$ の直接Ridge回帰は、同じ設計で学習した通常LIMEの係�
 
 - Ribeiro, Singh, and Guestrin, *Why Should I Trust You? Explaining the Predictions of Any Classifier*, KDD 2016: <https://doi.org/10.1145/2939672.2939778>
 - Wu, Lin, and Weng, *Probability Estimates for Multi-class Classification by Pairwise Coupling*, JMLR 2004: <https://www.jmlr.org/papers/v5/wu04a.html>
-- Shih, Tien, and Karnin, *GANMEX: One-vs-One Attributions using GAN-based Model Explainability*, ICML 2021: <https://proceedings.mlr.press/v139/shih21a.html>
 - Zhou, Hooker, and Wang, *S-LIME: Stabilized-LIME for Model Explanation*, KDD 2021: <https://doi.org/10.1145/3447548.3467274>
 - Björklund, Mäkelä, and Puolamäki, *SLISEMAP*, Machine Learning 2023: <https://doi.org/10.1007/s10994-022-06261-1>
 - Vo et al., *An Additive Instance-Wise Approach to Multi-class Model Interpretation*, ICLR 2023: <https://openreview.net/forum?id=ho2VRvHjTg>
@@ -345,10 +328,7 @@ $p_c-p_d$ の直接Ridge回帰は、同じ設計で学習した通常LIMEの係�
 
 ### 参考にはするが、主要な新規性根拠にしない文献
 
-Local Foil Treesは、局所サロゲートによるfact–foil説明として重要な近縁研究だが、ICML workshop論文／preprintであるため、査読済み主要根拠と区別する。
-
-- van der Waa et al., *Contrastive Explanations with Local Foil Trees*, ICML WHI Workshop 2018: <https://research-portal.uu.nl/en/publications/contrastive-explanations-with-local-foil-trees-2/>
-
 LIPExは、確率分布全体を局所softmaxモデルで近似するため非常に近い発想を持つ。しかし、確認できた公開版はpreprintであり、ICLR 2024ではWithdrawn Submissionになっている。修論では関連案として触れてもよいが、「査読済みの確立した先行手法」として扱わない。
 
 - Zhu et al., *LIPEx: Locally Interpretable Probabilistic Explanations to Look Beyond the Top Classes*: <https://openreview.net/forum?id=R7946uagL2>
+
