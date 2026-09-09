@@ -53,7 +53,13 @@
 - Hiragino Sansでの実際の文字送り幅は未検証（QA環境にこのフォントがないため）。特に新規追加スライドのテキストボックス（目次の説明文、方式カードの短文など）は文字数を保守的に短くして余裕を持たせたが、実機での折り返し・はみ出しは要確認。
 - 実験結果・数値・考察の内容自体（研究面）には触れていない。
 
+## 追記：mainとのコンフリクト対応（同日）
+
+このブランチをpush・PR化（[#1](https://github.com/SoutaIkegame/Multi-Class-LIME-v2/pull/1)）した後、`main`側で`pptx/MIDTERM_PRESENTATION_WITH_RESULTS_V2_2026-09-09.pptx`が削除され、代わりに別系統・別内容の`pptx/MIDTERM_PRESENTATION_2026-09-12_IMPROVED.pptx`（31枚、画像追加済み、齊藤研究室名義のタイトル）が追加されていた。中身を確認したところ、IMPROVED版は本セッションで行ったフォント統一・目次divider・提案手法ページ再構成を含んでおらず、別ルートで手作業編集されたものと判断した。
+
+ユーザーに確認の上、**このブランチの24枚版（WITH_RESULTS_V2、本セッションの編集済み）を残す**方針で`git merge origin/main`のmodify/delete競合を解決した（`git add`でこちら側の内容を採用）。`MIDTERM_PRESENTATION_2026-09-12_IMPROVED.pptx`自体は削除せず、mainから取り込んだまま残している。IMPROVED版へ本セッションの編集内容を反映する作業は行っていない。
+
 ## 次に行うこと
 
 1. ユーザーが手元のPowerPointでレイアウト崩れ（特にテキストのはみ出し・重なり）がないか確認し、あれば修正する。
-2. 問題なければユーザーの指示でこのブランチをpushし、必要ならPRを作成する（本セッションでは未実施）。
+2. `MIDTERM_PRESENTATION_2026-09-12_IMPROVED.pptx`と`MIDTERM_PRESENTATION_WITH_RESULTS_V2_2026-09-09.pptx`という2系統のデッキが並存している状態を、ユーザーがどちらか一本化するか、使い分けを決める必要がある。
