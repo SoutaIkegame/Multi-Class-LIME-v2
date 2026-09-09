@@ -88,6 +88,60 @@ def fit_onevsrest_lasso(Z: np.ndarray, weights: np.ndarray, proba: np.ndarray, x
     return out
 
 
+def fit_pairwise_lime(Z: np.ndarray, weights: np.ndarray, proba: np.ndarray,
+                      c1: int, c2: int, x: np.ndarray,
+                      eps: float = 1e-6, alpha: float = 1.0) -> dict:
+    """Ordinary linear LIME applied after reducing the multiclass black-box
+    output to the selected pair.
+
+    The original multiclass model is not retrained.  Its two selected
+    probabilities are renormalized to the binary conditional probability
+
+        q(z) = (p_c1(z)+eps) / (p_c1(z)+p_c2(z)+2*eps),
+
+    and a standard weighted Ridge surrogate regresses q directly.  The
+    c1-vs-c2 decision threshold is q=0.5, so callers comparing pairwise
+    signs should use ``intercept - 0.5`` with the returned coefficients.
+    """
+    q = (proba[:, c1] + eps) / (proba[:, c1] + proba[:, c2] + 2 * eps)
+    model = Ridge(alpha=alpha)
+    model.fit(Z, q, sample_weight=weights)
+    local_pred = float(model.predict(x[None, :])[0])
+    return {
+        "coef": model.coef_.copy(),
+        "intercept": float(model.intercept_),
+        "local_pred": local_pred,
+    }
+
+
+def fit_pairwise_lime_lasso(Z: np.ndarray, weights: np.ndarray, proba: np.ndarray,
+                            c1: int, c2: int, x: np.ndarray, K: int,
+                            eps: float = 1e-6, alpha: float = 1.0) -> dict:
+    """Top-K LIME counterpart of :func:`fit_pairwise_lime`.
+
+    Lasso first selects K features, after which weighted Ridge is refit on
+    those features.  This select-then-refit structure matches ordinary
+    LIME's ``lasso_path`` feature-selection mode followed by its default
+    Ridge surrogate.  The selected set is obtained with this repository's
+    existing Lasso approximation so it remains aligned with the other sparse
+    experiment variants.
+    """
+    q = (proba[:, c1] + eps) / (proba[:, c1] + proba[:, c2] + 2 * eps)
+    selector = _sparsest_lasso_with_at_least_k(Z, weights, q, K)
+    idx = np.argsort(-np.abs(selector.coef_))[:K]
+    model = Ridge(alpha=alpha)
+    model.fit(Z[:, idx], q, sample_weight=weights)
+    coef_masked = np.zeros(Z.shape[1], dtype=float)
+    coef_masked[idx] = model.coef_
+    intercept = float(model.intercept_)
+    return {
+        "coef": coef_masked,
+        "intercept": intercept,
+        "local_pred": float(intercept + coef_masked @ x),
+        "selected": frozenset(idx.tolist()),
+    }
+
+
 def fit_contrastive(Z: np.ndarray, weights: np.ndarray, proba: np.ndarray, c1: int, c2: int,
                      x: np.ndarray, eps: float = 1e-6, alpha: float = 1.0) -> dict:
     """"Contrastive LIME": regress log((p_c1+eps)/(p_c2+eps)) on z, rather

@@ -1,0 +1,533 @@
+{"kind":"deck","id":"pr/vfdo8a","name":"Deck"}
+{"kind":"layout","layoutId":"/ppt/slideMasters/slideMaster1.xml","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout1.xml","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/y90nupkv","slide":1,"title":"ゼミ中間発表","textShapes":6}
+{"kind":"shape","id":"sh/vmdcj2xw","slide":1,"name":"正方形/長方形 12","bbox":[0,0,18,720]}
+{"kind":"textbox","id":"sh/547294r6","slide":1,"name":"正方形/長方形 1","text":"ゼミ中間発表","textPreview":"ゼミ中間発表","textChars":6,"textLines":1,"bbox":[70,64,300,34]}
+{"kind":"textbox","id":"sh/k3yl0zql","slide":1,"name":"cover-title","text":"多クラス分類における\nLIMEの説明方法と課題","textPreview":"多クラス分類における | LIMEの説明方法と課題","textChars":23,"textLines":2,"bbox":[70,170,760,180]}
+{"kind":"textbox","id":"sh/7qp4be9c","slide":1,"name":"正方形/長方形 3","text":"局所説明の基本から、説明方法の拡張へ","textPreview":"局所説明の基本から、説明方法の拡張へ","textChars":18,"textLines":1,"bbox":[72,374,700,44]}
+{"kind":"shape","id":"sh/3qxwn2x8","slide":1,"name":"直線矢印コネクタ 16","bbox":[72,470,480,0]}
+{"kind":"textbox","id":"sh/ts7md4r2","slide":1,"name":"正方形/長方形 5","text":"池亀 颯太　M1","textPreview":"池亀 颯太　M1","textChars":8,"textLines":1,"bbox":[72,500,400,40]}
+{"kind":"textbox","id":"sh/sryl4zqx","slide":1,"name":"正方形/長方形 6","text":"2026年9月12日（土）","textPreview":"2026年9月12日（土）","textChars":13,"textLines":1,"bbox":[72,548,400,32]}
+{"kind":"shape","id":"sh/fu94fe98","slide":1,"name":"正方形/長方形 7","bbox":[900,100,230,230]}
+{"kind":"shape","id":"sh/utg3698n","slide":1,"name":"正方形/長方形 8","bbox":[1015,215,170,170]}
+{"kind":"shape","id":"sh/wn6dc7eh","slide":1,"name":"円/楕円 9","bbox":[850,355,180,180]}
+{"kind":"shape","id":"sh/e94v2hon","slide":1,"name":"直線矢印コネクタ 22","bbox":[820,580,340,0]}
+{"kind":"textbox","id":"sh/ul4vaxgb","slide":1,"name":"正方形/長方形 11","text":"LOCAL  →  MULTI-CLASS","textPreview":"LOCAL  →  MULTI-CLASS","textChars":21,"textLines":1,"bbox":[835,600,330,30]}
+{"kind":"notes","id":"nt/y90nupkv","slide":1,"text":"LIMEの基本的な仕組みを二値分類の例から説明し、Slide 6以降で多クラス分類へ話を広げる。今回はFisherの提案手法や実験結果には踏み込まず、研究の出発点を整理する。\n\n[Sources]\n- https://arxiv.org/abs/1602.04938"}
+{"kind":"slide","id":"sl/hwbqtkby","slide":2,"title":"XAIは予測理由を見える形にする","textShapes":21}
+{"kind":"shape","id":"sh/ba9cn6l4","slide":2,"name":"正方形/長方形 34","bbox":[54,44,12,48]}
+{"kind":"textbox","id":"sh/9072xkry","slide":2,"name":"slide-2-title","text":"XAIは予測理由を見える形にする","textPreview":"XAIは予測理由を見える形にする","textChars":16,"textLines":1,"bbox":[84,38,1110,62]}
+{"kind":"textbox","id":"sh/ozy1ofad","slide":2,"name":"slide-2-subtitle","text":"モデルを理解するだけでなく、誤学習を見つけるデバッグにも使える","textPreview":"モデルを理解するだけでなく、誤学習を見つけるデバッグにも使える","textChars":31,"textLines":1,"bbox":[84,101,1110,34]}
+{"kind":"textbox","id":"sh/b29kza94","slide":2,"name":"正方形/長方形 3","text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1180,676,50,22]}
+{"kind":"shape","id":"sh/a10jqpsj","slide":2,"name":"右矢印 4","bbox":[320,278,68,34]}
+{"kind":"shape","id":"sh/x4r21kru","slide":2,"name":"右矢印 5","bbox":[610,278,68,34]}
+{"kind":"shape","id":"sh/w3i1sfa9","slide":2,"name":"右矢印 6","bbox":[865,278,68,34]}
+{"kind":"shape","id":"sh/r65knqtk","slide":2,"name":"正方形/長方形 7","bbox":[60,165,250,350]}
+{"kind":"textbox","id":"sh/q5wjelsz","slide":2,"name":"正方形/長方形 8","text":"乗客データ","textPreview":"乗客データ","textChars":5,"textLines":1,"bbox":[84,188,190,34]}
+{"kind":"shape","id":"sh/fypcfqdg","slide":2,"name":"直線矢印コネクタ 43","bbox":[84,232,180,0]}
+{"kind":"textbox","id":"sh/9wnqhczy","slide":2,"name":"正方形/長方形 10","text":"年齢　　　 22歳\n性別　　　 女性\n客室等級　 1等\n運賃　　　 71\n同乗家族　 1人","textPreview":"年齢　　　 22歳 | 性別　　　 女性 | 客室等級　 1等 | 運賃　　　 71 | 同乗家族　 1人","textChars":45,"textLines":5,"bbox":[84,255,190,190]}
+{"kind":"textbox","id":"sh/mtwrmxg7","slide":2,"name":"正方形/長方形 11","text":"Titanic：模式例","textPreview":"Titanic：模式例","textChars":11,"textLines":1,"bbox":[84,466,180,25]}
+{"kind":"shape","id":"sh/nu58f2hs","slide":2,"name":"正方形/長方形 12","bbox":[390,225,210,140]}
+{"kind":"textbox","id":"sh/wjy9sry9","slide":2,"name":"正方形/長方形 13","text":"BLACK\nBOX","textPreview":"BLACK | BOX","textChars":9,"textLines":2,"bbox":[390,252,210,88]}
+{"kind":"shape","id":"sh/xk7qlczu","slide":2,"name":"正方形/長方形 14","bbox":[680,205,175,180]}
+{"kind":"textbox","id":"sh/ahwrqhgj","slide":2,"name":"正方形/長方形 15","text":"予測","textPreview":"予測","textChars":2,"textLines":1,"bbox":[704,228,130,30]}
+{"kind":"textbox","id":"sh/bip8jmho","slide":2,"name":"正方形/長方形 16","text":"生存確率","textPreview":"生存確率","textChars":4,"textLines":1,"bbox":[704,274,130,28]}
+{"kind":"textbox","id":"sh/cnupgny5","slide":2,"name":"正方形/長方形 17","text":"0.78","textPreview":"0.78","textChars":4,"textLines":1,"bbox":[704,305,130,48]}
+{"kind":"shape","id":"sh/do3q9szq","slide":2,"name":"正方形/長方形 18","bbox":[955,167.16,280,350]}
+{"kind":"textbox","id":"sh/t8byxkn2","slide":2,"name":"正方形/長方形 19","text":"XAIによる説明","textPreview":"XAIによる説明","textChars":8,"textLines":1,"bbox":[966,188,228,34]}
+{"kind":"textbox","id":"sh/s72xofmh","slide":2,"name":"正方形/長方形 20","text":"運賃","textPreview":"運賃","textChars":2,"textLines":1,"bbox":[966,250,90,26]}
+{"kind":"shape","id":"sh/76twva5c","slide":2,"name":"正方形/長方形 21","bbox":[1050,252,115,20]}
+{"kind":"textbox","id":"sh/65kfmpor","slide":2,"name":"正方形/長方形 22","text":"+0.50","textPreview":"+0.50","textChars":5,"textLines":1,"bbox":[1160,247,60,28]}
+{"kind":"textbox","id":"sh/hcvy14ne","slide":2,"name":"正方形/長方形 23","text":"年齢","textPreview":"年齢","textChars":2,"textLines":1,"bbox":[966,302,90,26]}
+{"kind":"shape","id":"sh/gbmxszmt","slide":2,"name":"正方形/長方形 24","bbox":[1050,304,45,20]}
+{"kind":"textbox","id":"sh/fadgzu58","slide":2,"name":"正方形/長方形 25","text":"−0.20","textPreview":"−0.20","textChars":5,"textLines":1,"bbox":[1160,299,60,28]}
+{"kind":"textbox","id":"sh/u94fqp4n","slide":2,"name":"正方形/長方形 26","text":"客室等級","textPreview":"客室等級","textChars":4,"textLines":1,"bbox":[966,354,90,26]}
+{"kind":"shape","id":"sh/p0vy54na","slide":2,"name":"正方形/長方形 27","bbox":[1050,356,70,20]}
+{"kind":"textbox","id":"sh/4zmxwzmp","slide":2,"name":"正方形/長方形 28","text":"+0.15","textPreview":"+0.15","textChars":5,"textLines":1,"bbox":[1160,351,60,28]}
+{"kind":"textbox","id":"sh/mlgvq147","slide":2,"name":"正方形/長方形 29","text":"理由を検査できる","textPreview":"理由を検査できる","textChars":8,"textLines":1,"bbox":[966,438,228,34]}
+{"kind":"shape","id":"sh/nmpcj6ls","slide":2,"name":"正方形/長方形 30","bbox":[60,555,1160,92]}
+{"kind":"textbox","id":"sh/onydsbmd","slide":2,"name":"正方形/長方形 31","text":"DEBUG","textPreview":"DEBUG","textChars":5,"textLines":1,"bbox":[84,580,115,34]}
+{"kind":"textbox","id":"sh/9o7ulg3y","slide":2,"name":"正方形/長方形 32","text":"説明に「乗客ID」など本質的でない特徴が大きく現れたら、モデルの誤学習を疑う","textPreview":"説明に「乗客ID」など本質的でない特徴が大きく現れたら、モデルの誤学習を疑う","textChars":38,"textLines":1,"bbox":[210,574,965,50]}
+{"kind":"textbox","id":"sh/a9gvulkj","slide":2,"name":"正方形/長方形 33","text":"※ 確率と特徴量の重みは説明用の模式値","textPreview":"※ 確率と特徴量の重みは説明用の模式値","textChars":19,"textLines":1,"bbox":[835,650,340,20]}
+{"kind":"notes","id":"nt/hwbqtkby","slide":2,"text":"XAIはExplainable Artificial Intelligenceの略。予測値だけでは分からない判断根拠を示し、予測の確認だけでなく、モデルが本質的でない特徴を学んでいないかを調べるデバッグにも役立つ。図の値は実験結果ではなく模式例。\n\n[Sources]\n- https://arxiv.org/abs/1602.04938"}
+{"kind":"slide","id":"sl/ofy9wn61","slide":3,"title":"LIMEは予測点の周辺だけを単純化する","textShapes":11}
+{"kind":"shape","id":"sh/hwzihwzi","slide":3,"name":"正方形/長方形 37","bbox":[54,44,12,48]}
+{"kind":"textbox","id":"sh/cza94vmx","slide":3,"name":"slide-3-title","text":"LIMEは予測点の周辺だけを単純化する","textPreview":"LIMEは予測点の周辺だけを単純化する","textChars":19,"textLines":1,"bbox":[84,38,1110,62]}
+{"kind":"textbox","id":"sh/d0jax03i","slide":3,"name":"slide-3-subtitle","text":"複雑なモデル全体ではなく、説明したい入力の近くを近似する","textPreview":"複雑なモデル全体ではなく、説明したい入力の近くを近似する","textChars":28,"textLines":1,"bbox":[84,101,1110,34]}
+{"kind":"textbox","id":"sh/298ryl4v","slide":3,"name":"正方形/長方形 3","text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1180,676,50,22]}
+{"kind":"textbox","id":"sh/3ah8rqlg","slide":3,"name":"正方形/長方形 4","text":"LIME","textPreview":"LIME","textChars":4,"textLines":1,"bbox":[62,174,300,48]}
+{"kind":"textbox","id":"sh/obq90bml","slide":3,"name":"正方形/長方形 5","text":"Local\nInterpretable\nModel-agnostic\nExplanations","textPreview":"Local | Interpretable | Model-agnostic | Explanations","textChars":47,"textLines":4,"bbox":[62,235,340,180]}
+{"kind":"textbox","id":"sh/pcjqtg36","slide":3,"name":"正方形/長方形 6","text":"モデル内部を見ず、入力と予測だけを使う","textPreview":"モデル内部を見ず、入力と予測だけを使う","textChars":19,"textLines":1,"bbox":[62,450,340,58]}
+{"kind":"shape","id":"sh/m5cra54z","slide":3,"name":"正方形/長方形 7","bbox":[62,552,340,74]}
+{"kind":"textbox","id":"sh/n6ls3alk","slide":3,"name":"正方形/長方形 8","text":"全体は複雑でも、\n狭い範囲なら単純化できる","textPreview":"全体は複雑でも、 | 狭い範囲なら単純化できる","textChars":21,"textLines":2,"bbox":[82,565,300,48]}
+{"kind":"shape","id":"sh/n2l4fq98","slide":3,"name":"正方形/長方形 9","bbox":[455,160,760,480]}
+{"kind":"shape","id":"sh/0ve10ru9","slide":3,"name":"直線矢印コネクタ 47","bbox":[520,470,120,70]}
+{"kind":"shape","id":"sh/1wnitwvu","slide":3,"name":"直線矢印コネクタ 48","bbox":[640,330,90,140]}
+{"kind":"shape","id":"sh/v29cfu18","slide":3,"name":"直線矢印コネクタ 49","bbox":[730,330,105,55]}
+{"kind":"shape","id":"sh/a10b6p03","slide":3,"name":"直線矢印コネクタ 50","bbox":[835,295,110,90]}
+{"kind":"shape","id":"sh/xoruhkje","slide":3,"name":"直線矢印コネクタ 51","bbox":[945,295,150,145]}
+{"kind":"textbox","id":"sh/x8nml0ra","slide":3,"name":"正方形/長方形 15","text":"ブラックボックスの複雑な境界","textPreview":"ブラックボックスの複雑な境界","textChars":14,"textLines":1,"bbox":[845,186,300,28]}
+{"kind":"shape","id":"sh/w7ulsvqp","slide":3,"name":"円/楕円 16","bbox":[510,220,16,16]}
+{"kind":"shape","id":"sh/ja54na9g","slide":3,"name":"円/楕円 17","bbox":[575,260,16,16]}
+{"kind":"shape","id":"sh/i9w3u58v","slide":3,"name":"円/楕円 18","bbox":[625,205,16,16]}
+{"kind":"shape","id":"sh/e10f2twf","slide":3,"name":"円/楕円 19","bbox":[675,285,16,16]}
+{"kind":"shape","id":"sh/f29gbyx0","slide":3,"name":"円/楕円 20","bbox":[565,375,16,16]}
+{"kind":"shape","id":"sh/03ix43e5","slide":3,"name":"円/楕円 21","bbox":[650,410,16,16]}
+{"kind":"shape","id":"sh/14ryd8fq","slide":3,"name":"円/楕円 22","bbox":[760,220,16,16]}
+{"kind":"shape","id":"sh/6d0fytg3","slide":3,"name":"円/楕円 23","bbox":[805,275,16,16]}
+{"kind":"shape","id":"sh/re9g7yxo","slide":3,"name":"円/楕円 24","bbox":[920,505,16,16]}
+{"kind":"shape","id":"sh/sfix03y9","slide":3,"name":"円/楕円 25","bbox":[1000,460,16,16]}
+{"kind":"shape","id":"sh/tgry9ofu","slide":3,"name":"円/楕円 26","bbox":[1080,520,16,16]}
+{"kind":"shape","id":"sh/a9kfadwn","slide":3,"name":"円/楕円 27","bbox":[1120,405,16,16]}
+{"kind":"shape","id":"sh/batgjixs","slide":3,"name":"円/楕円 28","bbox":[980,365,16,16]}
+{"kind":"shape","id":"sh/l4fi9cza","slide":3,"name":"円/楕円 29","bbox":[870,470,16,16]}
+{"kind":"shape","id":"sh/k3m1g7yp","slide":3,"name":"円/楕円 30","bbox":[750,540,16,16]}
+{"kind":"shape","id":"sh/z2d07mh4","slide":3,"name":"円/楕円 31","bbox":[700,315,250,220]}
+{"kind":"shape","id":"sh/y14jehgj","slide":3,"name":"円/楕円 32","bbox":[812,410,24,24]}
+{"kind":"textbox","id":"sh/x0vi5czy","slide":3,"name":"正方形/長方形 33","text":"説明対象 x","textPreview":"説明対象 x","textChars":6,"textLines":1,"bbox":[840,410,130,28]}
+{"kind":"shape","id":"sh/na10bm58","slide":3,"name":"直線矢印コネクタ 71","bbox":[735,375,185,105]}
+{"kind":"textbox","id":"sh/byd032h8","slide":3,"name":"正方形/長方形 35","text":"局所サロゲート","textPreview":"局所サロゲート","textChars":7,"textLines":1,"bbox":[705,548,210,28]}
+{"kind":"textbox","id":"sh/ax4zax0n","slide":3,"name":"正方形/長方形 36","text":"この円の中で元モデルをまねる","textPreview":"この円の中で元モデルをまねる","textChars":14,"textLines":1,"bbox":[864,580,300,28]}
+{"kind":"notes","id":"nt/ofy9wn61","slide":3,"text":"LIMEはブラックボックス全体を一本の単純なモデルに置き換えるのではない。説明対象の入力周辺だけに重みを置き、その狭い範囲で元モデルと似た出力を返す解釈可能なモデルを学習する。したがって説明は局所的であり、別の入力では別の説明になりうる。\n\n[Sources]\n- https://arxiv.org/abs/1602.04938"}
+{"kind":"slide","id":"sl/jyx0ra1s","slide":4,"title":"LIMEは5段階で局所説明を作る","textShapes":22}
+{"kind":"shape","id":"sh/wzex4z2p","slide":4,"name":"正方形/長方形 35","bbox":[54,44,12,48]}
+{"kind":"textbox","id":"sh/1cj2d8b6","slide":4,"name":"slide-4-title","text":"LIMEは5段階で局所説明を作る","textPreview":"LIMEは5段階で局所説明を作る","textChars":16,"textLines":1,"bbox":[84,38,1110,62]}
+{"kind":"textbox","id":"sh/0ba143al","slide":4,"name":"slide-4-subtitle","text":"処理の流れと目的関数は「忠実性」と「単純さ」でつながる","textPreview":"処理の流れと目的関数は「忠実性」と「単純さ」でつながる","textChars":27,"textLines":1,"bbox":[84,101,1110,34]}
+{"kind":"textbox","id":"sh/rm1k7yt4","slide":4,"name":"正方形/長方形 3","text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1180,676,50,22]}
+{"kind":"shape","id":"sh/ql8jytsj","slide":4,"name":"右矢印 4","bbox":[259,225,70,28]}
+{"kind":"shape","id":"sh/doj29oba","slide":4,"name":"右矢印 5","bbox":[499,225,70,28]}
+{"kind":"shape","id":"sh/sna103ap","slide":4,"name":"右矢印 6","bbox":[739,225,70,28]}
+{"kind":"shape","id":"sh/3ihk3et8","slide":4,"name":"右矢印 7","bbox":[979,225,70,28]}
+{"kind":"shape","id":"sh/ih8ju9sn","slide":4,"name":"正方形/長方形 8","bbox":[54,168,205,145]}
+{"kind":"textbox","id":"sh/kbm987y5","slide":4,"name":"正方形/長方形 9","text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[72,184,50,26]}
+{"kind":"textbox","id":"sh/5cva1cfq","slide":4,"name":"正方形/長方形 10","text":"説明対象を\n1つ選ぶ","textPreview":"説明対象を | 1つ選ぶ","textChars":10,"textLines":2,"bbox":[72,222,169,66]}
+{"kind":"shape","id":"sh/i94r6xgz","slide":4,"name":"正方形/長方形 11","bbox":[294,168,205,145]}
+{"kind":"textbox","id":"sh/jadsz2xk","slide":4,"name":"正方形/長方形 12","text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[312,184,50,26]}
+{"kind":"textbox","id":"sh/w72947yt","slide":4,"name":"正方形/長方形 13","text":"近傍サンプルを\n多数作る","textPreview":"近傍サンプルを | 多数作る","textChars":12,"textLines":2,"bbox":[312,222,169,66]}
+{"kind":"shape","id":"sh/x8vaxsfe","slide":4,"name":"正方形/長方形 14","bbox":[534,168,205,145]}
+{"kind":"textbox","id":"sh/a5kr2xg3","slide":4,"name":"正方形/長方形 15","text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[552,184,50,26]}
+{"kind":"textbox","id":"sh/v6tsv2xo","slide":4,"name":"正方形/長方形 16","text":"ブラックボックスの\n予測を得る","textPreview":"ブラックボックスの | 予測を得る","textChars":15,"textLines":2,"bbox":[552,222,169,66]}
+{"kind":"shape","id":"sh/g36tgryd","slide":4,"name":"正方形/長方形 17","bbox":[774,168,205,145]}
+{"kind":"textbox","id":"sh/h4fa9wfy","slide":4,"name":"正方形/長方形 18","text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[792,184,50,26]}
+{"kind":"textbox","id":"sh/p0batw72","slide":4,"name":"正方形/長方形 19","text":"近いサンプルを\n強く重み付け","textPreview":"近いサンプルを | 強く重み付け","textChars":14,"textLines":2,"bbox":[792,222,169,66]}
+{"kind":"shape","id":"sh/oz29krqh","slide":4,"name":"正方形/長方形 20","bbox":[1014,168,205,145]}
+{"kind":"textbox","id":"sh/3ytsrmpw","slide":4,"name":"正方形/長方形 21","text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1032,184,50,26]}
+{"kind":"textbox","id":"sh/2xkrih8b","slide":4,"name":"正方形/長方形 22","text":"単純な局所モデルを\n学習する","textPreview":"単純な局所モデルを | 学習する","textChars":14,"textLines":2,"bbox":[1032,222,169,66]}
+{"kind":"shape","id":"sh/xsfqxs36","slide":4,"name":"直線矢印コネクタ 58","bbox":[55,353,1160,0]}
+{"kind":"textbox","id":"sh/gv29g7q5","slide":4,"name":"正方形/長方形 24","text":"LIMEの目的関数","textPreview":"LIMEの目的関数","textChars":9,"textLines":1,"bbox":[70,385,260,36]}
+{"kind":"textbox","id":"sh/fu9sn2p0","slide":4,"name":"正方形/長方形 25","text":"ξ(x) =","textPreview":"ξ(x) =","textChars":6,"textLines":1,"bbox":[260,445,150,50]}
+{"kind":"textbox","id":"sh/et0reh8f","slide":4,"name":"正方形/長方形 26","text":"arg min","textPreview":"arg min","textChars":7,"textLines":1,"bbox":[410,434,160,46]}
+{"kind":"textbox","id":"sh/tsrqlc7u","slide":4,"name":"正方形/長方形 27","text":"g ∈ G","textPreview":"g ∈ G","textChars":5,"textLines":1,"bbox":[435,478,110,24]}
+{"kind":"textbox","id":"sh/sri9s7q9","slide":4,"name":"正方形/長方形 28","text":"{ L(f, g, πₓ) + Ω(g) }","textPreview":"{ L(f, g, πₓ) + Ω(g) }","textChars":22,"textLines":1,"bbox":[570,445,470,50]}
+{"kind":"shape","id":"sh/ilwf69kv","slide":4,"name":"正方形/長方形 29","bbox":[160,530,420,78]}
+{"kind":"textbox","id":"sh/jm5gze1g","slide":4,"name":"正方形/長方形 30","text":"L(f, g, πₓ)\n対象点の近くで予測を再現","textPreview":"L(f, g, πₓ) | 対象点の近くで予測を再現","textChars":24,"textLines":2,"bbox":[180,541,380,56]}
+{"kind":"textbox","id":"sh/knex8j21","slide":4,"name":"正方形/長方形 31","text":"＋","textPreview":"＋","textChars":1,"textLines":1,"bbox":[608,545,58,50]}
+{"kind":"shape","id":"sh/5ony1oj6","slide":4,"name":"正方形/長方形 32","bbox":[690,530,420,78]}
+{"kind":"textbox","id":"sh/axcf29kj","slide":4,"name":"正方形/長方形 33","text":"Ω(g)\n人が理解できる程度に単純","textPreview":"Ω(g) | 人が理解できる程度に単純","textChars":17,"textLines":2,"bbox":[710,541,380,56]}
+{"kind":"textbox","id":"sh/vy5gbe14","slide":4,"name":"正方形/長方形 34","text":"良い説明 ＝ 局所的な再現性 ＋ 説明の単純さ","textPreview":"良い説明 ＝ 局所的な再現性 ＋ 説明の単純さ","textChars":23,"textLines":1,"bbox":[350,632,580,30]}
+{"kind":"notes","id":"nt/jyx0ra1s","slide":4,"text":"1件の入力を選び、周辺に人工サンプルを生成し、ブラックボックスの予測を取得する。元の入力に近いサンプルほど強く重み付けし、少数の特徴を使う局所モデルを学習する。目的関数の第1項は局所的な予測のずれ、第2項は説明モデルの複雑さを表す。\n\n[Sources]\n- https://arxiv.org/abs/1602.04938\n- https://github.com/marcotcr/lime"}
+{"kind":"slide","id":"sl/i107q5of","slide":5,"title":"LIMEは「対象クラス vs その他」を説明する","textShapes":19}
+{"kind":"shape","id":"sh/5o7mhcju","slide":5,"name":"正方形/長方形 27","bbox":[54,44,12,48]}
+{"kind":"textbox","id":"sh/dgbulwnm","slide":5,"name":"slide-5-title","text":"LIMEは「対象クラス vs その他」を説明する","textPreview":"LIMEは「対象クラス vs その他」を説明する","textChars":24,"textLines":1,"bbox":[84,38,1110,62]}
+{"kind":"textbox","id":"sh/cf2tcr61","slide":5,"name":"slide-5-subtitle","text":"まずは生存・非生存の2値分類として読む","textPreview":"まずは生存・非生存の2値分類として読む","textChars":19,"textLines":1,"bbox":[84,101,1110,34]}
+{"kind":"textbox","id":"sh/z2tcnm5s","slide":5,"name":"正方形/長方形 3","text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1180,676,50,22]}
+{"kind":"textbox","id":"sh/yhkbe1o7","slide":5,"name":"正方形/長方形 4","text":"「生存」に対する局所的な特徴の重み","textPreview":"「生存」に対する局所的な特徴の重み","textChars":17,"textLines":1,"bbox":[80,160,690,34]}
+{"kind":"shape","id":"sh/xwn2dszi","slide":5,"name":"直線矢印コネクタ 32","bbox":[430,205,0,310]}
+{"kind":"textbox","id":"sh/032tgr6d","slide":5,"name":"正方形/長方形 6","text":"生存を抑える","textPreview":"生存を抑える","textChars":6,"textLines":1,"bbox":[250,205,160,26]}
+{"kind":"textbox","id":"sh/n6dcr65o","slide":5,"name":"正方形/長方形 7","text":"生存を支持する","textPreview":"生存を支持する","textChars":7,"textLines":1,"bbox":[450,205,180,26]}
+{"kind":"textbox","id":"sh/m5kbi1oj","slide":5,"name":"正方形/長方形 8","text":"運賃","textPreview":"運賃","textChars":2,"textLines":1,"bbox":[80,255,235,28]}
+{"kind":"shape","id":"sh/w32dkbuh","slide":5,"name":"正方形/長方形 9","bbox":[430,260,180,22]}
+{"kind":"textbox","id":"sh/x4vedgvm","slide":5,"name":"正方形/長方形 10","text":"+0.50","textPreview":"+0.50","textChars":5,"textLines":1,"bbox":[620,255,74,28]}
+{"kind":"textbox","id":"sh/ahkvi1cb","slide":5,"name":"正方形/長方形 11","text":"客室等級","textPreview":"客室等級","textChars":4,"textLines":1,"bbox":[80,320,235,28]}
+{"kind":"shape","id":"sh/v2twb6dw","slide":5,"name":"正方形/長方形 12","bbox":[430,325,115.2,22]}
+{"kind":"textbox","id":"sh/k7mxovud","slide":5,"name":"正方形/長方形 13","text":"+0.32","textPreview":"+0.32","textChars":5,"textLines":1,"bbox":[555.2,320,74,28]}
+{"kind":"textbox","id":"sh/58vehgvy","slide":5,"name":"正方形/長方形 14","text":"年齢","textPreview":"年齢","textChars":2,"textLines":1,"bbox":[80,385,235,28]}
+{"kind":"shape","id":"sh/i54fmlc7","slide":5,"name":"正方形/長方形 15","bbox":[358,390,72,22]}
+{"kind":"textbox","id":"sh/j6dwfqds","slide":5,"name":"正方形/長方形 16","text":"-0.20","textPreview":"-0.20","textChars":5,"textLines":1,"bbox":[286,385,64,28]}
+{"kind":"textbox","id":"sh/sb6xsvu9","slide":5,"name":"正方形/長方形 17","text":"同乗家族数","textPreview":"同乗家族数","textChars":5,"textLines":1,"bbox":[80,450,235,28]}
+{"kind":"shape","id":"sh/tcfel0vu","slide":5,"name":"正方形/長方形 18","bbox":[379.6,455,50.4,22]}
+{"kind":"textbox","id":"sh/hgrmpwj2","slide":5,"name":"正方形/長方形 19","text":"-0.14","textPreview":"-0.14","textChars":5,"textLines":1,"bbox":[307.6,450,64,28]}
+{"kind":"shape","id":"sh/gfi5grih","slide":5,"name":"正方形/長方形 20","bbox":[850,175,330,310]}
+{"kind":"textbox","id":"sh/fe94nm1w","slide":5,"name":"正方形/長方形 21","text":"説明の読み方","textPreview":"説明の読み方","textChars":6,"textLines":1,"bbox":[880,202,270,34]}
+{"kind":"textbox","id":"sh/ud0ne10b","slide":5,"name":"正方形/長方形 22","text":"正の重み\n生存確率を上げる方向\n\n負の重み\n生存確率を下げる方向\n\n絶対値\n局所モデル内の影響の強さ","textPreview":"正の重み | 生存確率を上げる方向 |  | 負の重み | 生存確率を下げる方向 |  | 絶対値 | 局所モデル内の影響の強さ","textChars":50,"textLines":8,"bbox":[880,258,270,190]}
+{"kind":"shape","id":"sh/pkr6tgjy","slide":5,"name":"正方形/長方形 23","bbox":[80,555,1100,82]}
+{"kind":"textbox","id":"sh/4ji5kbid","slide":5,"name":"正方形/長方形 24","text":"注意","textPreview":"注意","textChars":2,"textLines":1,"bbox":[102,580,90,30]}
+{"kind":"textbox","id":"sh/3i94r61s","slide":5,"name":"正方形/長方形 25","text":"重みは因果効果ではなく、この乗客・生存クラス・この近傍だけの近似結果","textPreview":"重みは因果効果ではなく、この乗客・生存クラス・この近傍だけの近似結果","textChars":34,"textLines":1,"bbox":[208,574,920,44]}
+{"kind":"textbox","id":"sh/2h0ni107","slide":5,"name":"正方形/長方形 26","text":"※ 棒の値は説明用の模式値","textPreview":"※ 棒の値は説明用の模式値","textChars":13,"textLines":1,"bbox":[900,650,280,20]}
+{"kind":"notes","id":"nt/i107q5of","slide":5,"text":"LIMEは指定した1クラスの予測確率を1本の局所モデルで近似する。2値分類では生存対非生存として直感的に読める。LIME自体は2値分類専用ではないが、公式実装では指定ラベルの確率列ごとに局所回帰を学習するため、基本の説明単位は対象クラス対その他に近い。\n\n[Sources]\n- https://arxiv.org/abs/1602.04938\n- https://github.com/marcotcr/lime/blob/master/lime/lime_base.py"}
+{"kind":"slide","id":"sl/x8f69ofe","slide":6,"title":"多クラスLIMEでは、クラスごとに説明モデルを作る","textShapes":13}
+{"kind":"shape","id":"sh/pgbul0fu","slide":6,"name":"正方形/長方形 42","bbox":[54,44,12,48]}
+{"kind":"textbox","id":"sh/yhg7epsj","slide":6,"name":"slide-6-title","text":"多クラスLIMEでは、クラスごとに説明モデルを作る","textPreview":"多クラスLIMEでは、クラスごとに説明モデルを作る","textChars":25,"textLines":1,"bbox":[84,38,1110,62]}
+{"kind":"textbox","id":"sh/zi98nu94","slide":6,"name":"slide-6-subtitle","text":"2値的な説明を繰り返す、one-vs-rest型の展開","textPreview":"2値的な説明を繰り返す、one-vs-rest型の展開","textChars":27,"textLines":1,"bbox":[84,101,1110,34]}
+{"kind":"textbox","id":"sh/87ipkzal","slide":6,"name":"正方形/長方形 3","text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1180,676,50,22]}
+{"kind":"shape","id":"sh/98rqt4r6","slide":6,"name":"右矢印 4","bbox":[300,303,76,30]}
+{"kind":"shape","id":"sh/ml07i9sv","slide":6,"name":"右矢印 5","bbox":[585,195,82,24]}
+{"kind":"shape","id":"sh/7m98ru9g","slide":6,"name":"右矢印 6","bbox":[585,323,82,24]}
+{"kind":"shape","id":"sh/oryp8fah","slide":6,"name":"右矢印 7","bbox":[585,451,82,24]}
+{"kind":"shape","id":"sh/pc76hkr2","slide":6,"name":"正方形/長方形 8","bbox":[55,195,240,330]}
+{"kind":"textbox","id":"sh/h4bupgn6","slide":6,"name":"正方形/長方形 9","text":"共通の近傍","textPreview":"共通の近傍","textChars":5,"textLines":1,"bbox":[80,218,190,34]}
+{"kind":"shape","id":"sh/w32twb6l","slide":6,"name":"円/楕円 10","bbox":[92,285,14,14]}
+{"kind":"shape","id":"sh/v2tcn650","slide":6,"name":"円/楕円 11","bbox":[145,267,14,14]}
+{"kind":"shape","id":"sh/u1kbu1ov","slide":6,"name":"円/楕円 12","bbox":[195,295,14,14]}
+{"kind":"shape","id":"sh/5svutgni","slide":6,"name":"円/楕円 13","bbox":[110,350,14,14]}
+{"kind":"shape","id":"sh/47mt0b6x","slide":6,"name":"円/楕円 14","bbox":[170,335,22,22]}
+{"kind":"shape","id":"sh/j6dcr65c","slide":6,"name":"円/楕円 15","bbox":[225,365,14,14]}
+{"kind":"shape","id":"sh/i54bylor","slide":6,"name":"円/楕円 16","bbox":[130,420,14,14]}
+{"kind":"shape","id":"sh/twfux0ne","slide":6,"name":"円/楕円 17","bbox":[205,440,14,14]}
+{"kind":"shape","id":"sh/svmt4v6t","slide":6,"name":"円/楕円 18","bbox":[90,465,14,14]}
+{"kind":"textbox","id":"sh/cbe5g3ih","slide":6,"name":"正方形/長方形 19","text":"同じサンプル群を使う","textPreview":"同じサンプル群を使う","textChars":10,"textLines":1,"bbox":[78,485,195,24]}
+{"kind":"shape","id":"sh/dcnm98zm","slide":6,"name":"正方形/長方形 20","bbox":[380,255,200,128]}
+{"kind":"textbox","id":"sh/qpwnet0b","slide":6,"name":"正方形/長方形 21","text":"BLACK\nBOX","textPreview":"BLACK | BOX","textChars":9,"textLines":2,"bbox":[380,274,200,86]}
+{"kind":"shape","id":"sh/bq547yhw","slide":6,"name":"正方形/長方形 22","bbox":[675,150,520,100]}
+{"kind":"textbox","id":"sh/0fy5k3id","slide":6,"name":"正方形/長方形 23","text":"クラス A","textPreview":"クラス A","textChars":5,"textLines":1,"bbox":[696,168,125,30]}
+{"kind":"textbox","id":"sh/lg76d8zy","slide":6,"name":"正方形/長方形 24","text":"用の局所モデル","textPreview":"用の局所モデル","textChars":7,"textLines":1,"bbox":[696,203,150,24]}
+{"kind":"shape","id":"sh/ydgnit07","slide":6,"name":"正方形/長方形 25","bbox":[885,168,180,13]}
+{"kind":"shape","id":"sh/zep4byhs","slide":6,"name":"正方形/長方形 26","bbox":[885,191,108,13]}
+{"kind":"shape","id":"sh/gju58ji9","slide":6,"name":"正方形/長方形 27","bbox":[885,214,48,13]}
+{"kind":"shape","id":"sh/1k3mhozu","slide":6,"name":"正方形/長方形 28","bbox":[675,278,520,100]}
+{"kind":"textbox","id":"sh/jet8nm1c","slide":6,"name":"正方形/長方形 29","text":"クラス B","textPreview":"クラス B","textChars":5,"textLines":1,"bbox":[696,296,125,30]}
+{"kind":"textbox","id":"sh/idk7ehkr","slide":6,"name":"正方形/長方形 30","text":"用の局所モデル","textPreview":"用の局所モデル","textChars":7,"textLines":1,"bbox":[696,331,150,24]}
+{"kind":"shape","id":"sh/50bqpcj2","slide":6,"name":"正方形/長方形 31","bbox":[885,296,60,13]}
+{"kind":"shape","id":"sh/4f2pgr2h","slide":6,"name":"正方形/長方形 32","bbox":[885,319,144,13]}
+{"kind":"shape","id":"sh/va98j210","slide":6,"name":"正方形/長方形 33","bbox":[885,342,84,13]}
+{"kind":"shape","id":"sh/u907axkf","slide":6,"name":"正方形/長方形 34","bbox":[675,406,520,100]}
+{"kind":"textbox","id":"sh/hcrqlcj6","slide":6,"name":"正方形/長方形 35","text":"クラス C","textPreview":"クラス C","textChars":5,"textLines":1,"bbox":[696,424,125,30]}
+{"kind":"textbox","id":"sh/wbipc72l","slide":6,"name":"正方形/長方形 36","text":"用の局所モデル","textPreview":"用の局所モデル","textChars":7,"textLines":1,"bbox":[696,459,150,24]}
+{"kind":"shape","id":"sh/7698f214","slide":6,"name":"正方形/長方形 37","bbox":[885,424,84,13]}
+{"kind":"shape","id":"sh/m5076xkj","slide":6,"name":"正方形/長方形 38","bbox":[885,447,43.2,13]}
+{"kind":"shape","id":"sh/2dkbalg3","slide":6,"name":"正方形/長方形 39","bbox":[885,470,156,13]}
+{"kind":"shape","id":"sh/netcjqxo","slide":6,"name":"正方形/長方形 40","bbox":[250,565,780,66]}
+{"kind":"textbox","id":"sh/of2tcvy9","slide":6,"name":"正方形/長方形 41","text":"近傍は共有できるが、説明モデルと特徴重みはクラス別に学習される","textPreview":"近傍は共有できるが、説明モデルと特徴重みはクラス別に学習される","textChars":31,"textLines":1,"bbox":[275,582,730,32]}
+{"kind":"notes","id":"nt/x8f69ofe","slide":6,"text":"ここで初めて多クラス分類へ広げる。one-vs-restは各クラスについて、そのクラス対その他という二値問題を作る代表的な多クラス化戦略。LIMEも多クラス分類器へ適用できるが、指定したラベルの確率列をクラスごとに別々に近似する。近傍は共有できても、局所モデルと特徴選択は別々になる。\n\n[Sources]\n- https://arxiv.org/abs/1602.04938\n- https://github.com/marcotcr/lime/blob/master/lime/lime_base.py\n- https://scikit-learn.org/stable/modules/generated/sklearn.multiclass.OneVsRestClassifier.html"}
+{"kind":"slide","id":"sl/gnmp4jqx","slide":7,"title":"クラス別説明を並べるだけでは、全体像を読み取りにくい","textShapes":18}
+{"kind":"shape","id":"sh/x4j6p47q","slide":7,"name":"正方形/長方形 33","bbox":[54,44,12,48]}
+{"kind":"textbox","id":"sh/cb2tkvap","slide":7,"name":"slide-7-title","text":"クラス別説明を並べるだけでは、全体像を読み取りにくい","textPreview":"クラス別説明を並べるだけでは、全体像を読み取りにくい","textChars":26,"textLines":1,"bbox":[84,38,1110,62]}
+{"kind":"textbox","id":"sh/dcbud0ra","slide":7,"name":"slide-7-subtitle","text":"利用者が複数の特徴集合を見比べ、クラス差を再構成する必要がある","textPreview":"利用者が複数の特徴集合を見比べ、クラス差を再構成する必要がある","textChars":31,"textLines":1,"bbox":[84,101,1110,34]}
+{"kind":"textbox","id":"sh/ydkbm5sv","slide":7,"name":"正方形/長方形 3","text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1180,676,50,22]}
+{"kind":"textbox","id":"sh/zedcfa9g","slide":7,"name":"正方形/長方形 4","text":"クラス A","textPreview":"クラス A","textChars":5,"textLines":1,"bbox":[55,175,235,34]}
+{"kind":"shape","id":"sh/kra50jqh","slide":7,"name":"直線矢印コネクタ 38","bbox":[55,218,230,0]}
+{"kind":"textbox","id":"sh/l0vuh0rm","slide":7,"name":"正方形/長方形 6","text":"特徴1","textPreview":"特徴1","textChars":3,"textLines":1,"bbox":[55,250,85,25]}
+{"kind":"shape","id":"sh/eh0ba1sr","slide":7,"name":"正方形/長方形 7","bbox":[145,252,126,19]}
+{"kind":"textbox","id":"sh/fi9c369c","slide":7,"name":"正方形/長方形 8","text":"特徴2","textPreview":"特徴2","textChars":3,"textLines":1,"bbox":[55,335,85,25]}
+{"kind":"shape","id":"sh/baxkjqlk","slide":7,"name":"正方形/長方形 9","bbox":[145,337,91,19]}
+{"kind":"textbox","id":"sh/a9ojq5kz","slide":7,"name":"正方形/長方形 10","text":"特徴5","textPreview":"特徴5","textChars":3,"textLines":1,"bbox":[55,420,85,25]}
+{"kind":"shape","id":"sh/xcz2l03q","slide":7,"name":"正方形/長方形 11","bbox":[145,422,49,19]}
+{"kind":"textbox","id":"sh/cbq1sv25","slide":7,"name":"正方形/長方形 12","text":"クラス B","textPreview":"クラス B","textChars":5,"textLines":1,"bbox":[340,175,235,34]}
+{"kind":"shape","id":"sh/7yl8vy9s","slide":7,"name":"直線矢印コネクタ 46","bbox":[340,218,230,0]}
+{"kind":"textbox","id":"sh/25ojml43","slide":7,"name":"正方形/長方形 14","text":"特徴2","textPreview":"特徴2","textChars":3,"textLines":1,"bbox":[340,250,85,25]}
+{"kind":"shape","id":"sh/p8fih03e","slide":7,"name":"正方形/長方形 15","bbox":[430,252,119,19]}
+{"kind":"textbox","id":"sh/o761ov2t","slide":7,"name":"正方形/長方形 16","text":"特徴4","textPreview":"特徴4","textChars":3,"textLines":1,"bbox":[340,335,85,25]}
+{"kind":"shape","id":"sh/f2d0b6lc","slide":7,"name":"正方形/長方形 17","bbox":[430,337,81.2,19]}
+{"kind":"textbox","id":"sh/eh4jil4r","slide":7,"name":"正方形/長方形 18","text":"特徴1","textPreview":"特徴1","textChars":3,"textLines":1,"bbox":[340,420,85,25]}
+{"kind":"shape","id":"sh/id4ju1oz","slide":7,"name":"正方形/長方形 19","bbox":[430,422,42,19]}
+{"kind":"textbox","id":"sh/jedkn654","slide":7,"name":"正方形/長方形 20","text":"クラス C","textPreview":"クラス C","textChars":5,"textLines":1,"bbox":[625,175,235,34]}
+{"kind":"shape","id":"sh/adkbu1cv","slide":7,"name":"直線矢印コネクタ 54","bbox":[625,218,230,0]}
+{"kind":"textbox","id":"sh/50v2pgna","slide":7,"name":"正方形/長方形 22","text":"特徴3","textPreview":"特徴3","textChars":3,"textLines":1,"bbox":[625,250,85,25]}
+{"kind":"shape","id":"sh/q143ylov","slide":7,"name":"正方形/長方形 23","bbox":[715,252,128.8,19]}
+{"kind":"textbox","id":"sh/r2dkrq5g","slide":7,"name":"正方形/長方形 24","text":"特徴5","textPreview":"特徴5","textChars":3,"textLines":1,"bbox":[625,335,85,25]}
+{"kind":"shape","id":"sh/s3ml0v61","slide":7,"name":"正方形/長方形 25","bbox":[715,337,86.8,19]}
+{"kind":"textbox","id":"sh/d4f2t0nm","slide":7,"name":"正方形/長方形 26","text":"特徴2","textPreview":"特徴2","textChars":3,"textLines":1,"bbox":[625,420,85,25]}
+{"kind":"shape","id":"sh/e5o32lor","slide":7,"name":"正方形/長方形 27","bbox":[715,422,39.2,19]}
+{"kind":"shape","id":"sh/gbq5ojih","slide":7,"name":"直線矢印コネクタ 61","bbox":[920,165,0,390]}
+{"kind":"textbox","id":"sh/p0zmlk7u","slide":7,"name":"正方形/長方形 29","text":"利用者の問い","textPreview":"利用者の問い","textChars":6,"textLines":1,"bbox":[965,180,240,34]}
+{"kind":"textbox","id":"sh/ozq5szq9","slide":7,"name":"正方形/長方形 30","text":"Aに重要な特徴は\n分かった。\n\nでは、AとBを\n分けた特徴は？\n\n3つの説明を\nどう統合する？","textPreview":"Aに重要な特徴は | 分かった。 |  | では、AとBを | 分けた特徴は？ |  | 3つの説明を | どう統合する？","textChars":47,"textLines":8,"bbox":[965,245,240,260]}
+{"kind":"shape","id":"sh/nyh4jupo","slide":7,"name":"正方形/長方形 31","bbox":[55,555,1150,76]}
+{"kind":"textbox","id":"sh/2x8nqp83","slide":7,"name":"正方形/長方形 32","text":"問題は「各説明が誤り」ではなく、クラス間の関係を読む認知的負担","textPreview":"問題は「各説明が誤り」ではなく、クラス間の関係を読む認知的負担","textChars":31,"textLines":1,"bbox":[115,576,1030,34]}
+{"kind":"notes","id":"nt/gnmp4jqx","slide":7,"text":"クラス別の説明それぞれには意味がある。しかし、クラスごとに選ばれる特徴、順位、符号が異なると、利用者は複数の説明を横断してAとBの違いを組み立てなければならない。ここで問題にしているのは数理的な矛盾ではなく、多クラス全体を読む負担である。\n\n[Sources]\n- https://arxiv.org/abs/2005.01427"}
+{"kind":"slide","id":"sl/fu1gfa1s","slide":8,"title":"LIMEtreeは一つの木で複数クラスを説明する","textShapes":18}
+{"kind":"shape","id":"sh/hsjqd47y","slide":8,"name":"正方形/長方形 45","bbox":[54,44,12,48]}
+{"kind":"textbox","id":"sh/18byd4zy","slide":8,"name":"slide-8-title","text":"LIMEtreeは一つの木で複数クラスを説明する","textPreview":"LIMEtreeは一つの木で複数クラスを説明する","textChars":24,"textLines":1,"bbox":[84,38,1110,62]}
+{"kind":"textbox","id":"sh/g72x4zyd","slide":8,"name":"slide-8-subtitle","text":"クラス別のモデルではなく、全クラスで共通の分岐構造を使う","textPreview":"クラス別のモデルではなく、全クラスで共通の分岐構造を使う","textChars":28,"textLines":1,"bbox":[84,101,1110,34]}
+{"kind":"textbox","id":"sh/ri9g7uhw","slide":8,"name":"正方形/長方形 3","text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1180,676,50,22]}
+{"kind":"textbox","id":"sh/6h0fypgb","slide":8,"name":"正方形/長方形 4","text":"LIME","textPreview":"LIME","textChars":4,"textLines":1,"bbox":[70,160,450,34]}
+{"kind":"textbox","id":"sh/tkby9kzm","slide":8,"name":"正方形/長方形 5","text":"別々の構造","textPreview":"別々の構造","textChars":5,"textLines":1,"bbox":[70,198,450,28]}
+{"kind":"shape","id":"sh/sjix0zy1","slide":8,"name":"正方形/長方形 6","bbox":[80,248,420,82]}
+{"kind":"textbox","id":"sh/je9g3ahk","slide":8,"name":"正方形/長方形 7","text":"A用モデル","textPreview":"A用モデル","textChars":5,"textLines":1,"bbox":[98,273,125,28]}
+{"kind":"shape","id":"sh/id0fu50z","slide":8,"name":"正方形/長方形 8","bbox":[245,263,184,11]}
+{"kind":"shape","id":"sh/o7ydoret","slide":8,"name":"正方形/長方形 9","bbox":[245,283,115,11]}
+{"kind":"shape","id":"sh/98rehwve","slide":8,"name":"正方形/長方形 10","bbox":[245,303,57.5,11]}
+{"kind":"shape","id":"sh/m5gvmhwn","slide":8,"name":"正方形/長方形 11","bbox":[80,360,420,82]}
+{"kind":"textbox","id":"sh/n6pwfmd8","slide":8,"name":"正方形/長方形 12","text":"B用モデル","textPreview":"B用モデル","textChars":5,"textLines":1,"bbox":[98,385,125,28]}
+{"kind":"shape","id":"sh/0jydkreh","slide":8,"name":"正方形/長方形 13","bbox":[245,375,57.5,11]}
+{"kind":"shape","id":"sh/1k7edwv2","slide":8,"name":"正方形/長方形 14","bbox":[245,395,161,11]}
+{"kind":"shape","id":"sh/ehgvihwr","slide":8,"name":"正方形/長方形 15","bbox":[245,415,96.6,11]}
+{"kind":"shape","id":"sh/zipwbmdc","slide":8,"name":"正方形/長方形 16","bbox":[80,472,420,82]}
+{"kind":"textbox","id":"sh/kfixwbe1","slide":8,"name":"正方形/長方形 17","text":"C用モデル","textPreview":"C用モデル","textChars":5,"textLines":1,"bbox":[98,497,125,28]}
+{"kind":"shape","id":"sh/lgbepgvm","slide":8,"name":"正方形/長方形 18","bbox":[245,487,126.5,11]}
+{"kind":"shape","id":"sh/tw7e9gnq","slide":8,"name":"正方形/長方形 19","bbox":[245,507,46,11]}
+{"kind":"shape","id":"sh/svydgb65","slide":8,"name":"正方形/長方形 20","bbox":[245,527,172.5,11]}
+{"kind":"shape","id":"sh/2lcbqdcj","slide":8,"name":"直線矢印コネクタ 66","bbox":[610,155,0,445]}
+{"kind":"textbox","id":"sh/6twve1oz","slide":8,"name":"正方形/長方形 22","text":"LIMEtree","textPreview":"LIMEtree","textChars":8,"textLines":1,"bbox":[690,160,480,34]}
+{"kind":"textbox","id":"sh/5sne5wne","slide":8,"name":"正方形/長方形 23","text":"共通の構造","textPreview":"共通の構造","textChars":5,"textLines":1,"bbox":[690,198,480,28]}
+{"kind":"shape","id":"sh/axo7qps3","slide":8,"name":"直線矢印コネクタ 69","bbox":[800,322,125,48]}
+{"kind":"shape","id":"sh/vyx8ju9o","slide":8,"name":"直線矢印コネクタ 70","bbox":[925,322,125,48]}
+{"kind":"shape","id":"sh/wzq9szat","slide":8,"name":"直線矢印コネクタ 71","bbox":[728,434,72,51]}
+{"kind":"shape","id":"sh/x0zql4re","slide":8,"name":"直線矢印コネクタ 72","bbox":[800,434,72,51]}
+{"kind":"shape","id":"sh/i18ru9sz","slide":8,"name":"直線矢印コネクタ 73","bbox":[978,434,72,51]}
+{"kind":"shape","id":"sh/jmh8nu9k","slide":8,"name":"直線矢印コネクタ 74","bbox":[1050,434,72,51]}
+{"kind":"shape","id":"sh/na1sb2lg","slide":8,"name":"正方形/長方形 30","bbox":[845,250,160,72]}
+{"kind":"textbox","id":"sh/8bat47ml","slide":8,"name":"正方形/長方形 31","text":"特徴1 > ?","textPreview":"特徴1 > ?","textChars":7,"textLines":1,"bbox":[845,269,160,30]}
+{"kind":"shape","id":"sh/9w3uds36","slide":8,"name":"正方形/長方形 32","bbox":[735,370,130,64]}
+{"kind":"textbox","id":"sh/y5sbed4j","slide":8,"name":"正方形/長方形 33","text":"特徴2 > ?","textPreview":"特徴2 > ?","textChars":7,"textLines":1,"bbox":[735,388,130,26]}
+{"kind":"shape","id":"sh/z61s7il4","slide":8,"name":"正方形/長方形 34","bbox":[985,370,130,64]}
+{"kind":"textbox","id":"sh/07atgnmp","slide":8,"name":"正方形/長方形 35","text":"特徴3 > ?","textPreview":"特徴3 > ?","textChars":7,"textLines":1,"bbox":[985,388,130,26]}
+{"kind":"shape","id":"sh/l8ja9s3a","slide":8,"name":"正方形/長方形 36","bbox":[665,485,125,74]}
+{"kind":"textbox","id":"sh/q18bad4n","slide":8,"name":"正方形/長方形 37","text":"A .72\nB .18\nC .10","textPreview":"A .72 | B .18 | C .10","textChars":17,"textLines":3,"bbox":[673,493,109,58]}
+{"kind":"shape","id":"sh/b2hs3il8","slide":8,"name":"正方形/長方形 38","bbox":[805,485,125,74]}
+{"kind":"textbox","id":"sh/3u18fepo","slide":8,"name":"正方形/長方形 39","text":"A .40\nB .45\nC .15","textPreview":"A .40 | B .45 | C .15","textChars":17,"textLines":3,"bbox":[813,493,109,58]}
+{"kind":"shape","id":"sh/2ts769o3","slide":8,"name":"正方形/長方形 40","bbox":[945,485,125,74]}
+{"kind":"textbox","id":"sh/pwjqho7u","slide":8,"name":"正方形/長方形 41","text":"A .15\nB .25\nC .60","textPreview":"A .15 | B .25 | C .60","textChars":17,"textLines":3,"bbox":[953,493,109,58]}
+{"kind":"shape","id":"sh/4vap8j69","slide":8,"name":"正方形/長方形 42","bbox":[1085,485,125,74]}
+{"kind":"textbox","id":"sh/fq1obeps","slide":8,"name":"正方形/長方形 43","text":"A .08\nB .22\nC .70","textPreview":"A .08 | B .22 | C .70","textChars":17,"textLines":3,"bbox":[1093,493,109,58]}
+{"kind":"textbox","id":"sh/up872987","slide":8,"name":"正方形/長方形 44","text":"1本の木が全クラスの確率を同時に近似","textPreview":"1本の木が全クラスの確率を同時に近似","textChars":18,"textLines":1,"bbox":[750,595,390,32]}
+{"kind":"notes","id":"nt/fu1gfa1s","slide":8,"text":"LIMEtreeは局所サロゲートとして多出力回帰木を用い、一つの木で全クラスの予測確率を同時に近似する。分岐条件を共有するため、同じ論理構造からクラス間を比較できる。出力形式はLIMEの特徴重みではなく、ルールや対比・反実仮想説明へ展開される。\n\n[Sources]\n- https://arxiv.org/abs/2005.01427"}
+{"kind":"slide","id":"sl/udsvah03","slide":9,"title":"多クラスの扱い方には複数の設計がある","textShapes":22}
+{"kind":"shape","id":"sh/mdsnatcn","slide":9,"name":"正方形/長方形 40","bbox":[54,44,12,48]}
+{"kind":"textbox","id":"sh/1cfmhgne","slide":9,"name":"slide-9-title","text":"多クラスの扱い方には複数の設計がある","textPreview":"多クラスの扱い方には複数の設計がある","textChars":18,"textLines":1,"bbox":[84,38,1110,62]}
+{"kind":"textbox","id":"sh/0b65obm9","slide":9,"name":"slide-9-subtitle","text":"何を一つにまとめるかで、説明の意味が変わる","textPreview":"何を一つにまとめるかで、説明の意味が変わる","textChars":21,"textLines":1,"bbox":[84,101,1110,34]}
+{"kind":"textbox","id":"sh/nex4jq5k","slide":9,"name":"正方形/長方形 3","text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1180,676,50,22]}
+{"kind":"shape","id":"sh/mdonql4z","slide":9,"name":"正方形/長方形 4","bbox":[55,165,170,62]}
+{"kind":"textbox","id":"sh/9gzml0nq","slide":9,"name":"正方形/長方形 5","text":"手法","textPreview":"手法","textChars":2,"textLines":1,"bbox":[65,183,150,28]}
+{"kind":"shape","id":"sh/ofq5svm5","slide":9,"name":"正方形/長方形 6","bbox":[225,165,270,62]}
+{"kind":"textbox","id":"sh/bih4na5w","slide":9,"name":"正方形/長方形 7","text":"近似する対象","textPreview":"近似する対象","textChars":6,"textLines":1,"bbox":[235,183,250,28]}
+{"kind":"shape","id":"sh/ah8nu54b","slide":9,"name":"正方形/長方形 8","bbox":[495,165,330,62]}
+{"kind":"textbox","id":"sh/oza1gfyh","slide":9,"name":"正方形/長方形 9","text":"多クラスの扱い","textPreview":"多クラスの扱い","textChars":7,"textLines":1,"bbox":[505,183,310,28]}
+{"kind":"shape","id":"sh/p0ji9kf2","slide":9,"name":"正方形/長方形 10","bbox":[825,165,375,62]}
+{"kind":"textbox","id":"sh/2xsjepgb","slide":9,"name":"正方形/長方形 11","text":"主な出力","textPreview":"主な出力","textChars":4,"textLines":1,"bbox":[835,183,355,28]}
+{"kind":"shape","id":"sh/3y107axw","slide":9,"name":"正方形/長方形 12","bbox":[55,227,170,108]}
+{"kind":"textbox","id":"sh/cnu1kzyd","slide":9,"name":"正方形/長方形 13","text":"LIME","textPreview":"LIME","textChars":4,"textLines":1,"bbox":[69,243,142,76]}
+{"kind":"shape","id":"sh/do3id4fy","slide":9,"name":"正方形/長方形 14","bbox":[225,227,270,108]}
+{"kind":"textbox","id":"sh/qlcjipgn","slide":9,"name":"正方形/長方形 15","text":"各クラスの予測確率","textPreview":"各クラスの予測確率","textChars":9,"textLines":1,"bbox":[239,243,242,76]}
+{"kind":"shape","id":"sh/bml0buxs","slide":9,"name":"正方形/長方形 16","bbox":[495,227,330,108]}
+{"kind":"textbox","id":"sh/0ru1ozyp","slide":9,"name":"正方形/長方形 17","text":"クラスごとに別々","textPreview":"クラスごとに別々","textChars":8,"textLines":1,"bbox":[509,243,302,76]}
+{"kind":"shape","id":"sh/lsn2h4fa","slide":9,"name":"正方形/長方形 18","bbox":[825,227,375,108]}
+{"kind":"textbox","id":"sh/98ji147e","slide":9,"name":"正方形/長方形 19","text":"特徴量の重み","textPreview":"特徴量の重み","textChars":6,"textLines":1,"bbox":[839,243,347,76]}
+{"kind":"shape","id":"sh/87a18zqt","slide":9,"name":"正方形/長方形 20","bbox":[55,335,170,108]}
+{"kind":"textbox","id":"sh/76h0zup8","slide":9,"name":"正方形/長方形 21","text":"LIMEtree","textPreview":"LIMEtree","textChars":8,"textLines":1,"bbox":[69,351,142,76]}
+{"kind":"shape","id":"sh/ml8j6p8n","slide":9,"name":"正方形/長方形 22","bbox":[225,335,270,108]}
+{"kind":"textbox","id":"sh/hcji5o7a","slide":9,"name":"正方形/長方形 23","text":"全クラスの予測確率","textPreview":"全クラスの予測確率","textChars":9,"textLines":1,"bbox":[239,351,242,76]}
+{"kind":"shape","id":"sh/wba1cjqp","slide":9,"name":"正方形/長方形 24","bbox":[495,335,330,108]}
+{"kind":"textbox","id":"sh/va103ep4","slide":9,"name":"正方形/長方形 25","text":"共通の木で同時に扱う","textPreview":"共通の木で同時に扱う","textChars":10,"textLines":1,"bbox":[509,351,302,76]}
+{"kind":"shape","id":"sh/u9sja98z","slide":9,"name":"正方形/長方形 26","bbox":[825,335,375,108]}
+{"kind":"textbox","id":"sh/xgzitk76","slide":9,"name":"正方形/長方形 27","text":"ルール・対比・反実仮想","textPreview":"ルール・対比・反実仮想","textChars":11,"textLines":1,"bbox":[839,351,347,76]}
+{"kind":"shape","id":"sh/cf6h0fql","slide":9,"name":"正方形/長方形 28","bbox":[55,443,170,108]}
+{"kind":"textbox","id":"sh/2l4faloj","slide":9,"name":"正方形/長方形 29","text":"LIPEx","textPreview":"LIPEx","textChars":5,"textLines":1,"bbox":[69,459,142,76]}
+{"kind":"shape","id":"sh/nmdg3q54","slide":9,"name":"正方形/長方形 30","bbox":[225,443,270,108]}
+{"kind":"textbox","id":"sh/onmxcv69","slide":9,"name":"正方形/長方形 31","text":"予測確率分布全体","textPreview":"予測確率分布全体","textChars":8,"textLines":1,"bbox":[239,459,242,76]}
+{"kind":"shape","id":"sh/pofy50nu","slide":9,"name":"正方形/長方形 32","bbox":[495,443,330,108]}
+{"kind":"textbox","id":"sh/apofe5of","slide":9,"name":"正方形/長方形 33","text":"分布として一体に扱う","textPreview":"分布として一体に扱う","textChars":10,"textLines":1,"bbox":[509,459,302,76]}
+{"kind":"shape","id":"sh/bqxg7q50","slide":9,"name":"正方形/長方形 34","bbox":[825,443,375,108]}
+{"kind":"textbox","id":"sh/cr6xgv6l","slide":9,"name":"正方形/長方形 35","text":"特徴×クラスの説明行列","textPreview":"特徴×クラスの説明行列","textChars":11,"textLines":1,"bbox":[839,459,347,76]}
+{"kind":"shape","id":"sh/xcfy90n6","slide":9,"name":"正方形/長方形 36","bbox":[55,575,1145,60]}
+{"kind":"textbox","id":"sh/qtkf21ob","slide":9,"name":"正方形/長方形 37","text":"bLIMEy","textPreview":"bLIMEy","textChars":6,"textLines":1,"bbox":[78,592,110,26]}
+{"kind":"textbox","id":"sh/rutwv65w","slide":9,"name":"正方形/長方形 38","text":"近傍生成・表現・特徴選択・サロゲートを分解し、LIME型説明器を設計する枠組み","textPreview":"近傍生成・表現・特徴選択・サロゲートを分解し、LIME型説明器を設計する枠組み","textChars":39,"textLines":1,"bbox":[195,588,965,34]}
+{"kind":"textbox","id":"sh/7y14jyd8","slide":9,"name":"正方形/長方形 39","text":"※ LIPExはICLR 2024 Withdrawn Submission","textPreview":"※ LIPExはICLR 2024 Withdrawn Submission","textChars":38,"textLines":1,"bbox":[820,648,380,20]}
+{"kind":"notes","id":"nt/udsvah03","slide":9,"text":"LIMEはクラス別、LIMEtreeは共通構造、LIPExは確率分布全体という異なる設計を取る。LIPExはHellinger距離に基づく回帰で特徴と各クラスの関係を行列として表すが、OpenReview上ではICLR 2024のWithdrawn Submissionである。bLIMEyは直接の多クラス解法ではなく、LIME型説明器を部品へ分解する設計枠組み。\n\n[Sources]\n- https://arxiv.org/abs/1602.04938\n- https://arxiv.org/abs/2005.01427\n- https://openreview.net/forum?id=R7946uagL2\n- https://arxiv.org/abs/1910.13016"}
+{"kind":"slide","id":"sl/m90b6t0r","slide":10,"title":"まず「多クラス説明の何を良くするか」を定義する","textShapes":20}
+{"kind":"shape","id":"sh/1o3ahwvq","slide":10,"name":"正方形/長方形 27","bbox":[54,44,12,48]}
+{"kind":"textbox","id":"sh/xc3mho32","slide":10,"name":"slide-10-title","text":"まず「多クラス説明の何を良くするか」を定義する","textPreview":"まず「多クラス説明の何を良くするか」を定義する","textChars":23,"textLines":1,"bbox":[84,38,1110,62]}
+{"kind":"textbox","id":"sh/cbu58j2h","slide":10,"name":"slide-10-subtitle","text":"手法を決める前に、研究目的と評価軸を対応させる","textPreview":"手法を決める前に、研究目的と評価軸を対応させる","textChars":23,"textLines":1,"bbox":[84,101,1110,34]}
+{"kind":"textbox","id":"sh/zelojyl8","slide":10,"name":"正方形/長方形 3","text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1180,676,50,22]}
+{"kind":"shape","id":"sh/cva9k7a9","slide":10,"name":"直線矢印コネクタ 31","bbox":[435,185,0,330]}
+{"kind":"shape","id":"sh/dwjqtcbu","slide":10,"name":"直線矢印コネクタ 32","bbox":[845,185,0,330]}
+{"kind":"textbox","id":"sh/kzu5c32t","slide":10,"name":"正方形/長方形 6","text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[65,185,110,70]}
+{"kind":"textbox","id":"sh/725onyl4","slide":10,"name":"正方形/長方形 7","text":"予測再現","textPreview":"予測再現","textChars":4,"textLines":1,"bbox":[65,270,330,42]}
+{"kind":"textbox","id":"sh/m1cnetkj","slide":10,"name":"正方形/長方形 8","text":"元モデルを\nまねられるか","textPreview":"元モデルを | まねられるか","textChars":12,"textLines":2,"bbox":[65,335,330,76]}
+{"kind":"shape","id":"sh/103qxcbq","slide":10,"name":"直線矢印コネクタ 36","bbox":[65,430,300,0]}
+{"kind":"textbox","id":"sh/d87uxg3m","slide":10,"name":"正方形/長方形 10","text":"評価例","textPreview":"評価例","textChars":3,"textLines":1,"bbox":[65,458,100,28]}
+{"kind":"textbox","id":"sh/q5gb21kb","slide":10,"name":"正方形/長方形 11","text":"確率の誤差\n局所忠実性","textPreview":"確率の誤差 | 局所忠実性","textChars":11,"textLines":2,"bbox":[65,492,300,64]}
+{"kind":"textbox","id":"sh/r6pcv6lw","slide":10,"name":"正方形/長方形 12","text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[475,185,110,70]}
+{"kind":"textbox","id":"sh/0bit8b2d","slide":10,"name":"正方形/長方形 13","text":"説明の一貫性","textPreview":"説明の一貫性","textChars":6,"textLines":1,"bbox":[475,270,330,42]}
+{"kind":"textbox","id":"sh/1cru1g3y","slide":10,"name":"正方形/長方形 14","text":"クラス間で説明が\nつながるか","textPreview":"クラス間で説明が | つながるか","textChars":14,"textLines":2,"bbox":[475,335,330,76]}
+{"kind":"shape","id":"sh/wnyx0fit","slide":10,"name":"直線矢印コネクタ 42","bbox":[475,430,300,0]}
+{"kind":"textbox","id":"sh/fapcz6ls","slide":10,"name":"正方形/長方形 16","text":"評価例","textPreview":"評価例","textChars":3,"textLines":1,"bbox":[475,458,100,28]}
+{"kind":"textbox","id":"sh/ozitcv29","slide":10,"name":"正方形/長方形 17","text":"共通特徴・共通構造\n安定性","textPreview":"共通特徴・共通構造 | 安定性","textChars":13,"textLines":2,"bbox":[475,492,300,64]}
+{"kind":"textbox","id":"sh/p0ru503u","slide":10,"name":"正方形/長方形 18","text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[885,185,110,70]}
+{"kind":"textbox","id":"sh/xwnupgvy","slide":10,"name":"正方形/長方形 19","text":"対比の理解","textPreview":"対比の理解","textChars":5,"textLines":1,"bbox":[885,270,330,42]}
+{"kind":"textbox","id":"sh/wvetgbud","slide":10,"name":"正方形/長方形 20","text":"AとBの違いが\n伝わるか","textPreview":"AとBの違いが | 伝わるか","textChars":12,"textLines":2,"bbox":[885,335,330,76]}
+{"kind":"shape","id":"sh/6d0f6pgv","slide":10,"name":"直線矢印コネクタ 48","bbox":[885,430,300,0]}
+{"kind":"textbox","id":"sh/atwbelcn","slide":10,"name":"正方形/長方形 22","text":"評価例","textPreview":"評価例","textChars":3,"textLines":1,"bbox":[885,458,100,28]}
+{"kind":"textbox","id":"sh/lk7ut0va","slide":10,"name":"正方形/長方形 23","text":"正答率・読解時間\n主観評価","textPreview":"正答率・読解時間 | 主観評価","textChars":13,"textLines":2,"bbox":[885,492,300,64]}
+{"kind":"shape","id":"sh/kjytkvup","slide":10,"name":"正方形/長方形 24","bbox":[70,585,1140,66]}
+{"kind":"textbox","id":"sh/jypcrqd4","slide":10,"name":"正方形/長方形 25","text":"改善したい性質を定めてから、手法と評価方法を選ぶ","textPreview":"改善したい性質を定めてから、手法と評価方法を選ぶ","textChars":24,"textLines":1,"bbox":[130,601,1020,36]}
+{"kind":"textbox","id":"sh/yxgbilcj","slide":10,"name":"正方形/長方形 26","text":"LIMEの多クラス化で重要なのは、説明の数ではなくクラス間の関係の表し方","textPreview":"LIMEの多クラス化で重要なのは、説明の数ではなくクラス間の関係の表し方","textChars":36,"textLines":1,"bbox":[175,665,930,26]}
+{"kind":"notes","id":"nt/m90b6t0r","slide":10,"text":"研究目的は一つの指標を上げることではなく、多クラス説明のどの性質を改善するかを定義すること。予測再現なら忠実性、説明の一貫性なら共有構造や安定性、対比の理解なら人を含む評価が必要になる。次の段階では同じ入力に対する複数手法の出力を比較し、主対象を決める。\n\n[Sources]\n- https://arxiv.org/abs/1602.04938\n- https://arxiv.org/abs/2005.01427\n- https://openreview.net/forum?id=R7946uagL2"}
+{"kind":"slide","id":"sl/vvmm7h","slide":11,"title":"評価設計","textShapes":26}
+{"kind":"shape","id":"sh/l4j2hgbe","slide":11,"bbox":[54,43,12,50]}
+{"kind":"textbox","id":"sh/yhsj6lsn","slide":11,"text":"評価設計","textPreview":"評価設計","textChars":4,"textLines":1,"bbox":[80,36,1120,50]}
+{"kind":"textbox","id":"sh/ji1kfqt8","slide":11,"text":"何を説明するかと、どの損失で当てはめるかを分けて比較","textPreview":"何を説明するかと、どの損失で当てはめるかを分けて比較","textChars":26,"textLines":1,"bbox":[80,84,1120,26]}
+{"kind":"textbox","id":"sh/87u1cvap","slide":11,"text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[1168,678,64,20]}
+{"kind":"shape","id":"sh/t832l0ba","slide":11,"bbox":[80,111,1120,25]}
+{"kind":"textbox","id":"sh/65sjalsj","slide":11,"text":"このスライドの主張：同じ説明予算で比べることで、『2クラスに絞る効果』と『回帰方法の効果』を分離する","textPreview":"このスライドの主張：同じ説明予算で比べることで、『2クラスに絞る効果』と『回帰方法の効果』を分離する","textChars":50,"textLines":1,"bbox":[96,112,1088,22]}
+{"kind":"shape","id":"sh/76lkjqt4","slide":11,"bbox":[62,134,370,330]}
+{"kind":"shape","id":"sh/gbu1gfa1","slide":11,"bbox":[94,156,300,32]}
+{"kind":"textbox","id":"sh/hc32p0rm","slide":11,"text":"従来：One-vs-Rest","textPreview":"従来：One-vs-Rest","textChars":14,"textLines":1,"bbox":[104,157,280,29]}
+{"kind":"textbox","id":"sh/t0jahsbu","slide":11,"text":"各クラス対残りを別々に回帰","textPreview":"各クラス対残りを別々に回帰","textChars":13,"textLines":1,"bbox":[92,208,310,35]}
+{"kind":"textbox","id":"sh/szat8nu9","slide":11,"text":"p₁(z) ≈ f₁(z)\np₂(z) ≈ f₂(z)","textPreview":"p₁(z) ≈ f₁(z) | p₂(z) ≈ f₂(z)","textChars":27,"textLines":2,"bbox":[116,256,265,72]}
+{"kind":"textbox","id":"sh/7y1sfit4","slide":11,"text":"最後に f₁ − f₂ で\n競合2クラスの方向を作る","textPreview":"最後に f₁ − f₂ で | 競合2クラスの方向を作る","textChars":26,"textLines":2,"bbox":[94,354,306,62]}
+{"kind":"textbox","id":"sh/6xsb6dcj","slide":11,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[442,270,45,50]}
+{"kind":"shape","id":"sh/h43alcb6","slide":11,"bbox":[492,134,726,330]}
+{"kind":"shape","id":"sh/g3atc7ul","slide":11,"bbox":[670,156,370,32]}
+{"kind":"textbox","id":"sh/f21sj2t0","slide":11,"text":"提案の枠組み：Top-1 vs Top-2","textPreview":"提案の枠組み：Top-1 vs Top-2","textChars":21,"textLines":1,"bbox":[680,157,350,29]}
+{"kind":"textbox","id":"sh/u1sbaxcf","slide":11,"text":"q(z) = p₁(z) / {p₁(z)+p₂(z)}","textPreview":"q(z) = p₁(z) / {p₁(z)+p₂(z)}","textChars":28,"textLines":1,"bbox":[592,212,526,45]}
+{"kind":"shape","id":"sh/x8za98bm","slide":11,"bbox":[526,286,200,122]}
+{"kind":"textbox","id":"sh/w7q903u1","slide":11,"text":"2クラスLIME","textPreview":"2クラスLIME","textChars":8,"textLines":1,"bbox":[538,300,176,32]}
+{"kind":"textbox","id":"sh/obutg32x","slide":11,"text":"q を Ridge 回帰","textPreview":"q を Ridge 回帰","textChars":12,"textLines":1,"bbox":[540,340,172,48]}
+{"kind":"shape","id":"sh/pc3ap8ji","slide":11,"bbox":[748,286,200,122]}
+{"kind":"textbox","id":"sh/2psbedk7","slide":11,"text":"Contrastive","textPreview":"Contrastive","textChars":11,"textLines":1,"bbox":[760,300,176,32]}
+{"kind":"textbox","id":"sh/nqlsny1s","slide":11,"text":"log(p₁/p₂) を Ridge 回帰","textPreview":"log(p₁/p₂) を Ridge 回帰","textChars":21,"textLines":1,"bbox":[762,340,172,48]}
+{"kind":"shape","id":"sh/cfutkn29","slide":11,"bbox":[970,286,200,122]}
+{"kind":"textbox","id":"sh/xg3atsju","slide":11,"text":"OVO Logistic","textPreview":"OVO Logistic","textChars":12,"textLines":1,"bbox":[982,300,176,32]}
+{"kind":"textbox","id":"sh/adcbidk3","slide":11,"text":"q を交差エントロピーで回帰","textPreview":"q を交差エントロピーで回帰","textChars":14,"textLines":1,"bbox":[984,340,172,48]}
+{"kind":"textbox","id":"sh/belsri1o","slide":11,"text":"評価指標","textPreview":"評価指標","textChars":4,"textLines":1,"bbox":[68,493,154,34]}
+{"kind":"shape","id":"sh/kjeton25","slide":11,"bbox":[68,536,274,112]}
+{"kind":"textbox","id":"sh/lknuxsjq","slide":11,"text":"ペア符号忠実度","textPreview":"ペア符号忠実度","textChars":7,"textLines":1,"bbox":[80,547,250,28]}
+{"kind":"textbox","id":"sh/vepwnmls","slide":11,"text":"Top-1 / Top-2 の大小関係を\n未使用摂動で再現できた割合","textPreview":"Top-1 / Top-2 の大小関係を | 未使用摂動で再現できた割合","textChars":34,"textLines":2,"bbox":[82,581,246,54]}
+{"kind":"shape","id":"sh/udgve14n","slide":11,"bbox":[364,536,274,112]}
+{"kind":"textbox","id":"sh/hg7epw3y","slide":11,"text":"重み付き Brier","textPreview":"重み付き Brier","textChars":10,"textLines":1,"bbox":[376,547,250,28]}
+{"kind":"textbox","id":"sh/gfydgrmd","slide":11,"text":"q の確率近似誤差\n小さいほどよい","textPreview":"q の確率近似誤差 | 小さいほどよい","textChars":17,"textLines":2,"bbox":[378,581,246,54]}
+{"kind":"shape","id":"sh/7apwjmlw","slide":11,"bbox":[660,536,274,112]}
+{"kind":"textbox","id":"sh/69gvah4b","slide":11,"text":"競合特徴再現率","textPreview":"競合特徴再現率","textChars":7,"textLines":1,"bbox":[672,547,250,28]}
+{"kind":"textbox","id":"sh/tc7elw32","slide":11,"text":"本当にクラス差を作る特徴を\n上位K個で拾えた割合","textPreview":"本当にクラス差を作る特徴を | 上位K個で拾えた割合","textChars":24,"textLines":2,"bbox":[674,581,246,54]}
+{"kind":"shape","id":"sh/8bydcrmh","slide":11,"bbox":[956,536,274,112]}
+{"kind":"textbox","id":"sh/r69wv6l0","slide":11,"text":"計算時間","textPreview":"計算時間","textChars":4,"textLines":1,"bbox":[968,547,250,28]}
+{"kind":"textbox","id":"sh/q50vml4f","slide":11,"text":"説明1件の学習時間\n次元数・クラス数を変化","textPreview":"説明1件の学習時間 | 次元数・クラス数を変化","textChars":21,"textLines":2,"bbox":[970,581,246,54]}
+{"kind":"notes","id":"nt/vvmm7h","slide":11,"text":"評価設計の出典: docs/OVO_VS_OVR_EXPERIMENT_SUMMARY.md, src/fidelity.py, src/metrics.py"}
+{"kind":"slide","id":"sl/9todus","slide":12,"title":"実験設定","textShapes":4}
+{"kind":"shape","id":"sh/0jaxkjml","slide":12,"bbox":[54,43,12,50]}
+{"kind":"textbox","id":"sh/fi1wbel0","slide":12,"text":"実験設定","textPreview":"実験設定","textChars":4,"textLines":1,"bbox":[80,36,1120,50]}
+{"kind":"textbox","id":"sh/ehsfit4f","slide":12,"text":"すべての手法で摂動点・近接度重み・説明対象を共有","textPreview":"すべての手法で摂動点・近接度重み・説明対象を共有","textChars":24,"textLines":1,"bbox":[80,84,1120,26]}
+{"kind":"textbox","id":"sh/po3yh832","slide":12,"text":"12","textPreview":"12","textChars":2,"textLines":1,"bbox":[1168,678,64,20]}
+{"kind":"textbox","id":"sh/nmlwfylw","slide":12,"text":"このスライドの主張：学習用とは別の摂動点で評価し、同じK・同じ乱数で公平に比較する","textPreview":"このスライドの主張：学習用とは別の摂動点で評価し、同じK・同じ乱数で公平に比較する","textChars":41,"textLines":1,"bbox":[80,637,1120,32]}
+{"kind":"table","id":"tb/pcrm9w36","slide":12,"name":"","rows":9,"cols":2,"preview":"項目 | 設定","bbox":[80,136,1120,486]}
+{"kind":"notes","id":"nt/9todus","slide":12,"text":"実験設定の出典: src/run_ovo_vs_ovr_experiment.py, src/run_blackbox_comparison_experiment.py, src/run_feature_role_experiment.py, src/run_timing_experiment.py"}
+{"kind":"slide","id":"sl/9s09cu","slide":13,"title":"主実験：Random Forest","textShapes":10}
+{"kind":"shape","id":"sh/72lcza50","slide":13,"bbox":[54,43,12,50]}
+{"kind":"textbox","id":"sh/83utsf6l","slide":13,"text":"主実験：Random Forest","textPreview":"主実験：Random Forest","textChars":17,"textLines":1,"bbox":[80,36,1120,50]}
+{"kind":"textbox","id":"sh/9o3u1kn6","slide":13,"text":"exact-K・held-out評価。点は20 seedsの平均、線は95%ブートストラップ信頼区間","textPreview":"exact-K・held-out評価。点は20 seedsの平均、線は95%ブートストラップ信頼区間","textChars":50,"textLines":1,"bbox":[80,84,1120,26]}
+{"kind":"textbox","id":"sh/upcbupor","slide":13,"text":"13","textPreview":"13","textChars":2,"textLines":1,"bbox":[1168,678,64,20]}
+{"kind":"shape","id":"sh/wrutwzmx","slide":13,"bbox":[946,132,276,128]}
+{"kind":"textbox","id":"sh/hs3u5kn2","slide":13,"text":"符号忠実度","textPreview":"符号忠実度","textChars":5,"textLines":1,"bbox":[964,146,240,28]}
+{"kind":"textbox","id":"sh/at8bilo7","slide":13,"text":"2クラスLIME  0.791\nOVR exact-K   0.787","textPreview":"2クラスLIME  0.791 | OVR exact-K   0.787","textChars":35,"textLines":2,"bbox":[963,184,242,56]}
+{"kind":"shape","id":"sh/bu1srq5s","slide":13,"bbox":[946,278,276,128]}
+{"kind":"textbox","id":"sh/fm1kz69c","slide":13,"text":"確率誤差（Brier）","textPreview":"確率誤差（Brier）","textChars":11,"textLines":1,"bbox":[964,292,240,28]}
+{"kind":"textbox","id":"sh/e1sjq1sr","slide":13,"text":"2クラスLIME  0.0156\nContrastive   0.0158","textPreview":"2クラスLIME  0.0156 | Contrastive   0.0158","textChars":37,"textLines":2,"bbox":[963,330,242,56]}
+{"kind":"shape","id":"sh/1oj21gri","slide":13,"bbox":[946,424,276,136]}
+{"kind":"textbox","id":"sh/0na1sbax","slide":13,"text":"読み方","textPreview":"読み方","textChars":3,"textLines":1,"bbox":[965,438,238,27]}
+{"kind":"textbox","id":"sh/ryhkv69g","slide":13,"text":"+0.0041は小幅。\n『大幅な精度向上』ではなく、\n同じKでも悪化しない証拠と捉える。","textPreview":"+0.0041は小幅。 | 『大幅な精度向上』ではなく、 | 同じKでも悪化しない証拠と捉える。","textChars":44,"textLines":3,"bbox":[963,472,242,70]}
+{"kind":"shape","id":"sh/6x8jm1sv","slide":13,"bbox":[80,610,1120,43]}
+{"kind":"textbox","id":"sh/t0j2xwr6","slide":13,"text":"このスライドの主張：RFではリンク関数の工夫より、説明対象をTop-1対Top-2へ絞る効果が中心","textPreview":"このスライドの主張：RFではリンク関数の工夫より、説明対象をTop-1対Top-2へ絞る効果が中心","textChars":49,"textLines":1,"bbox":[100,615,1080,32]}
+{"kind":"image","id":"im/2hg3q9gf","slide":13,"name":"","alt":"Random Forest主実験の忠実度とBrier誤差","bbox":[52,122,870,438]}
+{"kind":"notes","id":"nt/9s09cu","slide":13,"text":"出典: results/pairwise_lime_baseline_comparison.png。説明: +0.0041は0.41ポイントであり、実用上大きいとは断言しない。5/18条件でHolm補正後も有意だが、主張は同じ特徴予算でも忠実度を保ったこと。"}
+{"kind":"slide","id":"sl/abi1c6","slide":14,"title":"ブラックボックス構造別の結果","textShapes":10}
+{"kind":"shape","id":"sh/i18jehk7","slide":14,"bbox":[54,43,12,50]}
+{"kind":"textbox","id":"sh/54zipwjy","slide":14,"text":"ブラックボックス構造別の結果","textPreview":"ブラックボックス構造別の結果","textChars":14,"textLines":1,"bbox":[80,36,1120,50]}
+{"kind":"textbox","id":"sh/43q1gr2d","slide":14,"text":"線形softmax、非線形NN＋softmax、Random Forestを同じ設計で比較","textPreview":"線形softmax、非線形NN＋softmax、Random Forestを同じ設計で比較","textChars":45,"textLines":1,"bbox":[80,84,1120,26]}
+{"kind":"textbox","id":"sh/vex0j21g","slide":14,"text":"14","textPreview":"14","textChars":2,"textLines":1,"bbox":[1168,678,64,20]}
+{"kind":"shape","id":"sh/hgfilcjm","slide":14,"bbox":[974,135,248,115]}
+{"kind":"textbox","id":"sh/wf61c721","slide":14,"text":"線形 softmax","textPreview":"線形 softmax","textChars":10,"textLines":1,"bbox":[992,149,212,25]}
+{"kind":"textbox","id":"sh/nax0f21k","slide":14,"text":"Contrastive が最高\n忠実度 0.8655","textPreview":"Contrastive が最高 | 忠実度 0.8655","textChars":26,"textLines":2,"bbox":[991,184,214,52]}
+{"kind":"shape","id":"sh/m94z6xkz","slide":14,"bbox":[974,266,248,115]}
+{"kind":"textbox","id":"sh/oz6xsvah","slide":14,"text":"非線形NN・RF","textPreview":"非線形NN・RF","textChars":8,"textLines":1,"bbox":[992,280,212,25]}
+{"kind":"textbox","id":"sh/p0fy10b2","slide":14,"text":"2クラスLIME が最高","textPreview":"2クラスLIME が最高","textChars":12,"textLines":1,"bbox":[990,318,216,42]}
+{"kind":"shape","id":"sh/2x4fqlsb","slide":14,"bbox":[974,397,248,126]}
+{"kind":"textbox","id":"sh/3ydgzqtw","slide":14,"text":"解釈","textPreview":"解釈","textChars":2,"textLines":1,"bbox":[992,411,212,25]}
+{"kind":"textbox","id":"sh/gvmxova5","slide":14,"text":"softmaxかどうかだけでは不十分。\n局所logit差が線形に近いとき、\n対数比Ridgeが効く。","textPreview":"softmaxかどうかだけでは不十分。 | 局所logit差が線形に近いとき、 | 対数比Ridgeが効く。","textChars":50,"textLines":3,"bbox":[991,445,214,62]}
+{"kind":"shape","id":"sh/1wvyxgbq","slide":14,"bbox":[80,610,1120,43]}
+{"kind":"textbox","id":"sh/e94fmlsf","slide":14,"text":"このスライドの主張：万能な1方式はなく、黒箱の局所構造に応じて回帰対象を選ぶ必要がある","textPreview":"このスライドの主張：万能な1方式はなく、黒箱の局所構造に応じて回帰対象を選ぶ必要がある","textChars":43,"textLines":1,"bbox":[100,615,1080,32]}
+{"kind":"image","id":"im/bq50bqto","slide":14,"name":"","alt":"ブラックボックス構造別の忠実度とBrier誤差","bbox":[56,125,895,398]}
+{"kind":"notes","id":"nt/abi1c6","slide":14,"text":"出典: results/blackbox_comparison.png。線形softmaxではlog(p1/p2)が線形スコア差と一致するためContrastiveが有利。非線形NNではsoftmaxでもlogit差が入力に対して非線形なので、その利点は弱まる。"}
+{"kind":"slide","id":"sl/ibvsxq","slide":15,"title":"解釈性：競合に関係する特徴を選べるか","textShapes":7}
+{"kind":"shape","id":"sh/3yd0rixg","slide":15,"bbox":[54,43,12,50]}
+{"kind":"textbox","id":"sh/ojmh0ne1","slide":15,"text":"解釈性：競合に関係する特徴を選べるか","textPreview":"解釈性：競合に関係する特徴を選べるか","textChars":18,"textLines":1,"bbox":[80,36,1120,50]}
+{"kind":"textbox","id":"sh/pkvitsfm","slide":15,"text":"特徴の役割が既知の線形softmaxで、競合特徴・共通特徴・無関係特徴を分離","textPreview":"特徴の役割が既知の線形softmaxで、競合特徴・共通特徴・無関係特徴を分離","textChars":38,"textLines":1,"bbox":[80,84,1120,26]}
+{"kind":"textbox","id":"sh/ql4z2xwr","slide":15,"text":"15","textPreview":"15","textChars":2,"textLines":1,"bbox":[1168,678,64,20]}
+{"kind":"shape","id":"sh/cn6h4nex","slide":15,"bbox":[75,540,355,64]}
+{"kind":"textbox","id":"sh/dofixsfi","slide":15,"text":"共通特徴の強さ=5：OVRの競合特徴再現率 0.807","textPreview":"共通特徴の強さ=5：OVRの競合特徴再現率 0.807","textChars":27,"textLines":1,"bbox":[91,548,323,48]}
+{"kind":"shape","id":"sh/ypoz6xw3","slide":15,"bbox":[461,540,355,64]}
+{"kind":"textbox","id":"sh/zqx0z2xo","slide":15,"text":"2クラス方式：競合特徴再現率 約1.000、共通特徴表示率 約0","textPreview":"2クラス方式：競合特徴再現率 約1.000、共通特徴表示率 約0","textChars":32,"textLines":1,"bbox":[477,548,323,48]}
+{"kind":"shape","id":"sh/ve5s76pg","slide":15,"bbox":[847,540,355,64]}
+{"kind":"textbox","id":"sh/udcbe1ob","slide":15,"text":"これは『人の理解しやすさ』ではなく、質問への特徴関連性の定量評価","textPreview":"これは『人の理解しやすさ』ではなく、質問への特徴関連性の定量評価","textChars":32,"textLines":1,"bbox":[863,548,323,48]}
+{"kind":"shape","id":"sh/hgna9g7m","slide":15,"bbox":[80,614,1120,43]}
+{"kind":"textbox","id":"sh/gfetgb61","slide":15,"text":"このスライドの主張：2クラス説明は、両クラスに共通する証拠を避け、勝敗を分ける特徴へ表示枠を使える","textPreview":"このスライドの主張：2クラス説明は、両クラスに共通する証拠を避け、勝敗を分ける特徴へ表示枠を使える","textChars":49,"textLines":1,"bbox":[100,619,1080,32]}
+{"kind":"image","id":"im/uhkj6dgn","slide":15,"name":"","alt":"競合特徴の再現率、共通特徴の表示率、held-out忠実度","bbox":[52,123,1176,405]}
+{"kind":"notes","id":"nt/ibvsxq","slide":15,"text":"出典: results/feature_role_comparison.png。共通特徴はAとBの確率を同方向に動かすため、各クラス単独の説明では重要でもA対Bの差には寄与しない。解釈性の直接的な人間評価ではなく、質問関連性を測る代理指標である。"}
+{"kind":"slide","id":"sl/llnb4n","slide":16,"title":"計算時間","textShapes":4}
+{"kind":"shape","id":"sh/s7ulcbex","slide":16,"bbox":[54,43,12,50]}
+{"kind":"textbox","id":"sh/r6l436dc","slide":16,"text":"計算時間","textPreview":"計算時間","textChars":4,"textLines":1,"bbox":[80,36,1120,50]}
+{"kind":"textbox","id":"sh/qlc3a1wr","slide":16,"text":"特徴選択＋選択後の最終再学習。BB推論と摂動生成は含めない","textPreview":"特徴選択＋選択後の最終再学習。BB推論と摂動生成は含めない","textChars":29,"textLines":1,"bbox":[80,84,1120,26]}
+{"kind":"textbox","id":"sh/1cnm90ve","slide":16,"text":"16","textPreview":"16","textChars":2,"textLines":1,"bbox":[1168,678,64,20]}
+{"kind":"shape","id":"sh/fa547qdo","slide":16,"bbox":[80,614,1120,43]}
+{"kind":"textbox","id":"sh/e9w3elw3","slide":16,"text":"このスライドの主張：Top-1対Top-2の1ペアだけを作る方式はクラス数に依存せず、C=10ではOVRの約10分の1","textPreview":"このスライドの主張：Top-1対Top-2の1ペアだけを作る方式はクラス数に依存せず、C=10ではOVRの約10分の1","textChars":59,"textLines":1,"bbox":[100,619,1080,32]}
+{"kind":"image","id":"im/x0bedsf2","slide":16,"name":"","alt":"次元数とクラス数によるサロゲート学習時間の推移","bbox":[62,119,1156,474]}
+{"kind":"notes","id":"nt/llnb4n","slide":16,"text":"出典: results/timing_scaling.png。C=10ではOVR 63.46ms、2クラスLIME 6.48ms、Contrastive 6.51ms。全クラス対を説明するOVOではなく、説明点のTop-1/Top-2の1ペアだけを作る場合の測定。"}
+{"kind":"slide","id":"sl/mm9vao","slide":17,"title":"考察1：2クラスに絞ると何が変わるか","textShapes":11}
+{"kind":"shape","id":"sh/pwj69ona","slide":17,"bbox":[54,43,12,50]}
+{"kind":"textbox","id":"sh/2tsnyt4j","slide":17,"text":"考察1：2クラスに絞ると何が変わるか","textPreview":"考察1：2クラスに絞ると何が変わるか","textChars":18,"textLines":1,"bbox":[80,36,1120,50]}
+{"kind":"textbox","id":"sh/3u1o7e54","slide":17,"text":"OVRとpairwise説明は、そもそも答えている質問が異なる","textPreview":"OVRとpairwise説明は、そもそも答えている質問が異なる","textChars":31,"textLines":1,"bbox":[80,84,1120,26]}
+{"kind":"textbox","id":"sh/cjup43m1","slide":17,"text":"17","textPreview":"17","textChars":2,"textLines":1,"bbox":[1168,678,64,20]}
+{"kind":"shape","id":"sh/dk36d836","slide":17,"bbox":[80,128,1120,82]}
+{"kind":"textbox","id":"sh/qxc72t4v","slide":17,"text":"OVRは『なぜクラスAらしいか』、2クラス説明は『なぜAがBより選ばれたか』に答える","textPreview":"OVRは『なぜクラスAらしいか』、2クラス説明は『なぜAがBより選ばれたか』に答える","textChars":42,"textLines":1,"bbox":[105,145,1070,46]}
+{"kind":"shape","id":"sh/rylobylg","slide":17,"bbox":[88,252,218,32]}
+{"kind":"textbox","id":"sh/0nup83mx","slide":17,"text":"① 共通証拠を相殺","textPreview":"① 共通証拠を相殺","textChars":9,"textLines":1,"bbox":[98,253,198,29]}
+{"kind":"shape","id":"sh/1o36h83i","slide":17,"bbox":[326,238,866,84]}
+{"kind":"textbox","id":"sh/1gbatkfi","slide":17,"text":"AとBを同じ方向に押し上げる特徴は、A単独では重要でもA対Bの勝敗には効かない。qやlog(pA/pB)を説明すると、その共通成分が表示上位から外れやすい。","textPreview":"AとBを同じ方向に押し上げる特徴は、A単独では重要でもA対Bの勝敗には効かない。qやlog(pA/pB)を説明すると、その共通成分が表示上位から外れやすい。","textChars":78,"textLines":1,"bbox":[348,246,822,68]}
+{"kind":"shape","id":"sh/0f290fyx","slide":17,"bbox":[88,364,218,32]}
+{"kind":"textbox","id":"sh/fetsruxc","slide":17,"text":"② 表示予算を集中","textPreview":"② 表示予算を集中","textChars":9,"textLines":1,"bbox":[98,365,198,29]}
+{"kind":"shape","id":"sh/edkrypgr","slide":17,"bbox":[326,350,866,84]}
+{"kind":"textbox","id":"sh/p4vax4fe","slide":17,"text":"説明特徴数Kが小さいほど、関係のない共通特徴が1個入る損失は大きい。pairwise方式は限られた枠を『どちらを支持するか』へ集中できる。","textPreview":"説明特徴数Kが小さいほど、関係のない共通特徴が1個入る損失は大きい。pairwise方式は限られた枠を『どちらを支持するか』へ集中できる。","textChars":69,"textLines":1,"bbox":[348,358,822,68]}
+{"kind":"shape","id":"sh/o3m94zyt","slide":17,"bbox":[88,476,218,32]}
+{"kind":"textbox","id":"sh/n2dsvux8","slide":17,"text":"③ 忠実度は維持","textPreview":"③ 忠実度は維持","textChars":8,"textLines":1,"bbox":[98,477,198,29]}
+{"kind":"shape","id":"sh/21kr2pg3","slide":17,"bbox":[326,462,866,84]}
+{"kind":"textbox","id":"sh/58rql0fa","slide":17,"text":"RF主実験の改善は+0.0041と小さいが、同じKでも悪化せず、特徴関連性と計算時間は明確に改善した。価値は3指標を合わせて判断する。","textPreview":"RF主実験の改善は+0.0041と小さいが、同じKでも悪化せず、特徴関連性と計算時間は明確に改善した。価値は3指標を合わせて判断する。","textChars":67,"textLines":1,"bbox":[348,470,822,68]}
+{"kind":"shape","id":"sh/47i9svyp","slide":17,"bbox":[80,610,1120,43]}
+{"kind":"textbox","id":"sh/wrm98f6l","slide":17,"text":"このスライドの主張：精度向上だけでなく、『質問に合う特徴を出す』ことが2クラス化の主要な意義","textPreview":"このスライドの主張：精度向上だけでなく、『質問に合う特徴を出す』ことが2クラス化の主要な意義","textChars":46,"textLines":1,"bbox":[100,615,1080,32]}
+{"kind":"notes","id":"nt/mm9vao","slide":17,"text":"説明時は、OVRとpairwiseが異なる問いへ答える点を明示する。解釈性を断定せず、既知の真値に対する特徴関連性が改善したと述べる。"}
+{"kind":"slide","id":"sl/jmk8he","slide":18,"title":"考察2：3つの2クラス方式をどう使い分けるか","textShapes":14}
+{"kind":"shape","id":"sh/1g3u1cn2","slide":18,"bbox":[54,43,12,50]}
+{"kind":"textbox","id":"sh/edsb6xob","slide":18,"text":"考察2：3つの2クラス方式をどう使い分けるか","textPreview":"考察2：3つの2クラス方式をどう使い分けるか","textChars":22,"textLines":1,"bbox":[80,36,1120,50]}
+{"kind":"textbox","id":"sh/felcz25w","slide":18,"text":"2クラスの選択と、その後のリンク関数・損失の選択を分けて考える","textPreview":"2クラスの選択と、その後のリンク関数・損失の選択を分けて考える","textChars":31,"textLines":1,"bbox":[80,84,1120,26]}
+{"kind":"textbox","id":"sh/srat4n6l","slide":18,"text":"18","textPreview":"18","textChars":2,"textLines":1,"bbox":[1168,678,64,20]}
+{"kind":"shape","id":"sh/dsjuxsnq","slide":18,"bbox":[72,142,366,356]}
+{"kind":"shape","id":"sh/qpsb2dof","slide":18,"bbox":[72,142,366,60]}
+{"kind":"textbox","id":"sh/rq1svi50","slide":18,"text":"2クラスLIME","textPreview":"2クラスLIME","textChars":8,"textLines":1,"bbox":[90,152,330,40]}
+{"kind":"textbox","id":"sh/4nat0n69","slide":18,"text":"qをRidge回帰","textPreview":"qをRidge回帰","textChars":9,"textLines":1,"bbox":[96,222,318,48]}
+{"kind":"shape","id":"sh/5ojatsnu","slide":18,"bbox":[97,284,316,1]}
+{"kind":"textbox","id":"sh/lwbyxwbe","slide":18,"text":"3種類のBBで安定し、実装も最も単純。非線形NNとRFで最高忠実度。まず置くべき汎用ベースライン。","textPreview":"3種類のBBで安定し、実装も最も単純。非線形NNとRFで最高忠実度。まず置くべき汎用ベースライン。","textChars":49,"textLines":1,"bbox":[102,304,306,160]}
+{"kind":"shape","id":"sh/0vix4rat","slide":18,"bbox":[466,142,366,356]}
+{"kind":"shape","id":"sh/za9gv6t8","slide":18,"bbox":[466,142,366,60]}
+{"kind":"textbox","id":"sh/y90f21s3","slide":18,"text":"Contrastive","textPreview":"Contrastive","textChars":11,"textLines":1,"bbox":[484,152,330,40]}
+{"kind":"textbox","id":"sh/d8rytwbi","slide":18,"text":"log(p₁/p₂)をRidge回帰","textPreview":"log(p₁/p₂)をRidge回帰","textChars":18,"textLines":1,"bbox":[490,222,318,48]}
+{"kind":"shape","id":"sh/c7ix0rax","slide":18,"bbox":[491,284,316,1]}
+{"kind":"textbox","id":"sh/b69grmtc","slide":18,"text":"線形softmaxで忠実度・Brier・真係数復元が最良。局所logit差が線形に近い場合に理論と結果が一致。","textPreview":"線形softmaxで忠実度・Brier・真係数復元が最良。局所logit差が線形に近い場合に理論と結果が一致。","textChars":55,"textLines":1,"bbox":[496,304,306,160]}
+{"kind":"shape","id":"sh/q50fyhsr","slide":18,"bbox":[860,142,366,356]}
+{"kind":"shape","id":"sh/p47ypcb6","slide":18,"bbox":[860,142,366,60]}
+{"kind":"textbox","id":"sh/o3yxw7al","slide":18,"text":"OVO Logistic","textPreview":"OVO Logistic","textChars":12,"textLines":1,"bbox":[878,152,330,40]}
+{"kind":"textbox","id":"sh/gn2xcrih","slide":18,"text":"qを交差エントロピーで回帰","textPreview":"qを交差エントロピーで回帰","textChars":13,"textLines":1,"bbox":[884,222,318,48]}
+{"kind":"shape","id":"sh/hoby5cj2","slide":18,"bbox":[885,284,316,1]}
+{"kind":"textbox","id":"sh/ulkfah0r","slide":18,"text":"極端確率でも目的変数が発散しない利点はあるが、今回の疎な設定では忠実度が低く、次元増加で遅くなった。","textPreview":"極端確率でも目的変数が発散しない利点はあるが、今回の疎な設定では忠実度が低く、次元増加で遅くなった。","textChars":50,"textLines":1,"bbox":[890,304,306,160]}
+{"kind":"shape","id":"sh/fmtg3m1w","slide":18,"bbox":[102,526,1076,68]}
+{"kind":"textbox","id":"sh/sj2x87il","slide":18,"text":"研究としての主張は『対数比が常に最良』ではなく、2クラス化の効果と回帰方法の条件依存性を分離したこと","textPreview":"研究としての主張は『対数比が常に最良』ではなく、2クラス化の効果と回帰方法の条件依存性を分離したこと","textChars":50,"textLines":1,"bbox":[128,540,1024,40]}
+{"kind":"shape","id":"sh/tkby1cj6","slide":18,"bbox":[80,614,1120,43]}
+{"kind":"textbox","id":"sh/6h0f6x0f","slide":18,"text":"このスライドの主張：現時点の汎用候補は2クラスLIME、線形logit構造が期待できる場合はContrastive","textPreview":"このスライドの主張：現時点の汎用候補は2クラスLIME、線形logit構造が期待できる場合はContrastive","textChars":57,"textLines":1,"bbox":[100,619,1080,32]}
+{"kind":"notes","id":"nt/jmk8he","slide":18,"text":"OVO Logisticは失敗扱いではなく、正則化C、サンプル数、局所幅との相互作用を今後調べる。今回の結論は合成データとTop-1/Top-2に限定。"}
+{"kind":"slide","id":"sl/7kpq9p","slide":19,"title":"結果のまとめと今後の課題","textShapes":10}
+{"kind":"shape","id":"sh/epoj294r","slide":19,"bbox":[54,43,12,50]}
+{"kind":"textbox","id":"sh/1sz2d4ni","slide":19,"text":"結果のまとめと今後の課題","textPreview":"結果のまとめと今後の課題","textChars":12,"textLines":1,"bbox":[80,36,1120,50]}
+{"kind":"textbox","id":"sh/0r614zmx","slide":19,"text":"今回の実験から言えることと言えないことを分ける","textPreview":"今回の実験から言えることと言えないことを分ける","textChars":23,"textLines":1,"bbox":[80,84,1120,26]}
+{"kind":"textbox","id":"sh/rmx07u5g","slide":19,"text":"19","textPreview":"19","textChars":2,"textLines":1,"bbox":[1168,678,64,20]}
+{"kind":"shape","id":"sh/qlojypov","slide":19,"bbox":[82,132,180,32]}
+{"kind":"textbox","id":"sh/dofi94n6","slide":19,"text":"支持された","textPreview":"支持された","textChars":5,"textLines":1,"bbox":[92,133,160,29]}
+{"kind":"textbox","id":"sh/sn610zm1","slide":19,"text":"• 同じKでも、2クラスLIMEはOVRと同等以上のheld-out忠実度を保つ\n• 競合特徴の再現率が高く、両クラス共通特徴への表示枠の消費を避ける\n• Top-1/Top-2の1ペアなら、クラス数が増えても学習時間がほぼ一定","textPreview":"• 同じKでも、2クラスLIMEはOVRと同等以上のheld-out忠実度を保つ | • 競合特徴の再現率が高く、両クラス共通特徴への表示枠の消費を避ける | • Top-1/Top-2の1ペアなら、クラス数が増えても学習時間がほぼ一定","textChars":114,"textLines":3,"bbox":[291,122,895,126]}
+{"kind":"shape","id":"sh/3id03u54","slide":19,"bbox":[82,270,1104,1]}
+{"kind":"shape","id":"sh/ih4jupoj","slide":19,"bbox":[82,294,180,32]}
+{"kind":"textbox","id":"sh/ojit4jut","slide":19,"text":"条件付き","textPreview":"条件付き","textChars":4,"textLines":1,"bbox":[92,295,160,29]}
+{"kind":"textbox","id":"sh/9krud4by","slide":19,"text":"• Contrastiveの利点は、softmaxの有無より局所logit差の線形性に依存する\n• RFでの+0.0041は統計的差がある条件を含むが、効果量としては小さい\n• OVO Logisticの発散回避という理論的利点は、今回の疎な設定では性能向上に結びつかなかった","textPreview":"• Contrastiveの利点は、softmaxの有無より局所logit差の線形性に依存する | • RFでの+0.0041は統計的差がある条件を含むが、効果量としては小さい | • OVO Logisticの発散回避という理論的利点は、今回の疎な設定では性能向上に結びつ...","textChars":138,"textLines":3,"bbox":[291,284,895,126]}
+{"kind":"shape","id":"sh/mhgb29cn","slide":19,"bbox":[82,432,1104,1]}
+{"kind":"shape","id":"sh/nipcbed8","slide":19,"bbox":[82,456,180,32]}
+{"kind":"textbox","id":"sh/0fyt0zuh","slide":19,"text":"未検証","textPreview":"未検証","textChars":3,"textLines":1,"bbox":[92,457,160,29]}
+{"kind":"textbox","id":"sh/1g7a94v2","slide":19,"text":"• 実データでも同じ傾向になるか\n• Top-2以外の競合クラスを指定した場合や、入力ごとに競合が変化する場合\n• 人が説明を理解しやすいかというユーザ評価\n• OVO Logisticの正則化、摂動数、局所幅を調整した再評価","textPreview":"• 実データでも同じ傾向になるか | • Top-2以外の競合クラスを指定した場合や、入力ごとに競合が変化する場合 | • 人が説明を理解しやすいかというユーザ評価 | • OVO Logisticの正則化、摂動数、局所幅を調整した再評価","textChars":113,"textLines":4,"bbox":[291,446,895,142]}
+{"kind":"shape","id":"sh/etgbypcb","slide":19,"bbox":[80,614,1120,43]}
+{"kind":"textbox","id":"sh/zups7udw","slide":19,"text":"このスライドの主張：結論は『OVOが常に高精度』ではなく、特定の競合を説明する設計が関連性と計算量で有望ということ","textPreview":"このスライドの主張：結論は『OVOが常に高精度』ではなく、特定の競合を説明する設計が関連性と計算量で有望ということ","textChars":57,"textLines":1,"bbox":[100,619,1080,32]}
+{"kind":"notes","id":"nt/7kpq9p","slide":19,"text":"最終結論。新規性は既存のpairwise説明やlog-oddsそのものではなく、Top-1/Top-2への適用と、OVR・通常LIME・log-odds Ridge・local logisticを同一条件で分解比較した実証設計に置く。"}

@@ -1,10 +1,10 @@
 """Measure surrogate fitting time for the OVR/OVO comparison.
 
-The benchmark isolates the fitting step: all methods receive the same
-perturbation matrix and black-box probabilities.  Times are reported per
-explained instance and aggregated over independent dataset seeds.  OVR is
-the current implementation that fits one Lasso surrogate for every class;
-the OVO methods fit only the selected top-two class pair.
+The benchmark isolates the full select-then-refit surrogate step: all methods
+receive the same perturbation matrix and black-box probabilities. Times are
+reported per explained instance and aggregated over independent dataset
+seeds. OVR fits selectors for every class and constructs an exact-K pairwise
+comparison; the other methods fit only the selected top-two class pair.
 """
 from __future__ import annotations
 
@@ -21,7 +21,13 @@ from sklearn.model_selection import train_test_split
 sys.path.insert(0, str(Path(__file__).parent))
 from perturbation import sample_perturbations  # noqa: E402
 from run_experiment import pick_contested_instances  # noqa: E402
-from surrogates import fit_onevsrest_lasso, fit_contrastive_lasso, fit_ovo_logistic_lasso  # noqa: E402
+from run_blackbox_comparison_experiment import _exact_ovr  # noqa: E402
+from run_ovo_vs_ovr_experiment import _pair_q, _ridge_refit, _soft_logistic_refit  # noqa: E402
+from surrogates import (  # noqa: E402
+    fit_contrastive_lasso,
+    fit_ovo_logistic_lasso,
+    fit_pairwise_lime_lasso,
+)
 
 N_FEATURES_GRID = [8, 14, 20]
 N_CLASSES_GRID = list(range(3, 11))
@@ -36,6 +42,18 @@ def timed(fn):
     t0 = time.perf_counter()
     fn()
     return (time.perf_counter() - t0) * 1000.0
+
+
+def fit_contrastive_select_refit(Z, w, proba, c1, c2, x, K):
+    selector = fit_contrastive_lasso(Z, w, proba, c1, c2, x, K)
+    y = np.log((proba[:, c1] + 1e-6) / (proba[:, c2] + 1e-6))
+    return _ridge_refit(Z, w, y, selector["selected"], x)
+
+
+def fit_logistic_select_refit(Z, w, proba, c1, c2, x, K):
+    selector = fit_ovo_logistic_lasso(Z, w, proba, c1, c2, x, K)
+    q = _pair_q(proba, c1, c2, 1e-6)
+    return _soft_logistic_refit(Z, w, q, selector["selected"], x)
 
 
 def run_one_cell(n_features: int, n_classes: int, rng: np.random.Generator) -> list[dict]:
@@ -63,9 +81,14 @@ def run_one_cell(n_features: int, n_classes: int, rng: np.random.Generator) -> l
         for K in sorted({max(1, round(f * n_features)) for f in K_FRACS}):
             rows.append({
                 "n_features": n_features, "n_classes": n_classes, "K": K,
-                "ovr_union_ms": timed(lambda: fit_onevsrest_lasso(Z, w, proba, x, K)),
-                "contrastive_ms": timed(lambda: fit_contrastive_lasso(Z, w, proba, c1, c2, x, K)),
-                "logistic_ms": timed(lambda: fit_ovo_logistic_lasso(Z, w, proba, c1, c2, x, K)),
+                "ovr_exact_ms": timed(
+                    lambda: _exact_ovr(Z, w, proba, x, c1, c2, K)),
+                "two_class_lime_ms": timed(
+                    lambda: fit_pairwise_lime_lasso(Z, w, proba, c1, c2, x, K)),
+                "contrastive_ms": timed(
+                    lambda: fit_contrastive_select_refit(Z, w, proba, c1, c2, x, K)),
+                "logistic_ms": timed(
+                    lambda: fit_logistic_select_refit(Z, w, proba, c1, c2, x, K)),
             })
     return rows
 
@@ -73,18 +96,21 @@ def run_one_cell(n_features: int, n_classes: int, rng: np.random.Generator) -> l
 def main():
     rng = np.random.default_rng(SEED)
     rows = []
-    for nf in N_FEATURES_GRID:
-        for nc in N_CLASSES_GRID:
-            for seed in range(N_DATASET_SEEDS):
-                for row in run_one_cell(nf, nc, rng):
-                    row["seed"] = seed
-                    rows.append(row)
+    t0 = time.time()
+    cells = [(nf, nc) for nf in N_FEATURES_GRID for nc in N_CLASSES_GRID]
+    for cell_i, (nf, nc) in enumerate(cells, 1):
+        print(f"[{time.time()-t0:6.1f}s] cell {cell_i}/{len(cells)}: "
+              f"d={nf}, C={nc}", flush=True)
+        for seed in range(N_DATASET_SEEDS):
+            for row in run_one_cell(nf, nc, rng):
+                row["seed"] = seed
+                rows.append(row)
     df = pd.DataFrame(rows)
     out = Path(__file__).parent.parent / "results"
     out.mkdir(exist_ok=True)
     df.to_csv(out / "timing_results.csv", index=False)
     summary = (df.groupby(["n_features", "n_classes", "K"])
-                 [["ovr_union_ms", "contrastive_ms", "logistic_ms"]]
+                 [["ovr_exact_ms", "two_class_lime_ms", "contrastive_ms", "logistic_ms"]]
                  .agg(["mean", "median", "std"]).reset_index())
     summary.to_csv(out / "timing_summary.csv", index=False)
     print(summary.to_string(index=False))

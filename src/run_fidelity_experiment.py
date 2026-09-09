@@ -131,7 +131,7 @@ def main():
     stats_df.to_csv(out_dir / "fidelity_stats.csv", index=False)
 
     print(f"\n=== paired tests across {N_DATASET_SEEDS} independent dataset seeds "
-          "(Holm-Bonferroni corrected across grid cells+pairs; mean_diff = a - b, "
+          "(Holm-Bonferroni corrected for each method pair across grid cells; mean_diff = a - b, "
           "negative means a has LOWER (better) Hellinger loss) ===")
     print(stats_df.to_string(index=False))
 

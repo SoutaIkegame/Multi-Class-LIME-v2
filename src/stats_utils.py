@@ -172,7 +172,14 @@ def compare_methods(df: pd.DataFrame, group_cols: list[str], metric_pairs: list[
     result = pd.DataFrame(rows)
     if len(result) > 0:
         result["p_value_holm_reject"] = False
-        for metric_name in result["metric"].unique():
-            mask = result["metric"] == metric_name
+        # Each method pair defines a separate scientific comparison.  Correct
+        # across the grid cells tested for that pair, rather than pooling every
+        # pair that happens to share a generic metric label such as
+        # ``fidelity_test`` into one excessively large family.
+        family_cols = ["metric", "method_a", "method_b"]
+        for family in result[family_cols].drop_duplicates().itertuples(index=False, name=None):
+            mask = np.logical_and.reduce([
+                result[col] == value for col, value in zip(family_cols, family)
+            ])
             result.loc[mask, "p_value_holm_reject"] = holm_bonferroni(result.loc[mask, "p_value"].to_numpy())
     return result

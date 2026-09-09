@@ -53,7 +53,14 @@ from sklearn.model_selection import train_test_split
 
 sys.path.insert(0, str(Path(__file__).parent))
 from perturbation import sample_perturbations  # noqa: E402
-from surrogates import fit_onevsrest, fit_fisher, fit_fisher_soft, fit_contrastive  # noqa: E402
+from surrogates import (  # noqa: E402
+    fit_onevsrest,
+    fit_pairwise_lime,
+    fit_fisher,
+    fit_fisher_soft,
+    fit_contrastive,
+    fit_ovo_logistic,
+)
 from metrics import pairwise_coef_spearman  # noqa: E402
 from run_experiment import pick_contested_instances  # noqa: E402
 from stats_utils import compare_methods  # noqa: E402
@@ -114,12 +121,20 @@ def run_one_cell(n_features: int, n_classes: int, rng: np.random.Generator) -> l
         contrastive = fit_contrastive(Z, weights, proba, c_star, c_runner, x)
         beta_contrastive = contrastive["coef"]
 
+        pairwise_lime = fit_pairwise_lime(Z, weights, proba, c_star, c_runner, x)
+        beta_pairwise_lime = pairwise_lime["coef"]
+
+        ovo_logistic = fit_ovo_logistic(Z, weights, proba, c_star, c_runner, x)
+        beta_ovo_logistic = ovo_logistic["coef"]
+
         rows.append(dict(
             n_features=n_features, n_classes=n_classes,
             ovr_spearman=pairwise_coef_spearman(beta_true, beta_ovr),
             fisher_hard_spearman=pairwise_coef_spearman(beta_true, beta_fisher_hard),
             fisher_soft_spearman=pairwise_coef_spearman(beta_true, beta_fisher_soft),
+            pairwise_lime_spearman=pairwise_coef_spearman(beta_true, beta_pairwise_lime),
             contrastive_spearman=pairwise_coef_spearman(beta_true, beta_contrastive),
+            ovo_logistic_spearman=pairwise_coef_spearman(beta_true, beta_ovo_logistic),
         ))
     return rows
 
@@ -157,6 +172,9 @@ def main():
 
     # --- statistically rigorous comparison ---
     pairs = [
+        ("spearman", "contrastive_spearman", "pairwise_lime_spearman"),
+        ("spearman", "ovo_logistic_spearman", "pairwise_lime_spearman"),
+        ("spearman", "contrastive_spearman", "ovo_logistic_spearman"),
         ("spearman", "contrastive_spearman", "ovr_spearman"),
         ("spearman", "contrastive_spearman", "fisher_hard_spearman"),
         ("spearman", "contrastive_spearman", "fisher_soft_spearman"),
@@ -168,7 +186,7 @@ def main():
     stats_df.to_csv(out_dir / "groundtruth_stats.csv", index=False)
 
     print(f"\n=== paired tests across {N_DATASET_SEEDS} independent dataset seeds "
-          "(Holm-Bonferroni corrected across grid cells+pairs; mean_diff = a - b, "
+          "(Holm-Bonferroni corrected for each method pair across grid cells; mean_diff = a - b, "
           "positive means a recovers the true ranking BETTER) ===")
     print(stats_df.to_string(index=False))
 

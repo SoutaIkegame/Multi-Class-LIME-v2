@@ -3,10 +3,10 @@ does directly approximating a class PAIR (OVO) explain the black box's
 preference between those two classes more faithfully than an OVR-style
 explanation, AT THE SAME DISPLAYED FEATURE COUNT K?
 
-Four methods:
+Six methods:
 
   ovr_union       Each of c1, c2 gets its own independent top-K Lasso
-                  one-vs-rest explanation (fit_onevsrest_lasso); the pair
+                  feature selection followed by a Ridge refit; the pair
                   explanation is the coefficient DIFFERENCE, whose support
                   is the UNION of the two classes' selected features (size
                   K to 2K, not exactly K -- an OVR-based pairwise
@@ -23,10 +23,29 @@ Four methods:
                   just its complexity handicap, this version -- fit at
                   matched complexity -- should show Contrastive pulling
                   ahead.
-  contrastive_K   fit_contrastive_lasso: log-ratio Ridge restricted to
-                  exactly K features, selected jointly for the pair.
-  logistic_K      fit_ovo_logistic_lasso: soft-label logistic restricted
-                  to exactly K features, selected jointly for the pair.
+  ovr_exact_K     Start from the two independently selected OVR supports,
+                  rank their union by the magnitude of the fitted coefficient
+                  difference, retain exactly K distinct displayed features,
+                  and refit both class-probability surrogates on that support.
+                  This is the exact-complexity OVR baseline for the headline
+                  comparison; the union and half-union variants remain as
+                  sensitivity bounds for the unavoidable merge choice.
+  pairwise_lime_K Select c1 and c2, renormalize their black-box probabilities
+                  to q=p_c1/(p_c1+p_c2), then apply an ordinary weighted
+                  linear LIME surrogate to q with exactly K displayed
+                  features. This separates the benefit of choosing a pair
+                  from the benefit of the logit link / logistic loss.
+  contrastive_K   Lasso-select exactly K features on the log-ratio target,
+                  then refit weighted Ridge on those features.
+  logistic_K      L1-logistic-select exactly K features, then refit weighted
+                  soft-label logistic regression on those features.
+
+Every sparse method follows the same select-then-refit structure. This is
+important: LIME uses its sparse model/path only to select features and then
+fits the final local surrogate on that support. Using coefficients from the
+strongly regularized selector directly would confound target/link effects
+with shrinkage and was the cause of an unfair intermediate implementation of
+this experiment.
 
 Fidelity is pairwise-sign agreement, measured on an INDEPENDENT held-out
 perturbation sample (never used for fitting) -- see run_combined_bc_
@@ -53,13 +72,20 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
+from scipy.special import expit
 from sklearn.datasets import make_classification
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.linear_model import LogisticRegression, Ridge
 from sklearn.model_selection import train_test_split
 
 sys.path.insert(0, str(Path(__file__).parent))
 from perturbation import sample_perturbations  # noqa: E402
-from surrogates import fit_onevsrest_lasso, fit_contrastive_lasso, fit_ovo_logistic_lasso  # noqa: E402
+from surrogates import (  # noqa: E402
+    fit_onevsrest_lasso,
+    fit_pairwise_lime_lasso,
+    fit_contrastive_lasso,
+    fit_ovo_logistic_lasso,
+)
 from run_experiment import pick_contested_instances  # noqa: E402
 from stats_utils import compare_methods  # noqa: E402
 
@@ -76,6 +102,40 @@ def _sign_acc(coef, b, Z, proba, c1, c2, w):
     pred = np.sign(Z @ coef + b)
     true = np.sign(proba[:, c1] - proba[:, c2])
     return float(np.average(pred == true, weights=w))
+
+
+def _pair_q(proba, c1, c2, eps=1e-6):
+    return (proba[:, c1] + eps) / (proba[:, c1] + proba[:, c2] + 2 * eps)
+
+
+def _weighted_brier(pred_q, true_q, w):
+    return float(np.average((np.clip(pred_q, 0.0, 1.0) - true_q) ** 2, weights=w))
+
+
+def _ridge_refit(Z, weights, y, selected, x, alpha=1.0):
+    idx = np.array(sorted(selected), dtype=int)
+    model = Ridge(alpha=alpha)
+    model.fit(Z[:, idx], y, sample_weight=weights)
+    coef = np.zeros(Z.shape[1], dtype=float)
+    coef[idx] = model.coef_
+    intercept = float(model.intercept_)
+    return {"coef": coef, "intercept": intercept,
+            "local_pred": float(intercept + coef @ x), "selected": frozenset(idx.tolist())}
+
+
+def _soft_logistic_refit(Z, weights, q, selected, x, C=1.0):
+    idx = np.array(sorted(selected), dtype=int)
+    Zs = Z[:, idx]
+    Z2 = np.vstack([Zs, Zs])
+    y2 = np.concatenate([np.ones(len(Z)), np.zeros(len(Z))])
+    w2 = np.concatenate([weights * q, weights * (1.0 - q)])
+    model = LogisticRegression(C=C, max_iter=2000, random_state=0)
+    model.fit(Z2, y2, sample_weight=w2)
+    coef = np.zeros(Z.shape[1], dtype=float)
+    coef[idx] = model.coef_[0]
+    intercept = float(model.intercept_[0])
+    return {"coef": coef, "intercept": intercept,
+            "local_pred": float(intercept + coef @ x), "selected": frozenset(idx.tolist())}
 
 
 def run_one_cell(n_features, n_classes, rng):
@@ -109,29 +169,67 @@ def run_one_cell(n_features, n_classes, rng):
 
         for K in k_values:
             ovr_lasso = fit_onevsrest_lasso(Z, w, proba, x, K)
-            ovr1, ovr2 = ovr_lasso[c1], ovr_lasso[c2]
+            ovr1 = _ridge_refit(Z, w, proba[:, c1], ovr_lasso[c1]["selected"], x)
+            ovr2 = _ridge_refit(Z, w, proba[:, c2], ovr_lasso[c2]["selected"], x)
             ovr_coef = ovr1["coef"] - ovr2["coef"]
             ovr_intercept = ovr1["intercept"] - ovr2["intercept"]
             ovr_union_size = len(ovr1["selected"] | ovr2["selected"])
 
+            # Exact-K OVR display: merge the independently selected class-wise
+            # supports, keep the K largest fitted pair-difference terms, and
+            # refit both original OVR targets on that common displayed set.
+            # This preserves the OVR targets while matching the final number
+            # of distinct features shown by all three pair-target methods.
+            ovr_candidates = np.array(sorted(ovr1["selected"] | ovr2["selected"]), dtype=int)
+            ovr_candidate_scores = np.abs(ovr_coef[ovr_candidates])
+            ovr_exact_idx = ovr_candidates[np.argsort(-ovr_candidate_scores)[:K]]
+            ovr_exact_selected = frozenset(ovr_exact_idx.tolist())
+            ovre1 = _ridge_refit(Z, w, proba[:, c1], ovr_exact_selected, x)
+            ovre2 = _ridge_refit(Z, w, proba[:, c2], ovr_exact_selected, x)
+            ovre_coef = ovre1["coef"] - ovre2["coef"]
+            ovre_intercept = ovre1["intercept"] - ovre2["intercept"]
+
             K_half = max(1, -(-K // 2))  # ceil(K/2)
             ovr_lasso_half = fit_onevsrest_lasso(Z, w, proba, x, K_half)
-            ovrh1, ovrh2 = ovr_lasso_half[c1], ovr_lasso_half[c2]
+            ovrh1 = _ridge_refit(Z, w, proba[:, c1], ovr_lasso_half[c1]["selected"], x)
+            ovrh2 = _ridge_refit(Z, w, proba[:, c2], ovr_lasso_half[c2]["selected"], x)
             ovrh_coef = ovrh1["coef"] - ovrh2["coef"]
             ovrh_intercept = ovrh1["intercept"] - ovrh2["intercept"]
             ovrh_union_size = len(ovrh1["selected"] | ovrh2["selected"])
 
-            con = fit_contrastive_lasso(Z, w, proba, c1, c2, x, K)
-            log = fit_ovo_logistic_lasso(Z, w, proba, c1, c2, x, K)
+            pair_lime = fit_pairwise_lime_lasso(Z, w, proba, c1, c2, x, K)
+            con_selector = fit_contrastive_lasso(Z, w, proba, c1, c2, x, K)
+            log_selector = fit_ovo_logistic_lasso(Z, w, proba, c1, c2, x, K)
+            eps = 1e-6
+            log_ratio = np.log((proba[:, c1] + eps) / (proba[:, c2] + eps))
+            q_train = _pair_q(proba, c1, c2, eps)
+            con = _ridge_refit(Z, w, log_ratio, con_selector["selected"], x)
+            log = _soft_logistic_refit(Z, w, q_train, log_selector["selected"], x)
+            true_q_test = _pair_q(proba_test, c1, c2)
+            pair_lime_linear_test = Z_test @ pair_lime["coef"] + pair_lime["intercept"]
+            con_q_test = expit(Z_test @ con["coef"] + con["intercept"])
+            log_q_test = expit(Z_test @ log["coef"] + log["intercept"])
 
             rows.append(dict(
                 n_features=n_features, n_classes=n_classes, K=K,
                 ovr_union_fidelity_test=_sign_acc(ovr_coef, ovr_intercept, Z_test, proba_test, c1, c2, w_test),
                 ovr_union_complexity=ovr_union_size,
+                ovr_exact_fidelity_test=_sign_acc(ovre_coef, ovre_intercept, Z_test, proba_test, c1, c2, w_test),
+                ovr_exact_complexity=len(ovr_exact_selected),
                 ovr_union_half_fidelity_test=_sign_acc(ovrh_coef, ovrh_intercept, Z_test, proba_test, c1, c2, w_test),
                 ovr_union_half_complexity=ovrh_union_size,
+                pairwise_lime_fidelity_test=_sign_acc(
+                    pair_lime["coef"], pair_lime["intercept"] - 0.5,
+                    Z_test, proba_test, c1, c2, w_test,
+                ),
+                pairwise_lime_complexity=len(pair_lime["selected"]),
+                pairwise_lime_brier_test=_weighted_brier(pair_lime_linear_test, true_q_test, w_test),
                 contrastive_fidelity_test=_sign_acc(con["coef"], con["intercept"], Z_test, proba_test, c1, c2, w_test),
+                contrastive_complexity=len(con["selected"]),
+                contrastive_brier_test=_weighted_brier(con_q_test, true_q_test, w_test),
                 logistic_fidelity_test=_sign_acc(log["coef"], log["intercept"], Z_test, proba_test, c1, c2, w_test),
+                logistic_complexity=len(log["selected"]),
+                logistic_brier_test=_weighted_brier(log_q_test, true_q_test, w_test),
             ))
     return rows
 
@@ -167,8 +265,18 @@ def main():
     print(df[cols].mean().round(4))
 
     pairs = [
+        ("fidelity_test", "contrastive_fidelity_test", "pairwise_lime_fidelity_test"),
+        ("fidelity_test", "logistic_fidelity_test", "pairwise_lime_fidelity_test"),
+        ("fidelity_test", "pairwise_lime_fidelity_test", "ovr_union_fidelity_test"),
+        ("fidelity_test", "pairwise_lime_fidelity_test", "ovr_exact_fidelity_test"),
+        ("fidelity_test", "pairwise_lime_fidelity_test", "ovr_union_half_fidelity_test"),
+        ("brier_test", "contrastive_brier_test", "pairwise_lime_brier_test"),
+        ("brier_test", "logistic_brier_test", "pairwise_lime_brier_test"),
+        ("brier_test", "logistic_brier_test", "contrastive_brier_test"),
         ("fidelity_test", "contrastive_fidelity_test", "ovr_union_fidelity_test"),
+        ("fidelity_test", "contrastive_fidelity_test", "ovr_exact_fidelity_test"),
         ("fidelity_test", "logistic_fidelity_test", "ovr_union_fidelity_test"),
+        ("fidelity_test", "logistic_fidelity_test", "ovr_exact_fidelity_test"),
         ("fidelity_test", "logistic_fidelity_test", "contrastive_fidelity_test"),
         ("fidelity_test", "contrastive_fidelity_test", "ovr_union_half_fidelity_test"),
         ("fidelity_test", "logistic_fidelity_test", "ovr_union_half_fidelity_test"),
