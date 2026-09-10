@@ -15,7 +15,7 @@
 
 発表上の着想の流れは、**GANMEXから「なぜ予測クラスであり、特定の別クラスではないか」というOne-vs-One説明の問いを採り、CLIMAXからlog-odds／local logisticを局所説明へ用いる当てはめ方を採る**、という順序で示す。そのうえで、多クラスBBの予測1位・2位に対象を限定した方法として提案する。$q=p_{c^*}/(p_{c^*}+p_{c'})$の出典はPairwise Couplingとして示すが、確率調整自体を大きな提案として扱わない。最新結果に基づく考察と発表用文章は`docs/DISCUSSION.md`にまとめている。
 
-中間発表の現行デッキは`pptx/MIDTERM_PRESENTATION_WITH_RESULTS_V2_2026-09-09.pptx`（旧`docs/`配下から移動済み）。全24枚構成：タイトル1枚、4セクション（導入・LIMEの基礎／多クラスLIMEの課題と関連研究／提案手法・評価設計／実験結果・考察・まとめ）それぞれの直前に目次（セクション divider）を1枚ずつ配置し、該当セクションのみ強調・他は淡色表示する。提案手法パートは「OVR vs 提案（Top-1/Top-2）」のステップフロー比較スライドと、「3つの2クラス方式とその狙い（Contrastive/OVO Logisticを両方入れた理由の説明つき）」スライドに再構成した（旧・単一の「評価設計」スライドを分割・拡張）。フォントは全体をHiragino Sansに統一。結果グラフは`results/*.png`の画像を使用し、各追加スライドに「このスライドの主張」を明示している。実験設定表はPowerPoint上で編集可能。
+中間発表の現行デッキは`pptx/MIDTERM_PRESENTATION_RESULTS_REEXPERIMENT_2026-09-10.pptx`。全21枚構成で、24枚版`pptx/MIDTERM_PRESENTATION_WITH_RESULTS_V2_2026-09-09.pptx`の導入・目次・関連研究・提案手法を維持し、結果パートを4枚へ圧縮した。採用結果は、(1) 非線形・相関・ノイズを含む局所真値Top-5特徴再現、(2) 同条件のheld-out符号忠実度、(3) クラス数増加時の計算時間、(4) まとめ。線形softmaxのSpearman 0.9993と、競合特徴数=Kで約1.0となった旧特徴役割実験は、答えが簡単すぎる整合性確認として主結果から外した。
 
 ## 現在の状態
 
@@ -92,6 +92,7 @@
 - `src/run_ovo_vs_ovr_experiment.py`: 中心的な問いをheld-out摂動で直接検証する実験。OVR-union、OVR-half、OVR-exact、2クラスの確率の合計を1にして適用する通常LIME、Contrastive、OVO Logisticを比較する。全方式で疎モデルは特徴選択にのみ使い、選択後に最終サロゲートを再フィットする。結果は`results/ovo_vs_ovr_{results,stats}.csv`、全体集計と図は`results/pairwise_lime_baseline_*`。
 - `src/run_blackbox_comparison_experiment.py`: 線形softmax、非線形NN＋softmax、RFを、OVR-exact、2クラス通常LIME、Contrastive、OVO Logisticのexact-K・held-out忠実度／Brierで比較する。図は`src/plot_blackbox_comparison.py`で生成する。
 - `src/run_feature_role_experiment.py`: A/B競合特徴、A/B共通特徴、他クラス専用・無関係特徴が既知の線形softmax BBで、表示特徴の役割とheld-out忠実度を測る。図は`src/plot_feature_role_experiment.py`で生成する。
+- `src/run_challenging_groundtruth_experiment.py`: 非線形softmax、相関入力、弱い密ノイズ、クラス共通・ペア固有効果を含む30次元BBを独立に生成し、各説明点で数値計算した$\nabla_x\log(p_A/p_B)$を局所真値としてexact-Kの4手法を比較する。C=3/5/8、曲率=0.35/0.80、20独立BB×6説明点、学習・評価各400摂動。図は`src/plot_challenging_groundtruth.py`。
 - `src/run_timing_experiment.py`: 4方式の特徴選択＋最終再フィット時間を、特徴数8/14/20、クラス数3〜10で測定する。図は`src/plot_timing_results.py`で生成する。
 - `src/run_combined_bc_experiment.py`: 提案B・Cが積み上がるかの検証（standard/kernel/logistic/combinedの4水準）。fidelity/extreme/moderateは`_train`（学習に使った摂動上、in-sample、参考値）と`_test`（独立に引き直した摂動上、held-out、**こちらが正**）の両方を出力する。
 - `.venv/`: Python仮想環境（`.gitignore`で除外、コミット対象外）。

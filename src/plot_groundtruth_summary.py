@@ -12,7 +12,7 @@ INPUT = ROOT / "results" / "groundtruth_results.csv"
 OUTPUT = ROOT / "results" / "groundtruth_recovery.png"
 
 METHODS = [
-    ("OVR\n（ちょうどK特徴）", "ovr_spearman", "#6E7B8E", "o"),
+    ("OVR", "ovr_spearman", "#6E7B8E", "o"),
     ("2クラス選択＋\n通常LIME", "pairwise_lime_spearman", "#2474E5", "s"),
     ("対数比＋\nリッジ回帰", "contrastive_spearman", "#D97706", "D"),
     ("局所ロジスティック\n回帰", "ovo_logistic_spearman", "#079669", "^"),

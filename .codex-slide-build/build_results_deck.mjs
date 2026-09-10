@@ -6,8 +6,8 @@ import { FileBlob, PresentationFile } from "@oai/artifact-tool";
 const root = "/Users/triumph1118/Github/Multi-Class-LIME v2/Multi-Class-LIME-v2";
 const skillDir = "/Users/triumph1118/.codex/plugins/cache/openai-primary-runtime/presentations/26.905.11957/skills/presentations";
 const sourcePath = path.join(root, "docs/MIDTERM_PRESENTATION_2026-09-12.pptx");
-const outPath = path.join(root, ".codex-slide-build/candidate-results-v2.pptx");
-const previewDir = path.join(root, ".codex-slide-build/candidate-results-v2");
+const outPath = path.join(root, ".codex-slide-build/candidate-results-v3.pptx");
+const previewDir = path.join(root, ".codex-slide-build/candidate-results-v3");
 
 const { applyPresentationChartFont } = await import(
   pathToFileURL(path.join(skillDir, "container_tools/artifact_tool_utils.mjs")).href,
@@ -127,10 +127,10 @@ function styleChart(chart, yAxis = {}) {
 
   addText(s, "評価指標", 68, 493, 154, 34, { fontSize: 22, bold: true, color: C.blue });
   const metrics = [
-    ["ペア符号忠実度", "Top-1 / Top-2 の大小関係を\n未使用摂動で再現できた割合"],
-    ["重み付き Brier", "q の確率近似誤差\n小さいほどよい"],
+    ["真係数の復元", "線形softmaxの既知係数と\n説明係数の順位相関"],
     ["競合特徴再現率", "本当にクラス差を作る特徴を\n上位K個で拾えた割合"],
-    ["計算時間", "説明1件の学習時間\n次元数・クラス数を変化"],
+    ["共通特徴表示率", "勝敗に関係しない共通特徴へ\n表示枠を使った割合"],
+    ["計算時間", "説明1件の学習時間を\n次元数・クラス数別に測定"],
   ];
   metrics.forEach(([name, desc], i) => {
     const x = 68 + i * 296;
@@ -147,13 +147,13 @@ function styleChart(chart, yAxis = {}) {
   const values = [
     ["項目", "設定"],
     ["データ", "make_classification、2,000件、学習70%／評価30%"],
-    ["次元数・クラス数", "主実験 d={8,14,20}, C={3,4,5} ／ BB比較 d={8,14}, C={3,5}"],
-    ["表示特徴数 K", "round(0.25d), round(0.50d)。全手法で exact-K"],
-    ["ブラックボックス", "多項ロジスティック回帰、tanh MLP (32,16)、Random Forest 200本"],
-    ["説明対象", "テスト点のうち Top-1 と Top-2 の確率差が小さい8点"],
-    ["摂動と局所重み", "学習300点＋未使用300点。特徴標準偏差に基づくGaussian摂動＋指数カーネル"],
-    ["反復", "独立データ seed 20回（計算時間は10回）。各seed内で乱数を手法間共有"],
-    ["サロゲート", "Ridge α=1.0、Logistic C=1.0。Lasso pathでK特徴を選択後、選択特徴だけで再fit"],
+    ["真係数復元", "線形softmax、d={8,14,20}, C={3,4,5}、各条件20 seeds、説明点8件"],
+    ["特徴の関連性", "役割既知の線形softmax、d=12, C={3,5}, K=3、共通特徴強度={0,1,3,5}"],
+    ["計算時間", "Random Forest 200本、d={8,14,20}, C=3〜10、各条件10 seeds、説明点4件"],
+    ["説明対象", "各入力における予測確率Top-1とTop-2。確率差が小さい点を優先"],
+    ["摂動と局所重み", "各説明点でGaussian摂動300点。特徴標準偏差と指数カーネルを全手法で共有"],
+    ["特徴選択", "関連性・時間実験では同じK。Lasso pathで選択後、選択特徴だけで最終再fit"],
+    ["サロゲート", "Ridge α=1.0、Logistic C=1.0。乱数も各条件内で手法間共有"],
   ];
   const table = s.tables.add({ rows: values.length, columns: 2, left: 80, top: 136, width: 1120, height: 486, columnWidths: [245, 875], values });
   table.borders.assign({ style: "solid", fill: "#D9E0E8", width: 1 });
@@ -175,8 +175,8 @@ function styleChart(chart, yAxis = {}) {
   for (let r = 1; r < values.length; r += 2) {
     table.getCell(r, 1).fill = "#FBFCFE";
   }
-  addText(s, "このスライドの主張：学習用とは別の摂動点で評価し、同じK・同じ乱数で公平に比較する", 80, 637, 1120, 32, { fontSize: 18, bold: true, color: C.orange, alignment: "center" });
-  s.speakerNotes.textFrame.setText("実験設定の出典: src/run_ovo_vs_ovr_experiment.py, src/run_blackbox_comparison_experiment.py, src/run_feature_role_experiment.py, src/run_timing_experiment.py");
+  addText(s, "このスライドの主張：真値・特徴の役割・計算時間という、意味の異なる3つの観点で検証する", 80, 637, 1120, 32, { fontSize: 18, bold: true, color: C.orange, alignment: "center" });
+  s.speakerNotes.textFrame.setText("実験設定の出典: src/run_groundtruth_experiment.py, src/run_feature_role_experiment.py, src/run_timing_experiment.py");
 }
 
 if (false) {
@@ -352,6 +352,8 @@ if (false) {
 }
 }
 
+if (false) {
+// Earlier extended result section retained for reference.
 // 13: RF result as source-backed figure
 {
   const s = baseSlide("主実験：Random Forest", "exact-K・held-out評価。点は20 seedsの平均、線は95%ブートストラップ信頼区間", 13);
@@ -464,6 +466,67 @@ if (false) {
   addText(s, "• 実データでも同じ傾向になるか\n• Top-2以外の競合クラスを指定した場合や、入力ごとに競合が変化する場合\n• 人が説明を理解しやすいかというユーザ評価\n• OVO Logisticの正則化、摂動数、局所幅を調整した再評価", 291, 446, 895, 142, { fontSize: 19 });
   addClaim(s, "結論は『OVOが常に高精度』ではなく、特定の競合を説明する設計が関連性と計算量で有望ということ", 614);
   s.speakerNotes.textFrame.setText("最終結論。新規性は既存のpairwise説明やlog-oddsそのものではなく、Top-1/Top-2への適用と、OVR・通常LIME・log-odds Ridge・local logisticを同一条件で分解比較した実証設計に置く。");
+}
+}
+
+// 13: strongest quantitative recovery result
+{
+  const s = baseSlide("結果1：真の特徴方向を復元できるか", "係数が既知の線形softmax黒箱で、説明係数の特徴順位を真値と比較", 13);
+  await addImage(s, "results/groundtruth_recovery.png", { left: 63, top: 126, width: 865, height: 440 }, "線形softmaxにおける真のペア係数方向の復元結果");
+  addRect(s, 957, 145, 255, 142, C.lightBlue, 10);
+  addText(s, "Contrastive", 978, 161, 213, 31, { fontSize: 21, bold: true, color: C.orange, alignment: "center" });
+  addText(s, "Spearman\n0.9993", 978, 202, 213, 67, { fontSize: 30, bold: true, color: C.orange, alignment: "center" });
+  addRect(s, 957, 310, 255, 112, C.pale, 10, C.lightGray);
+  addText(s, "OVR：0.9758", 978, 327, 213, 33, { fontSize: 23, bold: true, color: C.gray, alignment: "center" });
+  addText(s, "差 +0.0235", 978, 372, 213, 30, { fontSize: 19, bold: true, color: C.blue, alignment: "center" });
+  addRect(s, 957, 445, 255, 121, C.yellow, 10);
+  addText(s, "9 / 9 条件で有意", 975, 459, 219, 31, { fontSize: 21, bold: true, color: C.green, alignment: "center" });
+  addText(s, "対数比が線形スコア差と一致するため、\n真の『AとBを分ける方向』をほぼ完全に復元", 975, 499, 219, 54, { fontSize: 15, alignment: "center" });
+  addClaim(s, "線形logit構造では、対数比を回帰するContrastiveが真の特徴方向を最も正確に復元する", 612);
+  s.speakerNotes.textFrame.setText("出典: results/groundtruth_recovery.png, results/groundtruth_results.csv, results/groundtruth_stats.csv。Contrastive vs OVRは全9グリッドセルでHolm補正後も有意。線形softmaxに限定した結果である。");
+}
+
+// 14: strongest interpretability result
+{
+  const s = baseSlide("結果2：競合に関係する特徴を選べるか", "A/B競合特徴、A/B共通特徴、他クラス専用・無関係特徴が既知のモデル", 14);
+  await addImage(s, "results/feature_role_comparison.png", { left: 52, top: 124, width: 1176, height: 407 }, "競合特徴再現率、共通特徴表示率、held-out忠実度");
+  addRect(s, 75, 542, 355, 62, C.pale, 8, C.lightGray);
+  addText(s, "共通特徴の強さ=5：OVRの競合特徴再現率 0.807", 91, 549, 323, 47, { fontSize: 16, bold: true, color: C.blue, alignment: "center" });
+  addRect(s, 461, 542, 355, 62, C.lightBlue, 8);
+  addText(s, "2クラス方式：競合特徴再現率 約1.000、共通特徴表示率 約0", 477, 549, 323, 47, { fontSize: 16, bold: true, color: C.green, alignment: "center" });
+  addRect(s, 847, 542, 355, 62, C.yellow, 8);
+  addText(s, "共通特徴はA/Bを同方向に動かすため、A対Bの勝敗には寄与しない", 863, 549, 323, 47, { fontSize: 16, bold: true, color: C.orange, alignment: "center" });
+  addClaim(s, "2クラス説明は、両クラスに共通する証拠を避け、勝敗を分ける特徴へ表示枠を集中できる", 614);
+  s.speakerNotes.textFrame.setText("出典: results/feature_role_comparison.png。これは人の理解しやすさを直接測った結果ではなく、説明質問への特徴関連性を既知の真値で定量化した結果。");
+}
+
+// 15: strongest computational result
+{
+  const s = baseSlide("結果3：クラス数が増えたときの計算時間", "Top-1対Top-2の1ペアだけを説明。特徴選択＋選択後の最終再学習を測定", 15);
+  await addImage(s, "results/timing_scaling.png", { left: 62, top: 118, width: 1156, height: 478 }, "次元数とクラス数によるサロゲート学習時間の推移");
+  addClaim(s, "C=10ではOVR 63.46msに対し、2クラスLIME 6.48ms・Contrastive 6.51msで約10分の1", 614);
+  s.speakerNotes.textFrame.setText("出典: results/timing_scaling.png。BB推論と摂動生成は含まない。全クラス対を作るOVOではなく、説明点のTop-1/Top-2の1ペアだけを作る設定。");
+}
+
+// 16: concise conclusion
+{
+  const s = baseSlide("結果のまとめ", "本編では、提案の価値を最も明確に示す3つの結果に絞る", 16);
+  const rows = [
+    ["正確さ", "真の特徴方向を復元", "線形softmaxでContrastiveのSpearman相関は0.9993。OVRの0.9758を全9条件で上回った。", C.orange],
+    ["関連性", "勝敗を分ける特徴へ集中", "共通特徴を強くしても、2クラス方式は競合特徴を約100%再現し、共通特徴をほぼ表示しなかった。", C.green],
+    ["効率", "クラス数に対してほぼ一定", "OVRは全クラス分を学習するためCとともに増加。Top-1/Top-2の1ペアならC=10で約10分の1。", C.blue],
+  ];
+  rows.forEach(([tag, head, body, color], i) => {
+    const y = 148 + i * 137;
+    addSectionLabel(s, tag, 82, y + 15, 154, color);
+    addText(s, head, 270, y, 310, 46, { fontSize: 23, bold: true, color });
+    addRect(s, 596, y - 2, 600, 87, C.pale, 8, C.lightGray);
+    addText(s, body, 620, y + 7, 552, 69, { fontSize: 18 });
+  });
+  addRect(s, 90, 568, 1100, 58, C.yellow, 9);
+  addText(s, "主張：特定の競合クラスを説明するなら、OVRよりも2クラスに絞る方が、正確・関連的・高速な説明を作れる条件がある", 115, 579, 1050, 37, { fontSize: 20, bold: true, color: C.orange, alignment: "center" });
+  addClaim(s, "特にContrastiveは線形logit構造で強く、2クラス化自体は特徴関連性と計算量で効果が明確", 634);
+  s.speakerNotes.textFrame.setText("一般化範囲は合成データ、Top-1/Top-2、線形softmaxまたはRFの今回条件。実データとユーザ評価は今後の課題として口頭で補足する。");
 }
 
 await fs.mkdir(previewDir, { recursive: true });

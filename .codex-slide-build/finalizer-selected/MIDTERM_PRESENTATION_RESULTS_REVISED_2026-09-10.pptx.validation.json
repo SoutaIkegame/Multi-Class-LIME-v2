@@ -1,0 +1,187 @@
+{
+  "schemaVersion": "presentation-finalization.v1",
+  "finalSha256": "039bbe6d409ede4388d45f517f08d60fcb39a72bef21c7f966fd3280ad879b2d",
+  "byteCount": 810889,
+  "packageIntegrity": {
+    "chart_count": 0,
+    "claim_boundary": "Structural package checks only; no slide text, notes, formulas, chart values, or native PowerPoint execution were inspected.",
+    "finding_count": 0,
+    "findings": [],
+    "notes_parts_skipped": 21,
+    "relationship_part_count": 47,
+    "slide_count": 21,
+    "status": "pass",
+    "exitCode": 0,
+    "findingCount": 0,
+    "warnings": []
+  },
+  "presentationLayout": {
+    "finding_count": 0,
+    "findings": [],
+    "font_policy": {
+      "checked_text_script_count": 566,
+      "native_font_rendering_verified": false,
+      "observed_font_families": [
+        "Cambria Math",
+        "Hiragino Sans"
+      ],
+      "observed_font_use_counts": {
+        "Cambria Math": 4,
+        "Hiragino Sans": 562
+      },
+      "passed": true,
+      "performed": true
+    },
+    "slide_count": 21,
+    "slide_size_in": [
+      13.3333,
+      7.5
+    ],
+    "warning_count": 1,
+    "warnings": [
+      {
+        "connector_id": "142",
+        "connector_z": 36,
+        "kind": "connector_over_text",
+        "slide": 4,
+        "text_object_id": "34",
+        "text_z": 35
+      }
+    ],
+    "exitCode": 0,
+    "findingCount": 0,
+    "fontPolicy": {
+      "checked_text_script_count": 566,
+      "native_font_rendering_verified": false,
+      "observed_font_families": [
+        "Cambria Math",
+        "Hiragino Sans"
+      ],
+      "observed_font_use_counts": {
+        "Cambria Math": 4,
+        "Hiragino Sans": 562
+      },
+      "passed": true,
+      "performed": true
+    }
+  },
+  "fontSelection": {
+    "basis": "design",
+    "approvedFamilies": [
+      "Hiragino Sans",
+      "Cambria Math"
+    ],
+    "scriptFonts": {
+      "ea": "Hiragino Sans"
+    },
+    "referenceSha256": null,
+    "referenceFontsVerifiedInEncodedText": false,
+    "checked_text_script_count": 566,
+    "native_font_rendering_verified": false,
+    "observed_font_families": [
+      "Cambria Math",
+      "Hiragino Sans"
+    ],
+    "observed_font_use_counts": {
+      "Cambria Math": 4,
+      "Hiragino Sans": 562
+    },
+    "passed": true,
+    "performed": true
+  },
+  "firstPartyImport": {
+    "performed": true,
+    "passed": true,
+    "slideCount": 21,
+    "sha256": "039bbe6d409ede4388d45f517f08d60fcb39a72bef21c7f966fd3280ad879b2d",
+    "runtimeNodeModules": "/Users/triumph1118/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules",
+    "nodeExecutable": "/Users/triumph1118/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node"
+  },
+  "nativeTableArithmetic": {
+    "performed": true,
+    "checked_column_count": 0,
+    "checks": [],
+    "claim_boundary": "Displayed-value arithmetic with rounding tolerance; not source-data verification.",
+    "eligible_table_count": 0,
+    "finding_count": 0,
+    "findings": [],
+    "native_table_count": 1,
+    "passed": true,
+    "schema_version": "presentation-native-table-arithmetic.v1",
+    "skipped_tables": [
+      {
+        "reason": "no_numeric_amounts",
+        "slide": 16,
+        "table": 1
+      }
+    ],
+    "slide_count": 21,
+    "warning_count": 0,
+    "warnings": []
+  },
+  "nativeChartTitles": {
+    "performed": true,
+    "checks": [],
+    "finding_count": 0,
+    "findings": [],
+    "native_chart_count": 0,
+    "native_powerpoint_verified": false,
+    "passed": true,
+    "presentation_sha256": "039bbe6d409ede4388d45f517f08d60fcb39a72bef21c7f966fd3280ad879b2d",
+    "schema_version": "presentation-native-chart-titles.v1",
+    "slide_count": 21,
+    "source_text_emitted": false,
+    "unresolved_linked_title_count": 0
+  },
+  "sourceDerivedPolicyFlags": [
+    "--expected-slide-size-emu",
+    "12192000,6858000",
+    "--validate-bullet-geometry",
+    "--validate-heading-fit",
+    "--require-native-table-slide",
+    "16",
+    "--cover-role",
+    "none",
+    "--expected-slide-count",
+    "21",
+    "--approved-font-family",
+    "Hiragino Sans",
+    "--approved-font-family",
+    "Cambria Math",
+    "--approved-script-font",
+    "ea=Hiragino Sans"
+  ],
+  "nativeChartValidation": {
+    "detectedOwnerSlides": [],
+    "detectedChartCount": 0,
+    "targetApplication": "powerpoint",
+    "sourceChartOwnersExplicitlyDeclared": true,
+    "validatorRan": false,
+    "passed": true
+  },
+  "sourceTemplateFidelity": {
+    "report": {
+      "coverage_ratio": 1,
+      "dimensions_match": null,
+      "generated_slide_count": 21,
+      "geometry_match": null,
+      "issue_codes": [],
+      "matched_family_count": 1,
+      "matched_generated_slide_count": 21,
+      "minimum_coverage_ratio": 1,
+      "passed": true,
+      "photographic_background_matched": null,
+      "photographic_background_required": false,
+      "prompt_or_slide_text_included": false,
+      "reference_family_count": 1,
+      "schema_version": "template_source_fidelity.v1",
+      "status": "passed"
+    },
+    "exitCode": 0,
+    "referenceFamilyCount": 1,
+    "matchedFamilyCount": 1,
+    "coverageRatio": 1,
+    "minimumCoverageRatio": 1,
+    "sourceSha256": "4db30ff6522b4bb38c6694f44cfb6721e438cd59348430ae53a3b60f87a19221"
+  }
+}

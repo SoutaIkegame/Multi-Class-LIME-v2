@@ -1,0 +1,368 @@
+slides 24
+size undefined
+masters 1
+{"kind":"layout","layoutId":"/ppt/slideMasters/slideMaster1.xml","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout1.xml","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/y90nupkv","slide":1,"title":"ゼミ中間発表","textShapes":6}
+{"kind":"shape","id":"sh/vmdcj2xw","slide":1,"name":"正方形/長方形 12","bbox":[0,0,18,720]}
+{"kind":"textbox","id":"sh/547294r6","slide":1,"textChars":6,"textLines":1}
+{"kind":"textbox","id":"sh/k3yl0zql","slide":1,"textChars":23,"textLines":2}
+{"kind":"textbox","id":"sh/7qp4be9c","slide":1,"textChars":18,"textLines":1}
+{"kind":"shape","id":"sh/p4bu5s76","slide":1,"name":"直線矢印コネクタ 16","bbox":[72,470,480,0]}
+{"kind":"textbox","id":"sh/ts7md4r2","slide":1,"textChars":8,"textLines":1}
+{"kind":"textbox","id":"sh/sryl4zqx","slide":1,"textChars":13,"textLines":1}
+{"kind":"shape","id":"sh/fu94fe98","slide":1,"name":"正方形/長方形 7","bbox":[900,100,230,230]}
+{"kind":"shape","id":"sh/utg3698n","slide":1,"name":"正方形/長方形 8","bbox":[1015,215,170,170]}
+{"kind":"shape","id":"sh/wn6dc7eh","slide":1,"name":"円/楕円 9","bbox":[850,355,180,180]}
+{"kind":"shape","id":"sh/i1gje90j","slide":1,"name":"直線矢印コネクタ 22","bbox":[820,580,340,0]}
+{"kind":"textbox","id":"sh/ul4vaxgb","slide":1,"textChars":21,"textLines":1}
+{"kind":"slide","id":"sl/zyxsni5k","slide":2,"title":"目次","textShapes":19}
+{"kind":"shape","id":"sh/qpwjmh8n","slide":2,"name":"accent-bar","bbox":[54,43,12,50]}
+{"kind":"textbox","id":"sh/rq50vmp8","slide":2,"textChars":2,"textLines":1}
+{"kind":"textbox","id":"sh/4nu1krqh","slide":2,"textChars":19,"textLines":1}
+{"kind":"textbox","id":"sh/po3itc72","slide":2,"textChars":2,"textLines":1}
+{"kind":"shape","id":"sh/2lczih8r","slide":2,"name":"toc-row-bg-0","bbox":[80,124.93,1120,112.34]}
+{"kind":"shape","id":"sh/3ml0rmpw","slide":2,"name":"toc-row-accent-0","bbox":[80,124.93,8,112.34]}
+{"kind":"textbox","id":"sh/gjuhg7ql","slide":2,"textChars":2,"textLines":1}
+{"kind":"textbox","id":"sh/hk3ipcr6","slide":2,"textChars":10,"textLines":1}
+{"kind":"textbox","id":"sh/dkfmp4zy","slide":2,"textChars":26,"textLines":1}
+{"kind":"textbox","id":"sh/cj65wzyd","slide":2,"textChars":7,"textLines":1}
+{"kind":"textbox","id":"sh/rid4nuhs","slide":2,"textChars":2,"textLines":1}
+{"kind":"textbox","id":"sh/qh4nupg7","slide":2,"textChars":16,"textLines":1}
+{"kind":"textbox","id":"sh/pwvmlkzm","slide":2,"textChars":36,"textLines":1}
+{"kind":"textbox","id":"sh/4vm5sfy1","slide":2,"textChars":7,"textLines":1}
+{"kind":"textbox","id":"sh/3ud4juhg","slide":2,"textChars":2,"textLines":1}
+{"kind":"textbox","id":"sh/2t4nqpgb","slide":2,"textChars":9,"textLines":1}
+{"kind":"textbox","id":"sh/hsvmhkzq","slide":2,"textChars":31,"textLines":1}
+{"kind":"textbox","id":"sh/grm5ofy5","slide":2,"textChars":7,"textLines":1}
+{"kind":"textbox","id":"sh/8b654f61","slide":2,"textChars":2,"textLines":1}
+{"kind":"textbox","id":"sh/tcz6dk7m","slide":2,"textChars":11,"textLines":1}
+{"kind":"textbox","id":"sh/69on25ov","slide":2,"textChars":26,"textLines":1}
+{"kind":"textbox","id":"sh/7ax4bapg","slide":2,"textChars":7,"textLines":1}
+{"kind":"slide","id":"sl/hwbqtkby","slide":3,"title":"XAIは予測理由を見える形にする","textShapes":21}
+{"kind":"shape","id":"sh/ba9cn6l4","slide":3,"name":"正方形/長方形 34","bbox":[54,44,12,48]}
+{"kind":"textbox","id":"sh/9072xkry","slide":3,"textChars":16,"textLines":1}
+{"kind":"textbox","id":"sh/ozy1ofad","slide":3,"textChars":31,"textLines":1}
+{"kind":"textbox","id":"sh/b29kza94","slide":3,"textChars":2,"textLines":1}
+{"kind":"shape","id":"sh/a10jqpsj","slide":3,"name":"右矢印 4","bbox":[320,278,68,34]}
+{"kind":"shape","id":"sh/x4r21kru","slide":3,"name":"右矢印 5","bbox":[610,278,68,34]}
+{"kind":"shape","id":"sh/w3i1sfa9","slide":3,"name":"右矢印 6","bbox":[865,278,68,34]}
+{"kind":"shape","id":"sh/r65knqtk","slide":3,"name":"正方形/長方形 7","bbox":[60,165,250,350]}
+{"kind":"textbox","id":"sh/q5wjelsz","slide":3,"textChars":5,"textLines":1}
+{"kind":"shape","id":"sh/c76hk361","slide":3,"name":"直線矢印コネクタ 43","bbox":[84,232,180,0]}
+{"kind":"textbox","id":"sh/9wnqhczy","slide":3,"textChars":45,"textLines":5}
+{"kind":"textbox","id":"sh/mtwrmxg7","slide":3,"textChars":11,"textLines":1}
+{"kind":"shape","id":"sh/nu58f2hs","slide":3,"name":"正方形/長方形 12","bbox":[390,225,210,140]}
+{"kind":"textbox","id":"sh/wjy9sry9","slide":3,"textChars":9,"textLines":2}
+{"kind":"shape","id":"sh/xk7qlczu","slide":3,"name":"正方形/長方形 14","bbox":[680,205,175,180]}
+{"kind":"textbox","id":"sh/ahwrqhgj","slide":3,"textChars":2,"textLines":1}
+{"kind":"textbox","id":"sh/bip8jmho","slide":3,"textChars":4,"textLines":1}
+{"kind":"textbox","id":"sh/cnupgny5","slide":3,"textChars":4,"textLines":1}
+{"kind":"shape","id":"sh/do3q9szq","slide":3,"name":"正方形/長方形 18","bbox":[955,167.16,280,350]}
+{"kind":"textbox","id":"sh/t8byxkn2","slide":3,"textChars":8,"textLines":1}
+{"kind":"textbox","id":"sh/s72xofmh","slide":3,"textChars":2,"textLines":1}
+{"kind":"shape","id":"sh/76twva5c","slide":3,"name":"正方形/長方形 21","bbox":[1050,252,115,20]}
+{"kind":"textbox","id":"sh/65kfmpor","slide":3,"textChars":5,"textLines":1}
+{"kind":"textbox","id":"sh/hcvy14ne","slide":3,"textChars":2,"textLines":1}
+{"kind":"shape","id":"sh/gbmxszmt","slide":3,"name":"正方形/長方形 24","bbox":[1050,304,45,20]}
+{"kind":"textbox","id":"sh/fadgzu58","slide":3,"textChars":5,"textLines":1}
+{"kind":"textbox","id":"sh/u94fqp4n","slide":3,"textChars":4,"textLines":1}
+{"kind":"shape","id":"sh/p0vy54na","slide":3,"name":"正方形/長方形 27","bbox":[1050,356,70,20]}
+{"kind":"textbox","id":"sh/4zmxwzmp","slide":3,"textChars":5,"textLines":1}
+{"kind":"textbox","id":"sh/mlgvq147","slide":3,"textChars":8,"textLines":1}
+{"kind":"shape","id":"sh/nmpcj6ls","slide":3,"name":"正方形/長方形 30","bbox":[60,555,1160,92]}
+{"kind":"textbox","id":"sh/onydsbmd","slide":3,"textChars":5,"textLines":1}
+{"kind":"textbox","id":"sh/9o7ulg3y","slide":3,"textChars":38,"textLines":1}
+{"kind":"textbox","id":"sh/a9gvulkj","slide":3,"textChars":19,"textLines":1}
+{"kind":"slide","id":"sl/ofy9wn61","slide":4,"title":"LIMEは予測点の周辺だけを単純化する","textShapes":11}
+{"kind":"shape","id":"sh/hwzihwzi","slide":4,"name":"正方形/長方形 37","bbox":[54,44,12,48]}
+{"kind":"textbox","id":"sh/cza94vmx","slide":4,"textChars":19,"textLines":1}
+{"kind":"textbox","id":"sh/d0jax03i","slide":4,"textChars":28,"textLines":1}
+{"kind":"textbox","id":"sh/298ryl4v","slide":4,"textChars":2,"textLines":1}
+{"kind":"textbox","id":"sh/3ah8rqlg","slide":4,"textChars":4,"textLines":1}
+{"kind":"textbox","id":"sh/obq90bml","slide":4,"textChars":47,"textLines":4}
+{"kind":"textbox","id":"sh/pcjqtg36","slide":4,"textChars":19,"textLines":1}
+{"kind":"shape","id":"sh/m5cra54z","slide":4,"name":"正方形/長方形 7","bbox":[62,552,340,74]}
+{"kind":"textbox","id":"sh/n6ls3alk","slide":4,"textChars":21,"textLines":2}
+{"kind":"shape","id":"sh/n2l4fq98","slide":4,"name":"正方形/長方形 9","bbox":[455,160,760,480]}
+{"kind":"shape","id":"sh/3id43qdg","slide":4,"name":"直線矢印コネクタ 47","bbox":[520,470,120,70]}
+{"kind":"shape","id":"sh/gfml8ve5","slide":4,"name":"直線矢印コネクタ 48","bbox":[640,330,90,140]}
+{"kind":"shape","id":"sh/hgvm1gvq","slide":4,"name":"直線矢印コネクタ 49","bbox":[730,330,105,55]}
+{"kind":"shape","id":"sh/ud436lwz","slide":4,"name":"直線矢印コネクタ 50","bbox":[835,295,110,90]}
+{"kind":"shape","id":"sh/ved4zqdk","slide":4,"name":"直線矢印コネクタ 51","bbox":[945,295,150,145]}
+{"kind":"textbox","id":"sh/x8nml0ra","slide":4,"textChars":14,"textLines":1}
+{"kind":"shape","id":"sh/w7ulsvqp","slide":4,"name":"円/楕円 16","bbox":[510,220,16,16]}
+{"kind":"shape","id":"sh/ja54na9g","slide":4,"name":"円/楕円 17","bbox":[575,260,16,16]}
+{"kind":"shape","id":"sh/i9w3u58v","slide":4,"name":"円/楕円 18","bbox":[625,205,16,16]}
+{"kind":"shape","id":"sh/e10f2twf","slide":4,"name":"円/楕円 19","bbox":[675,285,16,16]}
+{"kind":"shape","id":"sh/f29gbyx0","slide":4,"name":"円/楕円 20","bbox":[565,375,16,16]}
+{"kind":"shape","id":"sh/03ix43e5","slide":4,"name":"円/楕円 21","bbox":[650,410,16,16]}
+{"kind":"shape","id":"sh/14ryd8fq","slide":4,"name":"円/楕円 22","bbox":[760,220,16,16]}
+{"kind":"shape","id":"sh/6d0fytg3","slide":4,"name":"円/楕円 23","bbox":[805,275,16,16]}
+{"kind":"shape","id":"sh/re9g7yxo","slide":4,"name":"円/楕円 24","bbox":[920,505,16,16]}
+{"kind":"shape","id":"sh/sfix03y9","slide":4,"name":"円/楕円 25","bbox":[1000,460,16,16]}
+{"kind":"shape","id":"sh/tgry9ofu","slide":4,"name":"円/楕円 26","bbox":[1080,520,16,16]}
+{"kind":"shape","id":"sh/a9kfadwn","slide":4,"name":"円/楕円 27","bbox":[1120,405,16,16]}
+{"kind":"shape","id":"sh/batgjixs","slide":4,"name":"円/楕円 28","bbox":[980,365,16,16]}
+{"kind":"shape","id":"sh/l4fi9cza","slide":4,"name":"円/楕円 29","bbox":[870,470,16,16]}
+{"kind":"shape","id":"sh/k3m1g7yp","slide":4,"name":"円/楕円 30","bbox":[750,540,16,16]}
+{"kind":"shape","id":"sh/z2d07mh4","slide":4,"name":"円/楕円 31","bbox":[700,315,250,220]}
+{"kind":"shape","id":"sh/y14jehgj","slide":4,"name":"円/楕円 32","bbox":[812,410,24,24]}
+{"kind":"textbox","id":"sh/x0vi5czy","slide":4,"textChars":6,"textLines":1}
+{"kind":"shape","id":"sh/s7qdcvm9","slide":4,"name":"直線矢印コネクタ 71","bbox":[735,375,185,105]}
+{"kind":"textbox","id":"sh/byd032h8","slide":4,"textChars":7,"textLines":1}
+{"kind":"textbox","id":"sh/ax4zax0n","slide":4,"textChars":14,"textLines":1}
+{"kind":"slide","id":"sl/jyx0ra1s","slide":5,"title":"LIMEは5段階で局所説明を作る","textShapes":22}
+{"kind":"shape","id":"sh/wzex4z2p","slide":5,"name":"正方形/長方形 35","bbox":[54,44,12,48]}
+{"kind":"textbox","id":"sh/1cj2d8b6","slide":5,"textChars":16,"textLines":1}
+{"kind":"textbox","id":"sh/0ba143al","slide":5,"textChars":27,"textLines":1}
+{"kind":"textbox","id":"sh/rm1k7yt4","slide":5,"textChars":2,"textLines":1}
+{"kind":"shape","id":"sh/ql8jytsj","slide":5,"name":"右矢印 4","bbox":[259,225,70,28]}
+{"kind":"shape","id":"sh/doj29oba","slide":5,"name":"右矢印 5","bbox":[499,225,70,28]}
+{"kind":"shape","id":"sh/sna103ap","slide":5,"name":"右矢印 6","bbox":[739,225,70,28]}
+{"kind":"shape","id":"sh/3ihk3et8","slide":5,"name":"右矢印 7","bbox":[979,225,70,28]}
+{"kind":"shape","id":"sh/ih8ju9sn","slide":5,"name":"正方形/長方形 8","bbox":[54,168,205,145]}
+{"kind":"textbox","id":"sh/kbm987y5","slide":5,"textChars":2,"textLines":1}
+{"kind":"textbox","id":"sh/5cva1cfq","slide":5,"textChars":10,"textLines":2}
+{"kind":"shape","id":"sh/i94r6xgz","slide":5,"name":"正方形/長方形 11","bbox":[294,168,205,145]}
+{"kind":"textbox","id":"sh/jadsz2xk","slide":5,"textChars":2,"textLines":1}
+{"kind":"textbox","id":"sh/w72947yt","slide":5,"textChars":12,"textLines":2}
+{"kind":"shape","id":"sh/x8vaxsfe","slide":5,"name":"正方形/長方形 14","bbox":[534,168,205,145]}
+{"kind":"textbox","id":"sh/a5kr2xg3","slide":5,"textChars":2,"textLines":1}
+{"kind":"textbox","id":"sh/v6tsv2xo","slide":5,"textChars":15,"textLines":2}
+{"kind":"shape","id":"sh/g36tgryd","slide":5,"name":"正方形/長方形 17","bbox":[774,168,205,145]}
+{"kind":"textbox","id":"sh/h4fa9wfy","slide":5,"textChars":2,"textLines":1}
+{"kind":"textbox","id":"sh/p0batw72","slide":5,"textChars":14,"textLines":2}
+{"kind":"shape","id":"sh/oz29krqh","slide":5,"name":"正方形/長方形 20","bbox":[1014,168,205,145]}
+{"kind":"textbox","id":"sh/3ytsrmpw","slide":5,"textChars":2,"textLines":1}
+{"kind":"textbox","id":"sh/2xkrih8b","slide":5,"textChars":14,"textLines":2}
+{"kind":"shape","id":"sh/oba9k7uh","slide":5,"name":"直線矢印コネクタ 58","bbox":[55,353,1160,0]}
+{"kind":"textbox","id":"sh/gv29g7q5","slide":5,"textChars":9,"textLines":1}
+{"kind":"textbox","id":"sh/fu9sn2p0","slide":5,"textChars":6,"textLines":1}
+{"kind":"textbox","id":"sh/et0reh8f","slide":5,"textChars":7,"textLines":1}
+{"kind":"textbox","id":"sh/tsrqlc7u","slide":5,"textChars":5,"textLines":1}
+{"kind":"textbox","id":"sh/sri9s7q9","slide":5,"textChars":22,"textLines":1}
+{"kind":"shape","id":"sh/ilwf69kv","slide":5,"name":"正方形/長方形 29","bbox":[160,530,420,78]}
+{"kind":"textbox","id":"sh/jm5gze1g","slide":5,"textChars":24,"textLines":2}
+{"kind":"textbox","id":"sh/knex8j21","slide":5,"textChars":1,"textLines":1}
+{"kind":"shape","id":"sh/5ony1oj6","slide":5,"name":"正方形/長方形 32","bbox":[690,530,420,78]}
+{"kind":"textbox","id":"sh/axcf29kj","slide":5,"textChars":17,"textLines":2}
+{"kind":"textbox","id":"sh/vy5gbe14","slide":5,"textChars":23,"textLines":1}
+{"kind":"slide","id":"sl/i107q5of","slide":6,"title":"LIMEは「対象クラス vs その他」を説明する","textShapes":19}
+{"kind":"shape","id":"sh/5o7mhcju","slide":6,"name":"正方形/長方形 27","bbox":[54,44,12,48]}
+{"kind":"textbox","id":"sh/dgbulwnm","slide":6,"textChars":24,"textLines":1}
+{"kind":"textbox","id":"sh/cf2tcr61","slide":6,"textChars":19,"textLines":1}
+{"kind":"textbox","id":"sh/z2tcnm5s","slide":6,"textChars":2,"textLines":1}
+{"kind":"textbox","id":"sh/yhkbe1o7","slide":6,"textChars":17,"textLines":1}
+{"kind":"shape","id":"sh/zmlk3yhk","slide":6,"name":"直線矢印コネクタ 32","bbox":[430,205,0,310]}
+{"kind":"textbox","id":"sh/032tgr6d","slide":6,"textChars":6,"textLines":1}
+{"kind":"textbox","id":"sh/n6dcr65o","slide":6,"textChars":7,"textLines":1}
+{"kind":"textbox","id":"sh/m5kbi1oj","slide":6,"textChars":2,"textLines":1}
+{"kind":"shape","id":"sh/w32dkbuh","slide":6,"name":"正方形/長方形 9","bbox":[430,260,180,22]}
+{"kind":"textbox","id":"sh/x4vedgvm","slide":6,"textChars":5,"textLines":1}
+{"kind":"textbox","id":"sh/ahkvi1cb","slide":6,"textChars":4,"textLines":1}
+{"kind":"shape","id":"sh/v2twb6dw","slide":6,"name":"正方形/長方形 12","bbox":[430,325,115.2,22]}
+{"kind":"textbox","id":"sh/k7mxovud","slide":6,"textChars":5,"textLines":1}
+{"kind":"textbox","id":"sh/58vehgvy","slide":6,"textChars":2,"textLines":1}
+{"kind":"shape","id":"sh/i54fmlc7","slide":6,"name":"正方形/長方形 15","bbox":[358,390,72,22]}
+{"kind":"textbox","id":"sh/j6dwfqds","slide":6,"textChars":5,"textLines":1}
+{"kind":"textbox","id":"sh/sb6xsvu9","slide":6,"textChars":5,"textLines":1}
+{"kind":"shape","id":"sh/tcfel0vu","slide":6,"name":"正方形/長方形 18","bbox":[379.6,455,50.4,22]}
+{"kind":"textbox","id":"sh/hgrmpwj2","slide":6,"textChars":5,"textLines":1}
+{"kind":"shape","id":"sh/gfi5grih","slide":6,"name":"正方形/長方形 20","bbox":[850,175,330,310]}
+{"kind":"textbox","id":"sh/fe94nm1w","slide":6,"textChars":6,"textLines":1}
+{"kind":"textbox","id":"sh/ud0ne10b","slide":6,"textChars":50,"textLines":8}
+{"kind":"shape","id":"sh/pkr6tgjy","slide":6,"name":"正方形/長方形 23","bbox":[80,555,1100,82]}
+{"kind":"textbox","id":"sh/4ji5kbid","slide":6,"textChars":2,"textLines":1}
+{"kind":"textbox","id":"sh/3i94r61s","slide":6,"textChars":34,"textLines":1}
+{"kind":"textbox","id":"sh/2h0ni107","slide":6,"textChars":13,"textLines":1}
+{"kind":"slide","id":"sl/m1wvqtk3","slide":7,"title":"目次","textShapes":19}
+{"kind":"shape","id":"sh/1gbmxs7a","slide":7,"name":"accent-bar","bbox":[54,43,12,50]}
+{"kind":"textbox","id":"sh/0f2lon6p","slide":7,"textChars":2,"textLines":1}
+{"kind":"textbox","id":"sh/ra9kryp8","slide":7,"textChars":25,"textLines":1}
+{"kind":"textbox","id":"sh/qp03yt8n","slide":7,"textChars":2,"textLines":1}
+{"kind":"textbox","id":"sh/dcb2t87y","slide":7,"textChars":2,"textLines":1}
+{"kind":"textbox","id":"sh/sb2lk36t","slide":7,"textChars":10,"textLines":1}
+{"kind":"textbox","id":"sh/b6d432pc","slide":7,"textChars":26,"textLines":1}
+{"kind":"textbox","id":"sh/al43uxor","slide":7,"textChars":7,"textLines":1}
+{"kind":"shape","id":"sh/4jax4nqd","slide":7,"name":"toc-row-bg-1","bbox":[80,245.67,1120,112.34]}
+{"kind":"shape","id":"sh/5kjydsri","slide":7,"name":"toc-row-accent-1","bbox":[80,245.67,8,112.34]}
+{"kind":"textbox","id":"sh/ixsf2d87","slide":7,"textChars":2,"textLines":1}
+{"kind":"textbox","id":"sh/jy1gbi9s","slide":7,"textChars":16,"textLines":1}
+{"kind":"textbox","id":"sh/wvax03q1","slide":7,"textChars":36,"textLines":1}
+{"kind":"textbox","id":"sh/hwjy98rm","slide":7,"textChars":7,"textLines":1}
+{"kind":"textbox","id":"sh/utsfyt8v","slide":7,"textChars":2,"textLines":1}
+{"kind":"textbox","id":"sh/vu1w7y9g","slide":7,"textChars":9,"textLines":1}
+{"kind":"textbox","id":"sh/8rqxw3q5","slide":7,"textChars":31,"textLines":1}
+{"kind":"textbox","id":"sh/9sze58rq","slide":7,"textChars":7,"textLines":1}
+{"kind":"textbox","id":"sh/porutkje","slide":7,"textChars":2,"textLines":1}
+{"kind":"textbox","id":"sh/onid0f2t","slide":7,"textChars":11,"textLines":1}
+{"kind":"textbox","id":"sh/nm9cru18","slide":7,"textChars":26,"textLines":1}
+{"kind":"textbox","id":"sh/2l0vypkn","slide":7,"textChars":7,"textLines":1}
+{"kind":"slide","id":"sl/x8f69ofe","slide":8,"title":"多クラスLIMEでは、クラスごとに説明モデルを作る","textShapes":13}
+{"kind":"shape","id":"sh/pgbul0fu","slide":8,"name":"正方形/長方形 42","bbox":[54,44,12,48]}
+{"kind":"textbox","id":"sh/yhg7epsj","slide":8,"textChars":25,"textLines":1}
+{"kind":"textbox","id":"sh/zi98nu94","slide":8,"textChars":27,"textLines":1}
+{"kind":"textbox","id":"sh/87ipkzal","slide":8,"textChars":2,"textLines":1}
+{"kind":"shape","id":"sh/98rqt4r6","slide":8,"name":"右矢印 4","bbox":[300,303,76,30]}
+{"kind":"shape","id":"sh/ml07i9sv","slide":8,"name":"右矢印 5","bbox":[585,195,82,24]}
+{"kind":"shape","id":"sh/7m98ru9g","slide":8,"name":"右矢印 6","bbox":[585,323,82,24]}
+{"kind":"shape","id":"sh/oryp8fah","slide":8,"name":"右矢印 7","bbox":[585,451,82,24]}
+{"kind":"shape","id":"sh/pc76hkr2","slide":8,"name":"正方形/長方形 8","bbox":[55,195,240,330]}
+{"kind":"textbox","id":"sh/h4bupgn6","slide":8,"textChars":5,"textLines":1}
+{"kind":"shape","id":"sh/w32twb6l","slide":8,"name":"円/楕円 10","bbox":[92,285,14,14]}
+{"kind":"shape","id":"sh/v2tcn650","slide":8,"name":"円/楕円 11","bbox":[145,267,14,14]}
+{"kind":"shape","id":"sh/u1kbu1ov","slide":8,"name":"円/楕円 12","bbox":[195,295,14,14]}
+{"kind":"shape","id":"sh/5svutgni","slide":8,"name":"円/楕円 13","bbox":[110,350,14,14]}
+{"kind":"shape","id":"sh/47mt0b6x","slide":8,"name":"円/楕円 14","bbox":[170,335,22,22]}
+{"kind":"shape","id":"sh/j6dcr65c","slide":8,"name":"円/楕円 15","bbox":[225,365,14,14]}
+{"kind":"shape","id":"sh/i54bylor","slide":8,"name":"円/楕円 16","bbox":[130,420,14,14]}
+{"kind":"shape","id":"sh/twfux0ne","slide":8,"name":"円/楕円 17","bbox":[205,440,14,14]}
+{"kind":"shape","id":"sh/svmt4v6t","slide":8,"name":"円/楕円 18","bbox":[90,465,14,14]}
+{"kind":"textbox","id":"sh/cbe5g3ih","slide":8,"textChars":10,"textLines":1}
+{"kind":"shape","id":"sh/dcnm98zm","slide":8,"name":"正方形/長方形 20","bbox":[380,255,200,128]}
+{"kind":"textbox","id":"sh/qpwnet0b","slide":8,"textChars":9,"textLines":2}
+{"kind":"shape","id":"sh/bq547yhw","slide":8,"name":"正方形/長方形 22","bbox":[675,150,520,100]}
+{"kind":"textbox","id":"sh/0fy5k3id","slide":8,"textChars":5,"textLines":1}
+{"kind":"textbox","id":"sh/lg76d8zy","slide":8,"textChars":7,"textLines":1}
+{"kind":"shape","id":"sh/ydgnit07","slide":8,"name":"正方形/長方形 25","bbox":[885,168,180,13]}
+{"kind":"shape","id":"sh/zep4byhs","slide":8,"name":"正方形/長方形 26","bbox":[885,191,108,13]}
+{"kind":"shape","id":"sh/gju58ji9","slide":8,"name":"正方形/長方形 27","bbox":[885,214,48,13]}
+{"kind":"shape","id":"sh/1k3mhozu","slide":8,"name":"正方形/長方形 28","bbox":[675,278,520,100]}
+{"kind":"textbox","id":"sh/jet8nm1c","slide":8,"textChars":5,"textLines":1}
+{"kind":"textbox","id":"sh/idk7ehkr","slide":8,"textChars":7,"textLines":1}
+{"kind":"shape","id":"sh/50bqpcj2","slide":8,"name":"正方形/長方形 31","bbox":[885,296,60,13]}
+{"kind":"shape","id":"sh/4f2pgr2h","slide":8,"name":"正方形/長方形 32","bbox":[885,319,144,13]}
+{"kind":"shape","id":"sh/va98j210","slide":8,"name":"正方形/長方形 33","bbox":[885,342,84,13]}
+{"kind":"shape","id":"sh/u907axkf","slide":8,"name":"正方形/長方形 34","bbox":[675,406,520,100]}
+{"kind":"textbox","id":"sh/hcrqlcj6","slide":8,"textChars":5,"textLines":1}
+{"kind":"textbox","id":"sh/wbipc72l","slide":8,"textChars":7,"textLines":1}
+{"kind":"shape","id":"sh/7698f214","slide":8,"name":"正方形/長方形 37","bbox":[885,424,84,13]}
+{"kind":"shape","id":"sh/m5076xkj","slide":8,"name":"正方形/長方形 38","bbox":[885,447,43.2,13]}
+{"kind":"shape","id":"sh/2dkbalg3","slide":8,"name":"正方形/長方形 39","bbox":[885,470,156,13]}
+{"kind":"shape","id":"sh/netcjqxo","slide":8,"name":"正方形/長方形 40","bbox":[250,565,780,66]}
+{"kind":"textbox","id":"sh/of2tcvy9","slide":8,"textChars":31,"textLines":1}
+{"kind":"slide","id":"sl/gnmp4jqx","slide":9,"title":"クラス別説明を並べるだけでは、全体像を読み取りにくい","textShapes":18}
+{"kind":"shape","id":"sh/x4j6p47q","slide":9,"name":"正方形/長方形 33","bbox":[54,44,12,48]}
+{"kind":"textbox","id":"sh/cb2tkvap","slide":9,"textChars":26,"textLines":1}
+{"kind":"textbox","id":"sh/dcbud0ra","slide":9,"textChars":31,"textLines":1}
+{"kind":"textbox","id":"sh/ydkbm5sv","slide":9,"textChars":2,"textLines":1}
+{"kind":"textbox","id":"sh/zedcfa9g","slide":9,"textChars":5,"textLines":1}
+{"kind":"shape","id":"sh/yh4nep0j","slide":9,"name":"直線矢印コネクタ 38","bbox":[55,218,230,0]}
+{"kind":"textbox","id":"sh/l0vuh0rm","slide":9,"textChars":3,"textLines":1}
+{"kind":"shape","id":"sh/eh0ba1sr","slide":9,"name":"正方形/長方形 7","bbox":[145,252,126,19]}
+{"kind":"textbox","id":"sh/fi9c369c","slide":9,"textChars":3,"textLines":1}
+{"kind":"shape","id":"sh/baxkjqlk","slide":9,"name":"正方形/長方形 9","bbox":[145,337,91,19]}
+{"kind":"textbox","id":"sh/a9ojq5kz","slide":9,"textChars":3,"textLines":1}
+{"kind":"shape","id":"sh/xcz2l03q","slide":9,"name":"正方形/長方形 11","bbox":[145,422,49,19]}
+{"kind":"textbox","id":"sh/cbq1sv25","slide":9,"textChars":5,"textLines":1}
+{"kind":"shape","id":"sh/r6187i14","slide":9,"name":"直線矢印コネクタ 46","bbox":[340,218,230,0]}
+{"kind":"textbox","id":"sh/25ojml43","slide":9,"textChars":3,"textLines":1}
+{"kind":"shape","id":"sh/p8fih03e","slide":9,"name":"正方形/長方形 15","bbox":[430,252,119,19]}
+{"kind":"textbox","id":"sh/o761ov2t","slide":9,"textChars":3,"textLines":1}
+{"kind":"shape","id":"sh/f2d0b6lc","slide":9,"name":"正方形/長方形 17","bbox":[430,337,81.2,19]}
+{"kind":"textbox","id":"sh/eh4jil4r","slide":9,"textChars":3,"textLines":1}
+{"kind":"shape","id":"sh/id4ju1oz","slide":9,"name":"正方形/長方形 19","bbox":[430,422,42,19]}
+{"kind":"textbox","id":"sh/jedkn654","slide":9,"textChars":5,"textLines":1}
+{"kind":"shape","id":"sh/4nmdsjux","slide":9,"name":"直線矢印コネクタ 54","bbox":[625,218,230,0]}
+{"kind":"textbox","id":"sh/50v2pgna","slide":9,"textChars":3,"textLines":1}
+{"kind":"shape","id":"sh/q143ylov","slide":9,"name":"正方形/長方形 23","bbox":[715,252,128.8,19]}
+{"kind":"textbox","id":"sh/r2dkrq5g","slide":9,"textChars":3,"textLines":1}
+{"kind":"shape","id":"sh/s3ml0v61","slide":9,"name":"正方形/長方形 25","bbox":[715,337,86.8,19]}
+{"kind":"textbox","id":"sh/d4f2t0nm","slide":9,"textChars":3,"textLines":1}
+{"kind":"shape","id":"sh/e5o32lor","slide":9,"name":"正方形/長方形 27","bbox":[715,422,39.2,19]}
+{"kind":"shape","id":"sh/m58f2xwb","slide":9,"name":"直線矢印コネクタ 61","bbox":[920,165,0,390]}
+{"kind":"textbox","id":"sh/p0zmlk7u","slide":9,"textChars":6,"textLines":1}
+{"kind":"textbox","id":"sh/ozq5szq9","slide":9,"textChars":47,"textLines":8}
+{"kind":"shape","id":"sh/nyh4jupo","slide":9,"name":"正方形/長方形 31","bbox":[55,555,1150,76]}
+{"kind":"textbox","id":"sh/2x8nqp83","slide":9,"textChars":31,"textLines":1}
+{"kind":"slide","id":"sl/fu1gfa1s","slide":10,"title":"LIMEtreeは一つの木で複数クラスを説明する","textShapes":18}
+{"kind":"shape","id":"sh/hsjqd47y","slide":10,"name":"正方形/長方形 45","bbox":[54,44,12,48]}
+{"kind":"textbox","id":"sh/18byd4zy","slide":10,"textChars":24,"textLines":1}
+{"kind":"textbox","id":"sh/g72x4zyd","slide":10,"textChars":28,"textLines":1}
+{"kind":"textbox","id":"sh/ri9g7uhw","slide":10,"textChars":2,"textLines":1}
+{"kind":"textbox","id":"sh/6h0fypgb","slide":10,"textChars":4,"textLines":1}
+{"kind":"textbox","id":"sh/tkby9kzm","slide":10,"textChars":5,"textLines":1}
+{"kind":"shape","id":"sh/sjix0zy1","slide":10,"name":"正方形/長方形 6","bbox":[80,248,420,82]}
+{"kind":"textbox","id":"sh/je9g3ahk","slide":10,"textChars":5,"textLines":1}
+{"kind":"shape","id":"sh/id0fu50z","slide":10,"name":"正方形/長方形 8","bbox":[245,263,184,11]}
+{"kind":"shape","id":"sh/o7ydoret","slide":10,"name":"正方形/長方形 9","bbox":[245,283,115,11]}
+{"kind":"shape","id":"sh/98rehwve","slide":10,"name":"正方形/長方形 10","bbox":[245,303,57.5,11]}
+{"kind":"shape","id":"sh/m5gvmhwn","slide":10,"name":"正方形/長方形 11","bbox":[80,360,420,82]}
+{"kind":"textbox","id":"sh/n6pwfmd8","slide":10,"textChars":5,"textLines":1}
+{"kind":"shape","id":"sh/0jydkreh","slide":10,"name":"正方形/長方形 13","bbox":[245,375,57.5,11]}
+{"kind":"shape","id":"sh/1k7edwv2","slide":10,"name":"正方形/長方形 14","bbox":[245,395,161,11]}
+{"kind":"shape","id":"sh/ehgvihwr","slide":10,"name":"正方形/長方形 15","bbox":[245,415,96.6,11]}
+{"kind":"shape","id":"sh/zipwbmdc","slide":10,"name":"正方形/長方形 16","bbox":[80,472,420,82]}
+{"kind":"textbox","id":"sh/kfixwbe1","slide":10,"textChars":5,"textLines":1}
+{"kind":"shape","id":"sh/lgbepgvm","slide":10,"name":"正方形/長方形 18","bbox":[245,487,126.5,11]}
+{"kind":"shape","id":"sh/tw7e9gnq","slide":10,"name":"正方形/長方形 19","bbox":[245,507,46,11]}
+{"kind":"shape","id":"sh/svydgb65","slide":10,"name":"正方形/長方形 20","bbox":[245,527,172.5,11]}
+{"kind":"shape","id":"sh/bqh4fqtg","slide":10,"name":"直線矢印コネクタ 66","bbox":[610,155,0,445]}
+{"kind":"textbox","id":"sh/6twve1oz","slide":10,"textChars":8,"textLines":1}
+{"kind":"textbox","id":"sh/5sne5wne","slide":10,"textChars":5,"textLines":1}
+{"kind":"shape","id":"sh/idc76l07","slide":10,"name":"直線矢印コネクタ 69","bbox":[800,322,125,48]}
+{"kind":"shape","id":"sh/3e58fqhs","slide":10,"name":"直線矢印コネクタ 70","bbox":[925,322,125,48]}
+{"kind":"shape","id":"sh/4fep8vid","slide":10,"name":"直線矢印コネクタ 71","bbox":[728,434,72,51]}
+{"kind":"shape","id":"sh/5gnqh0zy","slide":10,"name":"直線矢印コネクタ 72","bbox":[800,434,72,51]}
+{"kind":"shape","id":"sh/u9c72l0b","slide":10,"name":"直線矢印コネクタ 73","bbox":[978,434,72,51]}
+{"kind":"shape","id":"sh/val8bqhw","slide":10,"name":"直線矢印コネクタ 74","bbox":[1050,434,72,51]}
+{"kind":"shape","id":"sh/na1sb2lg","slide":10,"name":"正方形/長方形 30","bbox":[845,250,160,72]}
+{"kind":"textbox","id":"sh/8bat47ml","slide":10,"textChars":7,"textLines":1}
+{"kind":"shape","id":"sh/9w3uds36","slide":10,"name":"正方形/長方形 32","bbox":[735,370,130,64]}
+{"kind":"textbox","id":"sh/y5sbed4j","slide":10,"textChars":7,"textLines":1}
+{"kind":"shape","id":"sh/z61s7il4","slide":10,"name":"正方形/長方形 34","bbox":[985,370,130,64]}
+{"kind":"textbox","id":"sh/07atgnmp","slide":10,"textChars":7,"textLines":1}
+{"kind":"shape","id":"sh/l8ja9s3a","slide":10,"name":"正方形/長方形 36","bbox":[665,485,125,74]}
+{"kind":"textbox","id":"sh/q18bad4n","slide":10,"textChars":17,"textLines":3}
+{"kind":"shape","id":"sh/b2hs3il8","slide":10,"name":"正方形/長方形 38","bbox":[805,485,125,74]}
+{"kind":"textbox","id":"sh/3u18fepo","slide":10,"textChars":17,"textLines":3}
+{"kind":"shape","id":"sh/2ts769o3","slide":10,"name":"正方形/長方形 40","bbox":[945,485,125,74]}
+{"kind":"textbox","id":"sh/pwjqho7u","slide":10,"textChars":17,"textLines":3}
+{"kind":"shape","id":"sh/4vap8j69","slide":10,"name":"正方形/長方形 42","bbox":[1085,485,125,74]}
+{"kind":"textbox","id":"sh/fq1obeps","slide":10,"textChars":17,"textLines":3}
+{"kind":"textbox","id":"sh/up872987","slide":10,"textChars":18,"textLines":1}
+{"kind":"slide","id":"sl/udsvah03","slide":11,"title":"多クラスの扱い方には複数の設計がある","textShapes":22}
+{"kind":"shape","id":"sh/mdsnatcn","slide":11,"name":"正方形/長方形 40","bbox":[54,44,12,48]}
+{"kind":"textbox","id":"sh/1cfmhgne","slide":11,"textChars":18,"textLines":1}
+{"kind":"textbox","id":"sh/0b65obm9","slide":11,"textChars":21,"textLines":1}
+{"kind":"textbox","id":"sh/nex4jq5k","slide":11,"textChars":2,"textLines":1}
+{"kind":"shape","id":"sh/mdonql4z","slide":11,"name":"正方形/長方形 4","bbox":[55,165,170,62]}
+{"kind":"textbox","id":"sh/9gzml0nq","slide":11,"textChars":2,"textLines":1}
+{"kind":"shape","id":"sh/ofq5svm5","slide":11,"name":"正方形/長方形 6","bbox":[225,165,270,62]}
+{"kind":"textbox","id":"sh/bih4na5w","slide":11,"textChars":6,"textLines":1}
+{"kind":"shape","id":"sh/ah8nu54b","slide":11,"name":"正方形/長方形 8","bbox":[495,165,330,62]}
+{"kind":"textbox","id":"sh/oza1gfyh","slide":11,"textChars":7,"textLines":1}
+{"kind":"shape","id":"sh/p0ji9kf2","slide":11,"name":"正方形/長方形 10","bbox":[825,165,375,62]}
+{"kind":"textbox","id":"sh/2xsjepgb","slide":11,"textChars":4,"textLines":1}
+{"kind":"shape","id":"sh/3y107axw","slide":11,"name":"正方形/長方形 12","bbox":[55,227,170,108]}
+{"kind":"textbox","id":"sh/cnu1kzyd","slide":11,"textChars":4,"textLines":1}
+{"kind":"shape","id":"sh/do3id4fy","slide":11,"name":"正方形/長方形 14","bbox":[225,227,270,108]}
+{"kind":"textbox","id":"sh/qlcjipgn","slide":11,"textChars":9,"textLines":1}
+{"kind":"shape","id":"sh/bml0buxs","slide":11,"name":"正方形/長方形 16","bbox":[495,227,330,108]}
+{"kind":"textbox","id":"sh/0ru1ozyp","slide":11,"textChars":8,"textLines":1}
+{"kind":"shape","id":"sh/lsn2h4fa","slide":11,"name":"正方形/長方形 18","bbox":[825,227,375,108]}
+{"kind":"textbox","id":"sh/98ji147e","slide":11,"textChars":6,"textLines":1}
+{"kind":"shape","id":"sh/87a18zqt","slide":11,"name":"正方形/長方形 20","bbox":[55,335,170,108]}
+{"kind":"textbox","id":"sh/76h0zup8","slide":11,"textChars":8,"textLines":1}
+{"kind":"shape","id":"sh/ml8j6p8n","slide":11,"name":"正方形/長方形 22","bbox":[225,335,270,108]}
+{"kind":"textbox","id":"sh/hcji5o7a","slide":11,"textChars":9,"textLines":1}
+{"kind":"shape","id":"sh/wba1cjqp","slide":11,"name":"正方形/長方形 24","bbox":[495,335,330,108]}
+{"kind":"textbox","id":"sh/va103ep4","slide":11,"textChars":10,"textLines":1}
+{"kind":"shape","id":"sh/u9sja98z","slide":11,"name":"正方形/長方形 26","bbox":[825,335,375,108]}
+{"kind":"textbox","id":"sh/xgzitk76","slide":11,"textChars":11,"textLines":1}
+{"kind":"shape","id":"sh/cf6h0fql","slide":11,"name":"正方形/長方形 28","bbox":[55,443,170,108]}
+{"kind":"textbox","id":"sh/2l4faloj","slide":11,"textChars":5,"textLines":1}
+{"kind":"shape","id":"sh/nmdg3q54","slide":11,"name":"正方形/長方形 30","bbox":[225,443,270,108]}
+{"kind":"textbox","id":"sh/onmxcv69","slide":11,"textChars":8,"textLines":1}
+{"kind":"shape","id":"sh/pofy50nu","slide":11,"name":"正方形/長方形 32","bbox":[495,443,330,108]}
+{"kind":"textbox","id":"sh/apofe5of","slide":11,"textChars":10,"textLines":1}
+{"kind":"shape","id":"sh/bqxg7q50","slide":11,"name":"正方形/長方形 34","bbox":[825,443,375,108]}
+{"kind":"textbox","id":"sh/cr6xgv6l","slide":11,"textChars":11,"textLines":1}
+{"kind":"shape","id":"sh/xcfy90n6","slide":11,"name":"正方形/長方形 36","bbox":[55,575,1145,60]}
+{"kind":"textbox","id":"sh/qtkf21ob","slide":11,"textChars":6,"textLines":1}
+{"kind":"textbox","id":"sh/rutwv65w","slide":11,"textChars":39,"textLines":1}
+{"kind":"notice","message":"Truncated: omitted 283 lines. Increase maxChars or narrow target."}
+STYLE sh/9072xkry undefined
+STYLE sh/ozy1ofad undefined
+STYLE sh/cb2tkvap undefined
